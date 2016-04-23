@@ -2,17 +2,23 @@
 //  FirstViewController.swift
 //  SmaLert
 //
-//  Created by Kian on 4/22/16.
+//  Created by Kian on 4/10/16.
 //  Copyright © 2016 Kian Sutarwala. All rights reserved.
 //
 
 import UIKit
+import MapKit
+import iAd
 
 class FirstViewController: UIViewController {
-
-    override func viewDidLoad() {
+    
+    var myViewController:UIViewController!
+    
+    ;override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        myViewController.canDisplayBannerAds = true
     }
 
     override func didReceiveMemoryWarning() {
