@@ -11,6 +11,8 @@ import UIKit
 class SettingsTableViewCell: UITableViewCell {
     
     // MARK: Properties
+    @IBOutlet weak var settingLabel: UILabel!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
