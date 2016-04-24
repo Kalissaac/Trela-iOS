@@ -9,15 +9,16 @@
 import UIKit
 import iAd
 
-class FirstViewController: UIViewController {
+class MapViewController: UIViewController {
     
-    var myViewController:UIViewController!
+    var adForVC:UIViewController!
     
     ;override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        myViewController.canDisplayBannerAds = true
+        adForVC.canDisplayBannerAds = true
+        
     }
 
     override func didReceiveMemoryWarning() {

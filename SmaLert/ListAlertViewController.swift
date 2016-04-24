@@ -1,18 +1,15 @@
 //
-//  SettingsViewController.swift
+//  ListAlertViewController.swift
 //  SmaLert
 //
-//  Created by Kian on 4/22/16.
+//  Created by Kian on 4/10/16.
 //  Copyright © 2016 Kian Sutarwala. All rights reserved.
 //
 
 import UIKit
-import iAd
 
-class SettingsViewController: UIViewController, UITableViewDataSource {
+class ListAlertViewController: UIViewController, UITableViewDataSource {
     
-    let data:[String] = ["Map Type", "Location", "Setting 3", "Setting 4", "Setting 5",]
- 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -42,7 +39,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource {
     func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
         return ["Section 1", "Section 2"]
     }
-    
+
+
 
 }
 

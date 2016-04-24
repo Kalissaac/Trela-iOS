@@ -1,4 +1,7 @@
 
+/* Class = "UIViewController"; title = "Settings"; ObjectID = "8rJ-Kc-sve"; */
+"8rJ-Kc-sve.title" = "Settings";
+
 /* Class = "UILabel"; text = "SmaLert Alert"; ObjectID = "NVe-RQ-1El"; */
 "NVe-RQ-1El.text" = "SmaLert Alert";
 
@@ -10,9 +13,6 @@
 
 /* Class = "UITabBarItem"; title = "Settings"; ObjectID = "cPa-gy-q4n"; */
 "cPa-gy-q4n.title" = "Settings";
-
-/* Class = "UILabel"; text = "Option"; ObjectID = "lEV-jh-QQB"; */
-"lEV-jh-QQB.text" = "Option";
 
 /* Class = "UINavigationItem"; title = "Title"; ObjectID = "n5b-AJ-DuB"; */
 "n5b-AJ-DuB.title" = "Title";

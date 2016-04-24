@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */; };
 		8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */; };
 		8DB717FE1CCB11B000F2CBE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717FD1CCB11B000F2CBE4 /* SettingsViewController.swift */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D6CFFD81CCD4BF900774356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = SmaLert/en.lproj/Main.strings; sourceTree = "<group>"; };
+		8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertViewController.swift; sourceTree = "<group>"; };
 		8DB717F61CCB11B000F2CBE4 /* SmaLert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmaLert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +122,7 @@
 				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
 				8DB717FD1CCB11B000F2CBE4 /* SettingsViewController.swift */,
 				8DB718361CCB133600F2CBE4 /* Main.storyboard */,
+				8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */,
 				8DB718341CCB132E00F2CBE4 /* Assets.xcassets */,
 				8DB718041CCB11B000F2CBE4 /* LaunchScreen.storyboard */,
 				8DB718071CCB11B000F2CBE4 /* Info.plist */,
@@ -280,6 +284,7 @@
 				8DB717FE1CCB11B000F2CBE4 /* SettingsViewController.swift in Sources */,
 				8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */,
 				8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */,
+				8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +332,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8DB718371CCB133600F2CBE4 /* Base */,
+				8D6CFFD81CCD4BF900774356 /* en */,
 			);
 			name = Main.storyboard;
 			path = ..;
