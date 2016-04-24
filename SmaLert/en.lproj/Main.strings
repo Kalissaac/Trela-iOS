@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "SmaLert Alert"; ObjectID = "NVe-RQ-1El"; */
+"NVe-RQ-1El.text" = "SmaLert Alert";
+
+/* Class = "UISearchBar"; placeholder = "Search"; ObjectID = "TdH-m3-byb"; */
+"TdH-m3-byb.placeholder" = "Search";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "acW-dT-cKf"; */
+"acW-dT-cKf.title" = "Map";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "cPa-gy-q4n"; */
+"cPa-gy-q4n.title" = "Settings";
+
+/* Class = "UILabel"; text = "Option"; ObjectID = "lEV-jh-QQB"; */
+"lEV-jh-QQB.text" = "Option";
+
+/* Class = "UINavigationItem"; title = "Title"; ObjectID = "n5b-AJ-DuB"; */
+"n5b-AJ-DuB.title" = "Title";
+
+/* Class = "UINavigationItem"; title = "SmaLert"; ObjectID = "qX4-NH-lQL"; */
+"qX4-NH-lQL.title" = "SmaLert";

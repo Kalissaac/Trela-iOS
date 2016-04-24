@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  MapViewController.swift
 //  SmaLert
 //
 //  Created by Kian on 4/10/16.
@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MapKit
 import iAd
 
 class FirstViewController: UIViewController {
