@@ -7,11 +7,14 @@
 //
 
 import UIKit
-import iAd
 
-class SettingsViewController: UIViewController, UITableViewDataSource {
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    let data:[String] = ["Map Type", "Location", "Setting 3", "Setting 4", "Setting 5",]
+    // Settings table data.
+    let dataSettingsSec1:[String] = ["Map Type", "Home Location", "Setting 3", "Setting 4", "Setting 5"]
+    let dataSettingsSec2:[String] = ["Setting 6", "Setting 7", "Setting 8", "Setting 9", "Setting 10"]
+    let dataSettingsSec3:[String] = ["Terms and Conditions", "Privacy Policy"]
+    let dataSettingsSec4:[String] = ["Help", "About", "Acknowledgements"]
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +28,25 @@ class SettingsViewController: UIViewController, UITableViewDataSource {
     
     // This is the cell part of the table.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = "Map Type"
+        let cell = tableView.dequeueReusableCellWithIdentifier("cellSetting", forIndexPath: indexPath)
+        if indexPath.section == 0 {
+            cell.textLabel?.text = dataSettingsSec1[indexPath.row]
+        }
+        else {
+            cell.textLabel?.text = dataSettingsSec2[indexPath.row]
+        }
+        
         return cell
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        if section == 0 {
+            return dataSettingsSec1.count
+        }
+        else {
+            return dataSettingsSec2.count
+        }
+        
     }
     
     // This is the section part of the table.
@@ -39,10 +54,15 @@ class SettingsViewController: UIViewController, UITableViewDataSource {
         return 2
     }
     
-    func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        return ["Section 1", "Section 2"]
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Section 1"
+        }
+        else {
+            return "Section 2"
+        }
+        
     }
     
-
 }
 
