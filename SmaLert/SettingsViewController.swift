@@ -32,8 +32,14 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         if indexPath.section == 0 {
             cell.textLabel?.text = dataSettingsSec1[indexPath.row]
         }
-        else {
+        else if indexPath.section == 1 {
             cell.textLabel?.text = dataSettingsSec2[indexPath.row]
+        }
+        else if indexPath.section == 2 {
+            cell.textLabel?.text = dataSettingsSec3[indexPath.row]
+        }
+        else {
+            cell.textLabel?.text = dataSettingsSec4[indexPath.row]
         }
         
         return cell
@@ -43,8 +49,14 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         if section == 0 {
             return dataSettingsSec1.count
         }
-        else {
+        else if section == 1 {
             return dataSettingsSec2.count
+        }
+        else if section == 2 {
+            return dataSettingsSec3.count
+        }
+        else {
+            return dataSettingsSec4.count
         }
         
     }
@@ -58,8 +70,14 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         if section == 0 {
             return "Section 1"
         }
-        else {
+        else if section == 1 {
             return "Section 2"
+        }
+        else if section == 2 {
+            return "Section 3"
+        }
+        else {
+            return "Section 4"
         }
         
     }
