@@ -2,12 +2,11 @@
 //  SettingsViewController.swift
 //  SmaLert
 //
-//  Created by Kian on 4/22/16.
+//  Created by Kian on 4/10/16.
 //  Copyright © 2016 Kian Sutarwala. All rights reserved.
 //
 
 import UIKit
-import AdSupport
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     

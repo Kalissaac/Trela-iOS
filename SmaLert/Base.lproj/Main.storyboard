@@ -109,9 +109,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Map" image="Map" id="pJ0-ga-q3Y"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="map" destination="Gz5-z4-wU4" id="Zzm-rR-5vr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>

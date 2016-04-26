@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D63A2611CCFDB6E00D0C5A0 /* Commit Messages.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 8D63A2601CCFDB6E00D0C5A0 /* Commit Messages.rtf */; settings = {ASSET_TAGS = (); }; };
 		8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */; };
 		8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		8D63A25E1CCFBF7600D0C5A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8D63A2601CCFDB6E00D0C5A0 /* Commit Messages.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = "Commit Messages.rtf"; sourceTree = "<group>"; };
 		8D6CFFD81CCD4BF900774356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = SmaLert/en.lproj/Main.strings; sourceTree = "<group>"; };
 		8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertViewController.swift; sourceTree = "<group>"; };
 		8DB717F61CCB11B000F2CBE4 /* SmaLert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmaLert.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +130,7 @@
 		8DB717F81CCB11B000F2CBE4 /* SmaLert */ = {
 			isa = PBXGroup;
 			children = (
+				8D63A2601CCFDB6E00D0C5A0 /* Commit Messages.rtf */,
 				8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */,
 				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
 				8DB717FD1CCB11B000F2CBE4 /* SettingsViewController.swift */,
@@ -266,6 +269,7 @@
 			files = (
 				8DB718381CCB133600F2CBE4 /* Main.storyboard in Resources */,
 				8DB718351CCB132E00F2CBE4 /* Assets.xcassets in Resources */,
+				8D63A2611CCFDB6E00D0C5A0 /* Commit Messages.rtf in Resources */,
 				8DB718061CCB11B000F2CBE4 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

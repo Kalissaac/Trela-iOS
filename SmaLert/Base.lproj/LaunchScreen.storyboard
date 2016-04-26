@@ -16,13 +16,47 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LaunchScreen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-ic-waE">
+                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="q1Z-ic-waE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8de-qZ-2Ns"/>
+                            <constraint firstItem="q1Z-ic-waE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="342" id="X3t-FY-v20"/>
+                            <constraint firstItem="q1Z-ic-waE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lc0-HQ-J1j"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="q1Z-ic-waE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="8de-qZ-2Ns"/>
+                                <exclude reference="X3t-FY-v20"/>
+                                <exclude reference="lc0-HQ-J1j"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="q1Z-ic-waE"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="8de-qZ-2Ns"/>
+                                <include reference="X3t-FY-v20"/>
+                                <include reference="lc0-HQ-J1j"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
 </document>
