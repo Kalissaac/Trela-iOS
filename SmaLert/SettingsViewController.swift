@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AdSupport
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -25,6 +26,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     // This is the cell part of the table.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -61,25 +63,10 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
+    
     // This is the section part of the table.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "Section 1"
-        }
-        else if section == 1 {
-            return "Section 2"
-        }
-        else if section == 2 {
-            return "Section 3"
-        }
-        else {
-            return "Section 4"
-        }
-        
+        return 4
     }
     
 }
