@@ -40,7 +40,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8D63A25E1CCFBF7600D0C5A0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8D6CFFD81CCD4BF900774356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = SmaLert/en.lproj/Main.strings; sourceTree = "<group>"; };
 		8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertViewController.swift; sourceTree = "<group>"; };
 		8DB717F61CCB11B000F2CBE4 /* SmaLert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmaLert.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,10 +67,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DB7183C1CCB238800F2CBE4 /* CoreLocation.framework in Frameworks */,
-				8DB7182E1CCB121600F2CBE4 /* WebKit.framework in Frameworks */,
 				8DB7182C1CCB11E300F2CBE4 /* iAd.framework in Frameworks */,
 				8DB7182A1CCB11D500F2CBE4 /* MapKit.framework in Frameworks */,
+				8DB7183C1CCB238800F2CBE4 /* CoreLocation.framework in Frameworks */,
+				8DB7182E1CCB121600F2CBE4 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +94,6 @@
 		8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D63A25E1CCFBF7600D0C5A0 /* Foundation.framework */,
 				8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */,
 				8DB7182D1CCB121600F2CBE4 /* WebKit.framework */,
 				8DB7182B1CCB11E300F2CBE4 /* iAd.framework */,

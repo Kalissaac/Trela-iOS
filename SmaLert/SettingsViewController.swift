@@ -63,6 +63,8 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
+    
+    
     // This is the section part of the table.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
