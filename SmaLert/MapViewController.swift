@@ -13,6 +13,8 @@ import iAd
 
 class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, ADBannerViewDelegate {
     
+    
+    
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     
