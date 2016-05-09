@@ -22,9 +22,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gz5-z4-wU4">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="20" width="400" height="731"/>
-                                </variation>
                             </mapView>
                             <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ljg-2z-Kci">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -47,12 +44,12 @@
                                 <exclude reference="Ljg-2z-Kci"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="cFx-8Q-r3c"/>
                                 <exclude reference="7AK-he-6JA"/>
                                 <exclude reference="Bi9-Pv-TUi"/>
                                 <exclude reference="YnP-1D-lfy"/>
                                 <exclude reference="cPm-J8-iPs"/>
                                 <exclude reference="z9l-9g-GVY"/>
-                                <exclude reference="cFx-8Q-r3c"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -61,12 +58,12 @@
                                 <include reference="Ljg-2z-Kci"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="cFx-8Q-r3c"/>
                                 <include reference="7AK-he-6JA"/>
                                 <include reference="Bi9-Pv-TUi"/>
                                 <include reference="YnP-1D-lfy"/>
                                 <include reference="cPm-J8-iPs"/>
                                 <include reference="z9l-9g-GVY"/>
-                                <include reference="cFx-8Q-r3c"/>
                             </mask>
                         </variation>
                     </view>
@@ -158,10 +155,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Yce-IE-Zyp">
+                            <searchBar contentMode="redraw" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yce-IE-Zyp">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <animations/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
                                 <connections>
                                     <outlet property="delegate" destination="rJ2-gG-CzZ" id="e7A-nj-ERd"/>
                                 </connections>
