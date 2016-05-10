@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8D8B49ED1CE1688400E9AF8F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B49EB1CE1688400E9AF8F /* Interface.storyboard */; };
+		8D8B49EF1CE1688500E9AF8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B49EE1CE1688500E9AF8F /* Assets.xcassets */; };
+		8D8B49F61CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8D8B49F51CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8D8B49FD1CE1688500E9AF8F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B49FC1CE1688500E9AF8F /* InterfaceController.swift */; };
+		8D8B49FF1CE1688500E9AF8F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B49FE1CE1688500E9AF8F /* ExtensionDelegate.swift */; };
+		8D8B4A011CE1688500E9AF8F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B4A001CE1688500E9AF8F /* NotificationController.swift */; };
+		8D8B4A031CE1688500E9AF8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B4A021CE1688500E9AF8F /* Assets.xcassets */; };
+		8D8B4A071CE1688500E9AF8F /* SmaLert WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */; };
+		8D8B4A111CE1691D00E9AF8F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8B4A101CE1691D00E9AF8F /* MapKit.framework */; };
 		8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */; };
 		8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */; };
 		8DB717FE1CCB11B000F2CBE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717FD1CCB11B000F2CBE4 /* SettingsViewController.swift */; };
@@ -23,6 +32,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		8D8B49F71CE1688500E9AF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB717EE1CCB11B000F2CBE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D8B49F41CE1688500E9AF8F;
+			remoteInfo = "SmaLert WatchKit App Extension";
+		};
+		8D8B4A051CE1688500E9AF8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB717EE1CCB11B000F2CBE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8D8B49E81CE1688400E9AF8F;
+			remoteInfo = "SmaLert WatchKit App";
+		};
 		8DB7180D1CCB11B000F2CBE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8DB717EE1CCB11B000F2CBE4 /* Project object */;
@@ -39,9 +62,46 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8D8B4A0D1CE1688500E9AF8F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8D8B49F61CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8B4A0F1CE1688500E9AF8F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				8D8B4A071CE1688500E9AF8F /* SmaLert WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8D6CFFD81CCD4BF900774356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = SmaLert/en.lproj/Main.strings; sourceTree = "<group>"; };
 		8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertViewController.swift; sourceTree = "<group>"; };
+		8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmaLert WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D8B49EC1CE1688400E9AF8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		8D8B49EE1CE1688500E9AF8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D8B49F01CE1688500E9AF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D8B49F51CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmaLert WatchKit App Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D8B49FB1CE1688500E9AF8F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		8D8B49FC1CE1688500E9AF8F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		8D8B49FE1CE1688500E9AF8F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		8D8B4A001CE1688500E9AF8F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		8D8B4A021CE1688500E9AF8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8D8B4A041CE1688500E9AF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8D8B4A101CE1691D00E9AF8F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		8DB717F61CCB11B000F2CBE4 /* SmaLert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmaLert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +123,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8D8B49F21CE1688500E9AF8F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8B4A111CE1691D00E9AF8F /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DB717F31CCB11B000F2CBE4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -94,6 +162,7 @@
 		8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8D8B4A101CE1691D00E9AF8F /* MapKit.framework */,
 				8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */,
 				8DB7182D1CCB121600F2CBE4 /* WebKit.framework */,
 				8DB7182B1CCB11E300F2CBE4 /* iAd.framework */,
@@ -102,11 +171,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8D8B49EA1CE1688400E9AF8F /* SmaLert WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				8D8B49EB1CE1688400E9AF8F /* Interface.storyboard */,
+				8D8B49EE1CE1688500E9AF8F /* Assets.xcassets */,
+				8D8B49F01CE1688500E9AF8F /* Info.plist */,
+			);
+			path = "SmaLert WatchKit App";
+			sourceTree = "<group>";
+		};
+		8D8B49F91CE1688500E9AF8F /* SmaLert WatchKit App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D8B49FC1CE1688500E9AF8F /* InterfaceController.swift */,
+				8D8B49FE1CE1688500E9AF8F /* ExtensionDelegate.swift */,
+				8D8B4A001CE1688500E9AF8F /* NotificationController.swift */,
+				8D8B4A021CE1688500E9AF8F /* Assets.xcassets */,
+				8D8B4A041CE1688500E9AF8F /* Info.plist */,
+				8D8B49FA1CE1688500E9AF8F /* Supporting Files */,
+			);
+			path = "SmaLert WatchKit App Extension";
+			sourceTree = "<group>";
+		};
+		8D8B49FA1CE1688500E9AF8F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D8B49FB1CE1688500E9AF8F /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		8DB717ED1CCB11B000F2CBE4 = {
 			isa = PBXGroup;
 			children = (
 				8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */,
 				8DB717F81CCB11B000F2CBE4 /* SmaLert */,
+				8D8B49EA1CE1688400E9AF8F /* SmaLert WatchKit App */,
+				8D8B49F91CE1688500E9AF8F /* SmaLert WatchKit App Extension */,
 				8DB7180F1CCB11B000F2CBE4 /* SmaLertTests */,
 				8DB7181A1CCB11B000F2CBE4 /* SmaLertUITests */,
 				8DB717F71CCB11B000F2CBE4 /* Products */,
@@ -119,6 +221,8 @@
 				8DB717F61CCB11B000F2CBE4 /* SmaLert.app */,
 				8DB7180C1CCB11B000F2CBE4 /* SmaLertTests.xctest */,
 				8DB718171CCB11B000F2CBE4 /* SmaLertUITests.xctest */,
+				8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */,
+				8D8B49F51CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,6 +263,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8D8B49E81CE1688400E9AF8F /* SmaLert WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D8B4A0E1CE1688500E9AF8F /* Build configuration list for PBXNativeTarget "SmaLert WatchKit App" */;
+			buildPhases = (
+				8D8B49E71CE1688400E9AF8F /* Resources */,
+				8D8B4A0D1CE1688500E9AF8F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D8B49F81CE1688500E9AF8F /* PBXTargetDependency */,
+			);
+			name = "SmaLert WatchKit App";
+			productName = "SmaLert WatchKit App";
+			productReference = 8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		8D8B49F41CE1688500E9AF8F /* SmaLert WatchKit App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D8B4A0C1CE1688500E9AF8F /* Build configuration list for PBXNativeTarget "SmaLert WatchKit App Extension" */;
+			buildPhases = (
+				8D8B49F11CE1688500E9AF8F /* Sources */,
+				8D8B49F21CE1688500E9AF8F /* Frameworks */,
+				8D8B49F31CE1688500E9AF8F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmaLert WatchKit App Extension";
+			productName = "SmaLert WatchKit App Extension";
+			productReference = 8D8B49F51CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		8DB717F51CCB11B000F2CBE4 /* SmaLert */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8DB718201CCB11B000F2CBE4 /* Build configuration list for PBXNativeTarget "SmaLert" */;
@@ -166,10 +304,12 @@
 				8DB717F21CCB11B000F2CBE4 /* Sources */,
 				8DB717F31CCB11B000F2CBE4 /* Frameworks */,
 				8DB717F41CCB11B000F2CBE4 /* Resources */,
+				8D8B4A0F1CE1688500E9AF8F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8D8B4A061CE1688500E9AF8F /* PBXTargetDependency */,
 			);
 			name = SmaLert;
 			productName = SmaLert;
@@ -221,6 +361,19 @@
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Kian Sutarwala";
 				TargetAttributes = {
+					8D8B49E81CE1688400E9AF8F = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7QA845L52Q;
+					};
+					8D8B49F41CE1688500E9AF8F = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7QA845L52Q;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					8DB717F51CCB11B000F2CBE4 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7QA845L52Q;
@@ -253,11 +406,30 @@
 				8DB717F51CCB11B000F2CBE4 /* SmaLert */,
 				8DB7180B1CCB11B000F2CBE4 /* SmaLertTests */,
 				8DB718161CCB11B000F2CBE4 /* SmaLertUITests */,
+				8D8B49E81CE1688400E9AF8F /* SmaLert WatchKit App */,
+				8D8B49F41CE1688500E9AF8F /* SmaLert WatchKit App Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8D8B49E71CE1688400E9AF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8B49EF1CE1688500E9AF8F /* Assets.xcassets in Resources */,
+				8D8B49ED1CE1688400E9AF8F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8D8B49F31CE1688500E9AF8F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8B4A031CE1688500E9AF8F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DB717F41CCB11B000F2CBE4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +457,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8D8B49F11CE1688500E9AF8F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D8B4A011CE1688500E9AF8F /* NotificationController.swift in Sources */,
+				8D8B49FF1CE1688500E9AF8F /* ExtensionDelegate.swift in Sources */,
+				8D8B49FD1CE1688500E9AF8F /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DB717F21CCB11B000F2CBE4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -315,6 +497,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8D8B49F81CE1688500E9AF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D8B49F41CE1688500E9AF8F /* SmaLert WatchKit App Extension */;
+			targetProxy = 8D8B49F71CE1688500E9AF8F /* PBXContainerItemProxy */;
+		};
+		8D8B4A061CE1688500E9AF8F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8D8B49E81CE1688400E9AF8F /* SmaLert WatchKit App */;
+			targetProxy = 8D8B4A051CE1688500E9AF8F /* PBXContainerItemProxy */;
+		};
 		8DB7180E1CCB11B000F2CBE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DB717F51CCB11B000F2CBE4 /* SmaLert */;
@@ -328,6 +520,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		8D8B49EB1CE1688400E9AF8F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8D8B49EC1CE1688400E9AF8F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		8DB718041CCB11B000F2CBE4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -349,6 +549,68 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		8D8B4A081CE1688500E9AF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SmaLert_WatchKit_App_Extension;
+				INFOPLIST_FILE = "SmaLert WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8D8B4A091CE1688500E9AF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SmaLert_WatchKit_App_Extension;
+				INFOPLIST_FILE = "SmaLert WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		8D8B4A0A1CE1688500E9AF8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SmaLert WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		8D8B4A0B1CE1688500E9AF8F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SmaLert WatchKit App Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		8DB7181E1CCB11B000F2CBE4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -509,6 +771,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8D8B4A0C1CE1688500E9AF8F /* Build configuration list for PBXNativeTarget "SmaLert WatchKit App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D8B4A0A1CE1688500E9AF8F /* Debug */,
+				8D8B4A0B1CE1688500E9AF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		8D8B4A0E1CE1688500E9AF8F /* Build configuration list for PBXNativeTarget "SmaLert WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D8B4A081CE1688500E9AF8F /* Debug */,
+				8D8B4A091CE1688500E9AF8F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		8DB717F11CCB11B000F2CBE4 /* Build configuration list for PBXProject "SmaLert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
