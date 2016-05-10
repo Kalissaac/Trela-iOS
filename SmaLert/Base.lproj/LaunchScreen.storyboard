@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="KTP-I7-kNF">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -17,44 +17,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LaunchScreen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q1Z-ic-waE">
-                                <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vb9-7e-Z7d">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                                 <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items/>
+                            </tabBar>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="q1Z-ic-waE" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8de-qZ-2Ns"/>
-                            <constraint firstItem="q1Z-ic-waE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="342" id="X3t-FY-v20"/>
-                            <constraint firstItem="q1Z-ic-waE" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="lc0-HQ-J1j"/>
+                            <constraint firstItem="vb9-7e-Z7d" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="CL9-jY-zSn"/>
+                            <constraint firstAttribute="trailing" secondItem="vb9-7e-Z7d" secondAttribute="trailing" id="RcE-v5-qYo"/>
+                            <constraint firstItem="vb9-7e-Z7d" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="cPZ-Qg-lpv"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="q1Z-ic-waE"/>
+                                <exclude reference="vb9-7e-Z7d"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8de-qZ-2Ns"/>
-                                <exclude reference="X3t-FY-v20"/>
-                                <exclude reference="lc0-HQ-J1j"/>
+                                <exclude reference="CL9-jY-zSn"/>
+                                <exclude reference="RcE-v5-qYo"/>
+                                <exclude reference="cPZ-Qg-lpv"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="q1Z-ic-waE"/>
+                                <include reference="vb9-7e-Z7d"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="8de-qZ-2Ns"/>
-                                <include reference="X3t-FY-v20"/>
-                                <include reference="lc0-HQ-J1j"/>
+                                <include reference="CL9-jY-zSn"/>
+                                <include reference="RcE-v5-qYo"/>
+                                <include reference="cPZ-Qg-lpv"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="1K6-t4-3DX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="970.5" y="375"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EYQ-ne-71x">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qRu-eQ-RHS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KTP-I7-kNF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oEp-4N-Wi7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="01J-lp-oVM" kind="relationship" relationship="rootViewController" id="dgd-Ij-WCd"/>
+                    </connections>
+                </navigationController>
             </objects>
             <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
