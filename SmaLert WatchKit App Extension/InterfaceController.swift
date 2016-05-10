@@ -2,12 +2,13 @@
 //  InterfaceController.swift
 //  SmaLert WatchKit App Extension
 //
-//  Created by Kian on 5/9/16.
+//  Created by Kian on 5/10/16.
 //  Copyright © 2016 Kian Sutarwala. All rights reserved.
 //
 
 import WatchKit
 import Foundation
+import MapKit
 
 
 class InterfaceController: WKInterfaceController {

@@ -696,7 +696,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SmaLert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -710,7 +709,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SmaLert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -778,6 +776,7 @@
 				8D8B4A0B1CE1688500E9AF8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8D8B4A0E1CE1688500E9AF8F /* Build configuration list for PBXNativeTarget "SmaLert WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -786,6 +785,7 @@
 				8D8B4A091CE1688500E9AF8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DB717F11CCB11B000F2CBE4 /* Build configuration list for PBXProject "SmaLert" */ = {
 			isa = XCConfigurationList;

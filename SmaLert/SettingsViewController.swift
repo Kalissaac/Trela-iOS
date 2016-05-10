@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import MapKit
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
     
     // Settings table data.
     let dataSettingsSec1:[String] = ["Map Type", "Home Location", "Setting 3", "Setting 4", "Setting 5"]
@@ -27,7 +28,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-    // This is the cell part of the table.
+    // MARK: This is the cell part of the table.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cellSetting", forIndexPath: indexPath)
         if indexPath.section == 0 {
@@ -63,11 +64,17 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
-    
-    
-    // This is the section part of the table.
+    // MARK: This is the section part of the table.
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 4
+    }
+    
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // When a row is selected
+        if indexPath.row == 1 {
+            MKMapType .Hybrid
+        }
     }
     
 }
