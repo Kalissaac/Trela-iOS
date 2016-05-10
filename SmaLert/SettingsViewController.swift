@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import MapKit
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MKMapViewDelegate {
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // Settings table data.
     let dataSettingsSec1:[String] = ["Map Type", "Home Location", "Setting 3", "Setting 4", "Setting 5"]
@@ -69,13 +68,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         return 4
     }
     
-    
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // When a row is selected
-        if indexPath.row == 1 {
-            MKMapType .Hybrid
-        }
-    }
     
 }
 
