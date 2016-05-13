@@ -321,13 +321,13 @@
         <!--Settings Detail View Controller-->
         <scene sceneID="TIC-YK-A4N">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bIq-tW-CUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="G9Y-U4-ySf" customClass="SettingsDetailViewController" customModule="SmaLert" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eon-b6-mPK"/>
                         <viewControllerLayoutGuide type="bottom" id="9wa-61-pRt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h7W-td-hXB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vIT-1e-uaV">
@@ -335,32 +335,14 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" hidesAccessoryWhenEditing="NO" indentationWidth="10" reuseIdentifier="cellSelected" textLabel="r0V-jP-PE1" style="IBUITableViewCellStyleDefault" id="VGR-Ic-jnP">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VGR-Ic-jnP" id="Nol-Ng-Ryg">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="r0V-jP-PE1">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellUnSelected" textLabel="XM6-2B-l1n" style="IBUITableViewCellStyleDefault" id="Brn-DE-Hdt">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellUnSelected" textLabel="XM6-2B-l1n" style="IBUITableViewCellStyleDefault" id="Brn-DE-Hdt">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Brn-DE-Hdt" id="Z18-Vg-KY6">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XM6-2B-l1n">
+                                                    <rect key="frame" x="15" y="0.0" width="210" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -377,9 +359,6 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="G9Y-U4-ySf" id="B6M-gV-5UW"/>
                                     <outlet property="delegate" destination="G9Y-U4-ySf" id="mx5-ay-Qu0"/>
@@ -388,18 +367,40 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vIT-1e-uaV" firstAttribute="top" secondItem="eon-b6-mPK" secondAttribute="bottom" id="870-2i-Ms0"/>
+                            <constraint firstItem="vIT-1e-uaV" firstAttribute="leading" secondItem="h7W-td-hXB" secondAttribute="leading" id="AKK-nc-tPs"/>
+                            <constraint firstAttribute="trailing" secondItem="vIT-1e-uaV" secondAttribute="trailing" id="GkC-5b-MSn"/>
+                            <constraint firstAttribute="bottom" secondItem="vIT-1e-uaV" secondAttribute="bottom" id="hu7-fp-UDx"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vIT-1e-uaV"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="870-2i-Ms0"/>
+                                <exclude reference="AKK-nc-tPs"/>
+                                <exclude reference="GkC-5b-MSn"/>
+                                <exclude reference="hu7-fp-UDx"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vIT-1e-uaV"/>
                             </mask>
+                            <mask key="constraints">
+                                <include reference="870-2i-Ms0"/>
+                                <include reference="AKK-nc-tPs"/>
+                                <include reference="GkC-5b-MSn"/>
+                                <include reference="hu7-fp-UDx"/>
+                            </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="myTableView" destination="vIT-1e-uaV" id="gcU-aq-Lba"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIq-tW-CUL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2533.5" y="360"/>
         </scene>

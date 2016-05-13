@@ -18,7 +18,6 @@
 		8D8B4A071CE1688500E9AF8F /* SmaLert WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */; };
 		8D8B4A111CE1691D00E9AF8F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8B4A101CE1691D00E9AF8F /* MapKit.framework */; };
 		8DA574D21CE27BEA0004E15E /* SettingsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA574D11CE27BEA0004E15E /* SettingsDetailViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8DA574D41CE284B70004E15E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8DA574D31CE284B70004E15E /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
 		8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */; };
 		8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */; };
 		8DB717FE1CCB11B000F2CBE4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB717FD1CCB11B000F2CBE4 /* SettingsViewController.swift */; };
@@ -105,7 +104,6 @@
 		8D8B4A041CE1688500E9AF8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8D8B4A101CE1691D00E9AF8F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS2.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
 		8DA574D11CE27BEA0004E15E /* SettingsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDetailViewController.swift; sourceTree = "<group>"; };
-		8DA574D31CE284B70004E15E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		8DB717F61CCB11B000F2CBE4 /* SmaLert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmaLert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -239,7 +237,6 @@
 				8DB717FD1CCB11B000F2CBE4 /* SettingsViewController.swift */,
 				8DA574D11CE27BEA0004E15E /* SettingsDetailViewController.swift */,
 				8DB718361CCB133600F2CBE4 /* Main.storyboard */,
-				8DA574D31CE284B70004E15E /* Settings.bundle */,
 				8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */,
 				8DB718341CCB132E00F2CBE4 /* Assets.xcassets */,
 				8DB718041CCB11B000F2CBE4 /* LaunchScreen.storyboard */,
@@ -440,7 +437,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DA574D41CE284B70004E15E /* Settings.bundle in Resources */,
 				8DB718381CCB133600F2CBE4 /* Main.storyboard in Resources */,
 				8DB718351CCB132E00F2CBE4 /* Assets.xcassets in Resources */,
 				8DB718061CCB11B000F2CBE4 /* LaunchScreen.storyboard in Resources */,

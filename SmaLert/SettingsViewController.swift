@@ -32,14 +32,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier("cellSetting", forIndexPath: indexPath)
         if indexPath.section == 0 {
             cell.textLabel?.text = dataSettingsSec1[indexPath.row]
-        }
-        else if indexPath.section == 1 {
+        } else if indexPath.section == 1 {
             cell.textLabel?.text = dataSettingsSec2[indexPath.row]
-        }
-        else if indexPath.section == 2 {
+        } else if indexPath.section == 2 {
             cell.textLabel?.text = dataSettingsSec3[indexPath.row]
-        }
-        else {
+        } else {
             cell.textLabel?.text = dataSettingsSec4[indexPath.row]
         }
         
@@ -49,14 +46,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return dataSettingsSec1.count
-        }
-        else if section == 1 {
+        } else if section == 1 {
             return dataSettingsSec2.count
-        }
-        else if section == 2 {
+        } else if section == 2 {
             return dataSettingsSec3.count
-        }
-        else {
+        } else {
             return dataSettingsSec4.count
         }
         
