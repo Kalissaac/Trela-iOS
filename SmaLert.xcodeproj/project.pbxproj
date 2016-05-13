@@ -30,6 +30,10 @@
 		8DB718351CCB132E00F2CBE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB718341CCB132E00F2CBE4 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		8DB718381CCB133600F2CBE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB718361CCB133600F2CBE4 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		8DB7183C1CCB238800F2CBE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */; };
+		8DBF40B41CE62A5B00E10E63 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF40B31CE62A5B00E10E63 /* AppDelegate.swift */; };
+		8DBF40B61CE62A5B00E10E63 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBF40B51CE62A5B00E10E63 /* ViewController.swift */; };
+		8DBF40B81CE62A5B00E10E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF40B71CE62A5B00E10E63 /* Assets.xcassets */; };
+		8DBF40BB1CE62A5B00E10E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBF40B91CE62A5B00E10E63 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +126,12 @@
 		8DB718341CCB132E00F2CBE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DB718371CCB133600F2CBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SmaLert/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmaLert Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBF40B31CE62A5B00E10E63 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8DBF40B51CE62A5B00E10E63 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8DBF40B71CE62A5B00E10E63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8DBF40BA1CE62A5B00E10E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8DBF40BC1CE62A5B00E10E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +162,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		8DB718141CCB11B000F2CBE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBF40AE1CE62A5B00E10E63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -207,6 +224,7 @@
 		8DB717ED1CCB11B000F2CBE4 = {
 			isa = PBXGroup;
 			children = (
+				8DBF40B21CE62A5B00E10E63 /* SmaLert Desktop */,
 				8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */,
 				8DB717F81CCB11B000F2CBE4 /* SmaLert */,
 				8D8B49EA1CE1688400E9AF8F /* SmaLert WatchKit App */,
@@ -225,6 +243,7 @@
 				8DB718171CCB11B000F2CBE4 /* SmaLertUITests.xctest */,
 				8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */,
 				8D8B49F51CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex */,
+				8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +280,18 @@
 				8DB7181D1CCB11B000F2CBE4 /* Info.plist */,
 			);
 			path = SmaLertUITests;
+			sourceTree = "<group>";
+		};
+		8DBF40B21CE62A5B00E10E63 /* SmaLert Desktop */ = {
+			isa = PBXGroup;
+			children = (
+				8DBF40B31CE62A5B00E10E63 /* AppDelegate.swift */,
+				8DBF40B51CE62A5B00E10E63 /* ViewController.swift */,
+				8DBF40B71CE62A5B00E10E63 /* Assets.xcassets */,
+				8DBF40B91CE62A5B00E10E63 /* Main.storyboard */,
+				8DBF40BC1CE62A5B00E10E63 /* Info.plist */,
+			);
+			path = "SmaLert Desktop";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,6 +386,23 @@
 			productReference = 8DB718171CCB11B000F2CBE4 /* SmaLertUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		8DBF40B01CE62A5B00E10E63 /* SmaLert Desktop */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DBF40BF1CE62A5B00E10E63 /* Build configuration list for PBXNativeTarget "SmaLert Desktop" */;
+			buildPhases = (
+				8DBF40AD1CE62A5B00E10E63 /* Sources */,
+				8DBF40AE1CE62A5B00E10E63 /* Frameworks */,
+				8DBF40AF1CE62A5B00E10E63 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmaLert Desktop";
+			productName = "SmaLert Desktop";
+			productReference = 8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -391,6 +439,9 @@
 						DevelopmentTeam = 7QA845L52Q;
 						TestTargetID = 8DB717F51CCB11B000F2CBE4;
 					};
+					8DBF40B01CE62A5B00E10E63 = {
+						CreatedOnToolsVersion = 7.0;
+					};
 				};
 			};
 			buildConfigurationList = 8DB717F11CCB11B000F2CBE4 /* Build configuration list for PBXProject "SmaLert" */;
@@ -411,6 +462,7 @@
 				8DB718161CCB11B000F2CBE4 /* SmaLertUITests */,
 				8D8B49E81CE1688400E9AF8F /* SmaLert WatchKit App */,
 				8D8B49F41CE1688500E9AF8F /* SmaLert WatchKit App Extension */,
+				8DBF40B01CE62A5B00E10E63 /* SmaLert Desktop */,
 			);
 		};
 /* End PBXProject section */
@@ -457,6 +509,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DBF40AF1CE62A5B00E10E63 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBF40B81CE62A5B00E10E63 /* Assets.xcassets in Resources */,
+				8DBF40BB1CE62A5B00E10E63 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -495,6 +556,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DB7181C1CCB11B000F2CBE4 /* SmaLertUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBF40AD1CE62A5B00E10E63 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBF40B61CE62A5B00E10E63 /* ViewController.swift in Sources */,
+				8DBF40B41CE62A5B00E10E63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +618,14 @@
 			);
 			name = Main.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		8DBF40B91CE62A5B00E10E63 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DBF40BA1CE62A5B00E10E63 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -770,6 +848,36 @@
 			};
 			name = Release;
 		};
+		8DBF40BD1CE62A5B00E10E63 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "SmaLert Desktop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert-Desktop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		8DBF40BE1CE62A5B00E10E63 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "SmaLert Desktop/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert-Desktop";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -826,6 +934,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8DBF40BF1CE62A5B00E10E63 /* Build configuration list for PBXNativeTarget "SmaLert Desktop" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBF40BD1CE62A5B00E10E63 /* Debug */,
+				8DBF40BE1CE62A5B00E10E63 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
