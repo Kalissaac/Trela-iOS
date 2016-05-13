@@ -224,9 +224,9 @@
 		8DB717ED1CCB11B000F2CBE4 = {
 			isa = PBXGroup;
 			children = (
-				8DBF40B21CE62A5B00E10E63 /* SmaLert Desktop */,
 				8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */,
 				8DB717F81CCB11B000F2CBE4 /* SmaLert */,
+				8DBF40B21CE62A5B00E10E63 /* SmaLert Desktop */,
 				8D8B49EA1CE1688400E9AF8F /* SmaLert WatchKit App */,
 				8D8B49F91CE1688500E9AF8F /* SmaLert WatchKit App Extension */,
 				8DB7180F1CCB11B000F2CBE4 /* SmaLertTests */,

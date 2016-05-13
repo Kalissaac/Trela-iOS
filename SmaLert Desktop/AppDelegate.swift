@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  SmaLert Desktop
 //
-//  Created by Kian on 5/13/16.
+//  Created by Kian on 5/10/16.
 //  Copyright © 2016 Kian Sutarwala. All rights reserved.
 //
 
