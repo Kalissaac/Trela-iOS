@@ -2,7 +2,7 @@
 //  SettingsViewController.swift
 //  SmaLert
 //
-//  Created by Kian on 5/22/16.
+//  Created by Kian on 5/20/16.
 //  Copyright © 2016 Kian Sutarwala. All rights reserved.
 //
 
@@ -26,7 +26,7 @@ class SettingsViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -36,7 +36,7 @@ class SettingsViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-
+    */
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
@@ -91,5 +91,39 @@ class SettingsViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    var lastSelection: NSIndexPath!
+    @IBOutlet var settingsTableView: UITableView!
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                if self.lastSelection != nil {
+                    self.settingsTableView.cellForRowAtIndexPath(self.lastSelection)?.accessoryType = .None
+                }
+                self.settingsTableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+                self.lastSelection = indexPath
+                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+            } else if indexPath.row == 1 {
+                if self.lastSelection != nil {
+                    self.settingsTableView.cellForRowAtIndexPath(self.lastSelection)?.accessoryType = .None
+                }
+                self.settingsTableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+                self.lastSelection = indexPath
+                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+            } else {
+                if self.lastSelection != nil {
+                    self.settingsTableView.cellForRowAtIndexPath(self.lastSelection)?.accessoryType = .None
+                }
+                self.settingsTableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
+                self.lastSelection = indexPath
+                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+            }
+        } else {
+            return
+        }
+        
+    }
+    
 }

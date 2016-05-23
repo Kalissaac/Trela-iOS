@@ -36,6 +36,8 @@
                             <constraint firstItem="Gz5-z4-wU4" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" id="YnP-1D-lfy"/>
                             <constraint firstItem="4ug-Mw-9AY" firstAttribute="top" secondItem="Ljg-2z-Kci" secondAttribute="bottom" constant="8" symbolic="YES" id="cFx-8Q-r3c"/>
                             <constraint firstAttribute="trailing" secondItem="Gz5-z4-wU4" secondAttribute="trailing" id="cPm-J8-iPs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ljg-2z-Kci" secondAttribute="trailing" constant="20" id="epz-G0-DBG"/>
+                            <constraint firstItem="Ljg-2z-Kci" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leadingMargin" constant="20" id="ygK-C1-tTP"/>
                             <constraint firstItem="Ljg-2z-Kci" firstAttribute="centerX" secondItem="Gz5-z4-wU4" secondAttribute="centerX" id="z9l-9g-GVY"/>
                         </constraints>
                         <variation key="default">
@@ -44,12 +46,14 @@
                                 <exclude reference="Ljg-2z-Kci"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="cFx-8Q-r3c"/>
                                 <exclude reference="7AK-he-6JA"/>
                                 <exclude reference="Bi9-Pv-TUi"/>
                                 <exclude reference="YnP-1D-lfy"/>
                                 <exclude reference="cPm-J8-iPs"/>
+                                <exclude reference="epz-G0-DBG"/>
+                                <exclude reference="ygK-C1-tTP"/>
                                 <exclude reference="z9l-9g-GVY"/>
+                                <exclude reference="cFx-8Q-r3c"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -58,12 +62,14 @@
                                 <include reference="Ljg-2z-Kci"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="cFx-8Q-r3c"/>
                                 <include reference="7AK-he-6JA"/>
                                 <include reference="Bi9-Pv-TUi"/>
                                 <include reference="YnP-1D-lfy"/>
                                 <include reference="cPm-J8-iPs"/>
+                                <include reference="epz-G0-DBG"/>
+                                <include reference="ygK-C1-tTP"/>
                                 <include reference="z9l-9g-GVY"/>
+                                <include reference="cFx-8Q-r3c"/>
                             </mask>
                         </variation>
                     </view>
@@ -161,10 +167,8 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
+                                    <string>Title</string>
                                 </scopeButtonTitles>
-                                <connections>
-                                    <outlet property="delegate" destination="rJ2-gG-CzZ" id="e7A-nj-ERd"/>
-                                </connections>
                             </searchBar>
                         </subviews>
                         <animations/>
@@ -228,7 +232,6 @@
                 <searchDisplayController id="yvf-0b-gJo">
                     <connections>
                         <outlet property="delegate" destination="rJ2-gG-CzZ" id="Rf3-PY-vTh"/>
-                        <outlet property="searchBar" destination="Yce-IE-Zyp" id="TUN-cO-6ZS"/>
                         <outlet property="searchContentsController" destination="rJ2-gG-CzZ" id="lIn-ml-qO8"/>
                         <outlet property="searchResultsDataSource" destination="rJ2-gG-CzZ" id="g2s-lY-k4y"/>
                         <outlet property="searchResultsDelegate" destination="rJ2-gG-CzZ" id="9EP-cm-bXe"/>
@@ -237,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="2520" y="-506.25"/>
         </scene>
-        <!--Settings-->
+        <!--Settings View Controller-->
         <scene sceneID="FAx-hY-jY8">
             <objects>
-                <tableViewController id="jmW-HV-ilY" customClass="SettingsViewController" customModule="SmaLert" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="jmW-HV-ilY" userLabel="Settings View Controller" customClass="SettingsViewController" customModule="SmaLert" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="iS5-Ew-tof">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
@@ -248,7 +251,7 @@
                         <sections>
                             <tableViewSection headerTitle="Map Type" id="Dux-E0-2HA">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="pbD-0z-xxf" style="IBUITableViewCellStyleDefault" id="q0n-RP-Xdc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="pbD-0z-xxf" style="IBUITableViewCellStyleDefault" id="q0n-RP-Xdc">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q0n-RP-Xdc" id="2T5-ck-kwk">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -310,14 +313,14 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="rDv-dL-Apg">
+                            <tableViewSection headerTitle="Home Location" footerTitle="SmaLert will give you a notification if there are any alerts near your home location." id="rDv-dL-Apg">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="nAm-4K-Tds" style="IBUITableViewCellStyleDefault" id="Qq5-5b-Wd9">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qq5-5b-Wd9" id="qA0-BA-qVC">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nAm-4K-Tds">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Set Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nAm-4K-Tds">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -337,27 +340,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Jjv-Wo-1l8" id="tLp-s3-YbX">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qnf-TQ-ElC">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
-                                                </label>
-                                            </subviews>
-                                            <animations/>
-                                        </tableViewCellContentView>
-                                        <animations/>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="Neu-Dz-Rg5" style="IBUITableViewCellStyleDefault" id="NDM-qy-miE">
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NDM-qy-miE" id="S7q-Zu-PE5">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Neu-Dz-Rg5">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Radius" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Qnf-TQ-ElC">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -391,7 +374,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SmaLert Alpha 2.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ia-nW-P8W">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SmaLert Beta 2.5" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ia-nW-P8W">
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -451,10 +434,13 @@
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="jmW-HV-ilY" id="lZa-al-fO5"/>
-                            <outlet property="delegate" destination="jmW-HV-ilY" id="gLc-lm-LrA"/>
+                            <outlet property="delegate" destination="jmW-HV-ilY" id="cRl-o7-d1f"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="pSs-Wx-yI5"/>
+                    <connections>
+                        <outlet property="settingsTableView" destination="iS5-Ew-tof" id="L1E-Uk-VMl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOl-QZ-JuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
