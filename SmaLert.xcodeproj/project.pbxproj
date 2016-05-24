@@ -1239,6 +1239,7 @@
 				8DBA582E1CF3F52200B3185F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8DBF40BF1CE62A5B00E10E63 /* Build configuration list for PBXNativeTarget "SmaLert Desktop" */ = {
 			isa = XCConfigurationList;

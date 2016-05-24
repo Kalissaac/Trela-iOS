@@ -55,7 +55,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMH-X3-Mq0">
                                 <rect key="frame" x="129" y="4" width="62" height="30"/>
                                 <animations/>
-                                <state key="normal" title="All Alerts"/>
+                                <state key="normal" title="All Alerts">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="actionAllAlerts:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="m2C-qm-vHG"/>
                                 </connections>
