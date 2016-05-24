@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListAlertViewController: UIViewController, UITableViewDataSource {
+class ListAlertViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate {
     
     let dataListAlerts:[String] = ["SmaLert Alert 1", "SmaLert Alert 2", "SmaLert Alert 3", "SmaLert Alert 4", "SmaLert Alert 5"]
     let dataListAlertsDescription:[String] = ["SmaLert Alert Description 1", "SmaLert Alert Description 2", "SmaLert Alert Description 3", "SmaLert Alert Description 4", "SmaLert Alert Description 5"]
@@ -35,6 +35,12 @@ class ListAlertViewController: UIViewController, UITableViewDataSource {
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataListAlerts.count
     }
+    
+    // MARK: This is the search part of the table.
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     
 }
 

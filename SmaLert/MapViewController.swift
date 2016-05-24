@@ -24,11 +24,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        if #available(iOS 8.0, *) {
-            self.locationManager.requestWhenInUseAuthorization()
-        } else {
-            // Hope they don't mind their location being used. :P
-        }
+        self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
         self.canDisplayBannerAds = true

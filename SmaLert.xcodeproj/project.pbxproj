@@ -29,6 +29,8 @@
 		8DB718351CCB132E00F2CBE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB718341CCB132E00F2CBE4 /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
 		8DB718381CCB133600F2CBE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB718361CCB133600F2CBE4 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		8DB7183C1CCB238800F2CBE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */; };
+		8DBA58181CF3E04600B3185F /* DetailAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8DBA581A1CF3EC0000B3185F /* FriendItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58191CF3EC0000B3185F /* FriendItem.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +221,8 @@
 		8DBA58141CF3DE4300B3185F /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = SmaLert/vi.lproj/Main.strings; sourceTree = "<group>"; };
 		8DBA58151CF3DE4300B3185F /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		8DBA58161CF3DE4300B3185F /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Interface.strings; sourceTree = "<group>"; };
+		8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAlertViewController.swift; sourceTree = "<group>"; };
+		8DBA58191CF3EC0000B3185F /* FriendItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItem.swift; sourceTree = "<group>"; };
 		8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmaLert Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -342,7 +346,9 @@
 				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
 				8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */,
 				8DB718361CCB133600F2CBE4 /* Main.storyboard */,
+				8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */,
 				8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */,
+				8DBA58191CF3EC0000B3185F /* FriendItem.swift */,
 				8DB718341CCB132E00F2CBE4 /* Assets.xcassets */,
 				8DB718041CCB11B000F2CBE4 /* LaunchScreen.storyboard */,
 				8DB718071CCB11B000F2CBE4 /* Info.plist */,
@@ -609,7 +615,9 @@
 			files = (
 				8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */,
 				8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */,
+				8DBA581A1CF3EC0000B3185F /* FriendItem.swift in Sources */,
 				8D7BEC041CF280FB007AF833 /* SettingsViewController.swift in Sources */,
+				8DBA58181CF3E04600B3185F /* DetailAlertViewController.swift in Sources */,
 				8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -889,7 +897,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -927,7 +935,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -938,10 +946,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SmaLert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -952,10 +959,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = BrandAsset;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SmaLert/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
