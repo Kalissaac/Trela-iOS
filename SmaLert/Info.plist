@@ -40,6 +40,7 @@
 			<array>
 				<string>SmaLert://EasterEgg</string>
 				<string>SmaLert://AllAlerts</string>
+				<string>SmaLert</string>
 			</array>
 		</dict>
 	</array>

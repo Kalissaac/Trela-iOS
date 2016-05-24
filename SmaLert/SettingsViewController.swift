@@ -121,6 +121,12 @@ class SettingsViewController: UITableViewController {
                 self.lastSelection = indexPath
                 self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
+        } else if indexPath.section == 3 {
+            if indexPath.row == 0 {
+                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+            } else {
+                return
+            }
         } else {
             return
         }

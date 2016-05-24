@@ -10,7 +10,13 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="SmaLert_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <map width="1" height="1" alignment="left" id="Xmt-H2-emI"/>
+                        <table alignment="left" id="sk2-hH-gdY">
+                            <items>
+                                <tableRow identifier="watchCellListAlert" id="Kpp-rA-x2m">
+                                    <group key="rootItem" width="1" alignment="left" id="Agd-gs-OMZ"/>
+                                </tableRow>
+                            </items>
+                        </table>
                     </items>
                 </controller>
             </objects>

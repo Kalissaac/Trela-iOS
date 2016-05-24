@@ -250,7 +250,10 @@
 		8DBA58231CF3F52100B3185F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8DBA58261CF3F52100B3185F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8DBA58281CF3F52100B3185F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmaLert Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DD6D2641CF4F93B003A1820 /* SmaLert.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SmaLert.entitlements; sourceTree = "<group>"; };
+		8DD6D2651CF4F944003A1820 /* SmaLert WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SmaLert WatchKit App.entitlements"; sourceTree = "<group>"; };
+		8DD6D2661CF4F94A003A1820 /* SmaLert WatchKit App Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SmaLert WatchKit App Extension.entitlements"; sourceTree = "<group>"; };
+		8DD6D2671CF4F950003A1820 /* SmaLert Today Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "SmaLert Today Extension.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,13 +298,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DBF40AE1CE62A5B00E10E63 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -321,6 +317,7 @@
 		8D8B49EA1CE1688400E9AF8F /* SmaLert WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				8DD6D2651CF4F944003A1820 /* SmaLert WatchKit App.entitlements */,
 				8D8B49EB1CE1688400E9AF8F /* Interface.storyboard */,
 				8D8B49EE1CE1688500E9AF8F /* Assets.xcassets */,
 				8D8B49F01CE1688500E9AF8F /* Info.plist */,
@@ -331,6 +328,7 @@
 		8D8B49F91CE1688500E9AF8F /* SmaLert WatchKit App Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8DD6D2661CF4F94A003A1820 /* SmaLert WatchKit App Extension.entitlements */,
 				8D8B49FC1CE1688500E9AF8F /* InterfaceController.swift */,
 				8D8B49FE1CE1688500E9AF8F /* ExtensionDelegate.swift */,
 				8D8B4A001CE1688500E9AF8F /* NotificationController.swift */,
@@ -371,7 +369,6 @@
 				8DB718171CCB11B000F2CBE4 /* SmaLertUITests.xctest */,
 				8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */,
 				8D8B49F51CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex */,
-				8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */,
 				8DBA581F1CF3F52100B3185F /* SmaLert Today Extension.appex */,
 			);
 			name = Products;
@@ -380,6 +377,7 @@
 		8DB717F81CCB11B000F2CBE4 /* SmaLert */ = {
 			isa = PBXGroup;
 			children = (
+				8DD6D2641CF4F93B003A1820 /* SmaLert.entitlements */,
 				8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */,
 				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
 				8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */,
@@ -415,6 +413,7 @@
 		8DBA58221CF3F52100B3185F /* SmaLert Today Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8DD6D2671CF4F950003A1820 /* SmaLert Today Extension.entitlements */,
 				8DBA58231CF3F52100B3185F /* TodayViewController.swift */,
 				8DBA58251CF3F52100B3185F /* MainInterface.storyboard */,
 				8DBA58281CF3F52100B3185F /* Info.plist */,
@@ -533,23 +532,6 @@
 			productReference = 8DBA581F1CF3F52100B3185F /* SmaLert Today Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
-		8DBF40B01CE62A5B00E10E63 /* SmaLert Desktop */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8DBF40BF1CE62A5B00E10E63 /* Build configuration list for PBXNativeTarget "SmaLert Desktop" */;
-			buildPhases = (
-				8DBF40AD1CE62A5B00E10E63 /* Sources */,
-				8DBF40AE1CE62A5B00E10E63 /* Frameworks */,
-				8DBF40AF1CE62A5B00E10E63 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "SmaLert Desktop";
-			productName = "SmaLert Desktop";
-			productReference = 8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -562,11 +544,19 @@
 					8D8B49E81CE1688400E9AF8F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7QA845L52Q;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8D8B49F41CE1688500E9AF8F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7QA845L52Q;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
@@ -575,6 +565,11 @@
 					8DB717F51CCB11B000F2CBE4 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7QA845L52Q;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8DB7180B1CCB11B000F2CBE4 = {
 						CreatedOnToolsVersion = 7.0;
@@ -589,9 +584,11 @@
 					8DBA581E1CF3F52100B3185F = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7QA845L52Q;
-					};
-					8DBF40B01CE62A5B00E10E63 = {
-						CreatedOnToolsVersion = 7.0;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -613,7 +610,6 @@
 				8DB718161CCB11B000F2CBE4 /* SmaLertUITests */,
 				8D8B49E81CE1688400E9AF8F /* SmaLert WatchKit App */,
 				8D8B49F41CE1688500E9AF8F /* SmaLert WatchKit App Extension */,
-				8DBF40B01CE62A5B00E10E63 /* SmaLert Desktop */,
 				8DBA581E1CF3F52100B3185F /* SmaLert Today Extension */,
 			);
 		};
@@ -669,13 +665,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DBF40AF1CE62A5B00E10E63 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -723,13 +712,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8DBA58241CF3F52100B3185F /* TodayViewController.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8DBF40AD1CE62A5B00E10E63 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,6 +886,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App/SmaLert WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SmaLert_WatchKit_App_Extension;
@@ -921,6 +904,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App/SmaLert WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SmaLert_WatchKit_App_Extension;
@@ -937,6 +921,7 @@
 		8D8B4A0A1CE1688500E9AF8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App Extension/SmaLert WatchKit App Extension.entitlements";
 				INFOPLIST_FILE = "SmaLert WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp.watchkitextension;
@@ -951,6 +936,7 @@
 		8D8B4A0B1CE1688500E9AF8F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App Extension/SmaLert WatchKit App Extension.entitlements";
 				INFOPLIST_FILE = "SmaLert WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp.watchkitextension;
@@ -1047,6 +1033,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmaLert/SmaLert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmaLert/Info.plist;
@@ -1061,6 +1048,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmaLert/SmaLert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmaLert/Info.plist;
@@ -1122,6 +1110,7 @@
 		8DBA582D1CF3F52200B3185F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SmaLert Today Extension/SmaLert Today Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "SmaLert Today Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1135,6 +1124,7 @@
 		8DBA582E1CF3F52200B3185F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "SmaLert Today Extension/SmaLert Today Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "SmaLert Today Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1142,36 +1132,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert.SmaLert-Today-Extension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		8DBF40BD1CE62A5B00E10E63 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "SmaLert Desktop/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert-Desktop";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		8DBF40BE1CE62A5B00E10E63 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "SmaLert Desktop/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert-Desktop";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 			};
 			name = Release;
 		};
@@ -1237,15 +1197,6 @@
 			buildConfigurations = (
 				8DBA582D1CF3F52200B3185F /* Debug */,
 				8DBA582E1CF3F52200B3185F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8DBF40BF1CE62A5B00E10E63 /* Build configuration list for PBXNativeTarget "SmaLert Desktop" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8DBF40BD1CE62A5B00E10E63 /* Debug */,
-				8DBF40BE1CE62A5B00E10E63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
