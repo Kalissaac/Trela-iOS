@@ -31,6 +31,10 @@
 		8DB7183C1CCB238800F2CBE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */; };
 		8DBA58181CF3E04600B3185F /* DetailAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8DBA581A1CF3EC0000B3185F /* FriendItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58191CF3EC0000B3185F /* FriendItem.swift */; settings = {ASSET_TAGS = (); }; };
+		8DBA58211CF3F52100B3185F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBA58201CF3F52100B3185F /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
+		8DBA58241CF3F52100B3185F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58231CF3F52100B3185F /* TodayViewController.swift */; };
+		8DBA58271CF3F52100B3185F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA58251CF3F52100B3185F /* MainInterface.storyboard */; };
+		8DBA582B1CF3F52100B3185F /* SmaLert Today Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8DBA581F1CF3F52100B3185F /* SmaLert Today Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,13 @@
 			remoteGlobalIDString = 8DB717F51CCB11B000F2CBE4;
 			remoteInfo = SmaLert;
 		};
+		8DBA58291CF3F52100B3185F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8DB717EE1CCB11B000F2CBE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DBA581E1CF3F52100B3185F;
+			remoteInfo = "SmaLert Today Extension";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -85,6 +96,17 @@
 				8D8B4A071CE1688500E9AF8F /* SmaLert WatchKit App.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBA582F1CF3F52200B3185F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8DBA582B1CF3F52100B3185F /* SmaLert Today Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -223,6 +245,11 @@
 		8DBA58161CF3DE4300B3185F /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Interface.strings; sourceTree = "<group>"; };
 		8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAlertViewController.swift; sourceTree = "<group>"; };
 		8DBA58191CF3EC0000B3185F /* FriendItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItem.swift; sourceTree = "<group>"; };
+		8DBA581F1CF3F52100B3185F /* SmaLert Today Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmaLert Today Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8DBA58201CF3F52100B3185F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8DBA58231CF3F52100B3185F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		8DBA58261CF3F52100B3185F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		8DBA58281CF3F52100B3185F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SmaLert Desktop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -260,6 +287,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DBA581C1CF3F52100B3185F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBA58211CF3F52100B3185F /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DBF40AE1CE62A5B00E10E63 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,6 +313,7 @@
 				8DB7182D1CCB121600F2CBE4 /* WebKit.framework */,
 				8DB7182B1CCB11E300F2CBE4 /* iAd.framework */,
 				8DB718291CCB11D500F2CBE4 /* MapKit.framework */,
+				8DBA58201CF3F52100B3185F /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,6 +354,7 @@
 			children = (
 				8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */,
 				8DB717F81CCB11B000F2CBE4 /* SmaLert */,
+				8DBA58221CF3F52100B3185F /* SmaLert Today Extension */,
 				8D8B49EA1CE1688400E9AF8F /* SmaLert WatchKit App */,
 				8D8B49F91CE1688500E9AF8F /* SmaLert WatchKit App Extension */,
 				8DB7180F1CCB11B000F2CBE4 /* SmaLertTests */,
@@ -335,6 +372,7 @@
 				8D8B49E91CE1688400E9AF8F /* SmaLert WatchKit App.app */,
 				8D8B49F51CE1688500E9AF8F /* SmaLert WatchKit App Extension.appex */,
 				8DBF40B11CE62A5B00E10E63 /* SmaLert Desktop.app */,
+				8DBA581F1CF3F52100B3185F /* SmaLert Today Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -372,6 +410,16 @@
 				8DB7181D1CCB11B000F2CBE4 /* Info.plist */,
 			);
 			path = SmaLertUITests;
+			sourceTree = "<group>";
+		};
+		8DBA58221CF3F52100B3185F /* SmaLert Today Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8DBA58231CF3F52100B3185F /* TodayViewController.swift */,
+				8DBA58251CF3F52100B3185F /* MainInterface.storyboard */,
+				8DBA58281CF3F52100B3185F /* Info.plist */,
+			);
+			path = "SmaLert Today Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,11 +467,13 @@
 				8DB717F31CCB11B000F2CBE4 /* Frameworks */,
 				8DB717F41CCB11B000F2CBE4 /* Resources */,
 				8D8B4A0F1CE1688500E9AF8F /* Embed Watch Content */,
+				8DBA582F1CF3F52200B3185F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				8D8B4A061CE1688500E9AF8F /* PBXTargetDependency */,
+				8DBA582A1CF3F52100B3185F /* PBXTargetDependency */,
 			);
 			name = SmaLert;
 			productName = SmaLert;
@@ -465,6 +515,23 @@
 			productName = SmaLertUITests;
 			productReference = 8DB718171CCB11B000F2CBE4 /* SmaLertUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		8DBA581E1CF3F52100B3185F /* SmaLert Today Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8DBA582C1CF3F52200B3185F /* Build configuration list for PBXNativeTarget "SmaLert Today Extension" */;
+			buildPhases = (
+				8DBA581B1CF3F52100B3185F /* Sources */,
+				8DBA581C1CF3F52100B3185F /* Frameworks */,
+				8DBA581D1CF3F52100B3185F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SmaLert Today Extension";
+			productName = "SmaLert Today Extension";
+			productReference = 8DBA581F1CF3F52100B3185F /* SmaLert Today Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 		8DBF40B01CE62A5B00E10E63 /* SmaLert Desktop */ = {
 			isa = PBXNativeTarget;
@@ -519,6 +586,10 @@
 						DevelopmentTeam = 7QA845L52Q;
 						TestTargetID = 8DB717F51CCB11B000F2CBE4;
 					};
+					8DBA581E1CF3F52100B3185F = {
+						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 7QA845L52Q;
+					};
 					8DBF40B01CE62A5B00E10E63 = {
 						CreatedOnToolsVersion = 7.0;
 					};
@@ -543,6 +614,7 @@
 				8D8B49E81CE1688400E9AF8F /* SmaLert WatchKit App */,
 				8D8B49F41CE1688500E9AF8F /* SmaLert WatchKit App Extension */,
 				8DBF40B01CE62A5B00E10E63 /* SmaLert Desktop */,
+				8DBA581E1CF3F52100B3185F /* SmaLert Today Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -586,6 +658,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DBA581D1CF3F52100B3185F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBA58271CF3F52100B3185F /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +718,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8DBA581B1CF3F52100B3185F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8DBA58241CF3F52100B3185F /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8DBF40AD1CE62A5B00E10E63 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -667,6 +755,11 @@
 			isa = PBXTargetDependency;
 			target = 8DB717F51CCB11B000F2CBE4 /* SmaLert */;
 			targetProxy = 8DB718181CCB11B000F2CBE4 /* PBXContainerItemProxy */;
+		};
+		8DBA582A1CF3F52100B3185F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DBA581E1CF3F52100B3185F /* SmaLert Today Extension */;
+			targetProxy = 8DBA58291CF3F52100B3185F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -794,6 +887,14 @@
 			);
 			name = Main.storyboard;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		8DBA58251CF3F52100B3185F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8DBA58261CF3F52100B3185F /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -947,6 +1048,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmaLert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -960,6 +1062,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmaLert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1013,6 +1116,32 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = SmaLert;
 				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		8DBA582D1CF3F52200B3185F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "SmaLert Today Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert.SmaLert-Today-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8DBA582E1CF3F52200B3185F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "SmaLert Today Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert.SmaLert-Today-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -1102,6 +1231,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		8DBA582C1CF3F52200B3185F /* Build configuration list for PBXNativeTarget "SmaLert Today Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DBA582D1CF3F52200B3185F /* Debug */,
+				8DBA582E1CF3F52200B3185F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		8DBF40BF1CE62A5B00E10E63 /* Build configuration list for PBXNativeTarget "SmaLert Desktop" */ = {
 			isa = XCConfigurationList;

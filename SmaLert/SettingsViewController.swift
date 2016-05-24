@@ -105,6 +105,7 @@ class SettingsViewController: UITableViewController {
                 self.settingsTableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
                 self.lastSelection = indexPath
                 self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+                
             } else if indexPath.row == 1 {
                 if self.lastSelection != nil {
                     self.settingsTableView.cellForRowAtIndexPath(self.lastSelection)?.accessoryType = .None

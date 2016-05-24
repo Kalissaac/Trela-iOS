@@ -14,9 +14,18 @@ class ListAlertViewController: UIViewController, UITableViewDataSource, UITableV
     let dataListAlertsDescription:[String] = ["SmaLert Alert Description 1", "SmaLert Alert Description 2", "SmaLert Alert Description 3", "SmaLert Alert Description 4", "SmaLert Alert Description 5"]
     // Make sure that dataListAlerts and dataListAlertsDescription have the same number of strings or the app will crash.
     
+    // MARK: This is the search part of the table.
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var friendsArray = [FriendItem]()
+    var filteredFriends = [FriendItem]()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.friendsArray += [FriendItem(name: "")]
     }
     
     override func didReceiveMemoryWarning() {
@@ -35,12 +44,6 @@ class ListAlertViewController: UIViewController, UITableViewDataSource, UITableV
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataListAlerts.count
     }
-    
-    // MARK: This is the search part of the table.
-    
-    @IBOutlet weak var tableView: UITableView!
-    
-    
     
 }
 
