@@ -16,7 +16,7 @@ class ListAlertViewController: UIViewController, UITableViewDataSource, UITableV
     
     // MARK: This is the search part of the table.
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var alertTableView: UITableView!
     
     var friendsArray = [FriendItem]()
     var filteredFriends = [FriendItem]()
@@ -35,7 +35,7 @@ class ListAlertViewController: UIViewController, UITableViewDataSource, UITableV
     
     // MARK: This is the cell part of the table.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cellListAlert", forIndexPath: indexPath)
+        let cell = alertTableView.dequeueReusableCellWithIdentifier("cellListAlert", forIndexPath: indexPath)
         cell.textLabel?.text = dataListAlerts[indexPath.row]
         cell.detailTextLabel?.text = dataListAlertsDescription[indexPath.row]
         return cell
@@ -43,6 +43,10 @@ class ListAlertViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataListAlerts.count
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.alertTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
 }

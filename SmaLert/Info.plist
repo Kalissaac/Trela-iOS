@@ -28,14 +28,14 @@
 	<key>CFBundleShortVersionString</key>
 	<string>Beta 2.5</string>
 	<key>CFBundleSignature</key>
-	<string>????</string>
+	<string>KIAN</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>SmaLert</string>
+			<string>co.sutarwala.kian.SmaLert</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>SmaLert://EasterEgg</string>
