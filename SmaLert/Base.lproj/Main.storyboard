@@ -442,14 +442,14 @@
                             <tableViewSection id="QML-kK-8xE" userLabel="Logout">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="vhT-vE-Sys" style="IBUITableViewCellStyleDefault" id="DhS-UK-ngK">
-                                        <rect key="frame" x="0.0" y="430" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="510" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DhS-UK-ngK" id="Pno-zq-01j">
-                                            <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Logout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vhT-vE-Sys">
-                                                    <rect key="frame" x="15" y="11" width="140" height="21"/>
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -469,7 +469,7 @@
                             <tableViewSection id="Mh9-4m-TGS" userLabel="Extra Stuff">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="2AC-Rb-EwV" detailTextLabel="7Ia-nW-P8W" style="IBUITableViewCellStyleValue1" id="k8L-vD-rRs">
-                                        <rect key="frame" x="0.0" y="510" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="590" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="k8L-vD-rRs" id="kSz-CJ-uq0">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -486,8 +486,8 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     </variation>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SmaLert Beta 2.6" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ia-nW-P8W">
-                                                    <rect key="frame" x="453" y="11" width="132" height="21"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="SmaLert Beta 2.6.1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7Ia-nW-P8W">
+                                                    <rect key="frame" x="452" y="11" width="133" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -503,7 +503,7 @@
                                         <animations/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="efh-c8-UsY" style="IBUITableViewCellStyleDefault" id="BHY-Td-eez">
-                                        <rect key="frame" x="0.0" y="554" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="634" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BHY-Td-eez" id="uP4-4c-CoF">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -529,7 +529,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cellSetting" textLabel="RxY-B9-Gha" style="IBUITableViewCellStyleDefault" id="liS-Nj-VSS">
-                                        <rect key="frame" x="0.0" y="598" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="678" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="liS-Nj-VSS" id="RFZ-HJ-fAL">
                                             <rect key="frame" x="0.0" y="0.0" width="567" height="43"/>
@@ -565,6 +565,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="pSs-Wx-yI5"/>
                     <connections>
                         <outlet property="settingsTableView" destination="iS5-Ew-tof" id="L1E-Uk-VMl"/>
+                        <segue destination="V7a-rm-5E0" kind="presentation" identifier="logoutSegue" modalTransitionStyle="coverVertical" id="wxZ-vM-OMk"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOl-QZ-JuF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -854,23 +855,23 @@
                                 <exclude reference="0I9-sD-NIA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2Qe-jR-wes"/>
-                                <exclude reference="E3R-01-IPp"/>
-                                <exclude reference="XBu-6u-e6O"/>
-                                <exclude reference="rRA-dD-GcC"/>
+                                <exclude reference="7mf-5D-qAH"/>
+                                <exclude reference="dFa-6Z-9B6"/>
+                                <exclude reference="jFu-ER-mYu"/>
                                 <exclude reference="D2E-5P-jmR"/>
                                 <exclude reference="aAg-iH-cSd"/>
                                 <exclude reference="TiR-N9-93y"/>
                                 <exclude reference="oXU-sw-IlI"/>
                                 <exclude reference="rDj-Dx-q6P"/>
-                                <exclude reference="cpi-sn-pdz"/>
-                                <exclude reference="hxH-fK-xDd"/>
-                                <exclude reference="dFa-6Z-9B6"/>
-                                <exclude reference="jFu-ER-mYu"/>
                                 <exclude reference="3Pk-an-pde"/>
                                 <exclude reference="Nk4-dt-55h"/>
                                 <exclude reference="Zsq-yS-Mha"/>
-                                <exclude reference="7mf-5D-qAH"/>
+                                <exclude reference="cpi-sn-pdz"/>
+                                <exclude reference="hxH-fK-xDd"/>
+                                <exclude reference="2Qe-jR-wes"/>
+                                <exclude reference="E3R-01-IPp"/>
+                                <exclude reference="XBu-6u-e6O"/>
+                                <exclude reference="rRA-dD-GcC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -883,23 +884,23 @@
                                 <include reference="0I9-sD-NIA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2Qe-jR-wes"/>
-                                <include reference="E3R-01-IPp"/>
-                                <include reference="XBu-6u-e6O"/>
-                                <include reference="rRA-dD-GcC"/>
+                                <include reference="7mf-5D-qAH"/>
+                                <include reference="dFa-6Z-9B6"/>
+                                <include reference="jFu-ER-mYu"/>
                                 <include reference="D2E-5P-jmR"/>
                                 <include reference="aAg-iH-cSd"/>
                                 <include reference="TiR-N9-93y"/>
                                 <include reference="oXU-sw-IlI"/>
                                 <include reference="rDj-Dx-q6P"/>
-                                <include reference="cpi-sn-pdz"/>
-                                <include reference="hxH-fK-xDd"/>
-                                <include reference="dFa-6Z-9B6"/>
-                                <include reference="jFu-ER-mYu"/>
                                 <include reference="3Pk-an-pde"/>
                                 <exclude reference="Nk4-dt-55h"/>
                                 <include reference="Zsq-yS-Mha"/>
-                                <include reference="7mf-5D-qAH"/>
+                                <include reference="cpi-sn-pdz"/>
+                                <include reference="hxH-fK-xDd"/>
+                                <include reference="2Qe-jR-wes"/>
+                                <include reference="E3R-01-IPp"/>
+                                <include reference="XBu-6u-e6O"/>
+                                <include reference="rRA-dD-GcC"/>
                             </mask>
                         </variation>
                     </view>

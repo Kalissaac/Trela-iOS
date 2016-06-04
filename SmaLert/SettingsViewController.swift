@@ -96,7 +96,6 @@ class SettingsViewController: UITableViewController {
     @IBOutlet var settingsTableView: UITableView!
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
         if indexPath.section == 0 {
             if indexPath.row == 0 {
                 if self.lastSelection != nil {
@@ -122,6 +121,22 @@ class SettingsViewController: UITableViewController {
                 self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
             }
         } else if indexPath.section == 3 {
+            if indexPath.row == 0 {
+                let alertController = UIAlertController(title: "", message: "Are you sure you want to log out?", preferredStyle: .ActionSheet)
+                let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive) { (action) in
+                    self.performSegueWithIdentifier("logoutSegue", sender: nil)
+                }
+                alertController.addAction(logoutAction)
+                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+                }
+                alertController.addAction(cancelAction)
+                self.presentViewController(alertController, animated: true) {
+                }
+                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
+            } else {
+                return
+            }
+        } else if indexPath.section == 4 {
             if indexPath.row == 0 {
                 self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
             } else {
