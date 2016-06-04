@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B7BB61D024A5A0011D6FE /* Common.swift */; settings = {ASSET_TAGS = (); }; };
 		8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8D7BEC041CF280FB007AF833 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8D8B49ED1CE1688400E9AF8F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B49EB1CE1688400E9AF8F /* Interface.storyboard */; };
@@ -114,6 +115,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8D0B7BB61D024A5A0011D6FE /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		8D6CFFD81CCD4BF900774356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = SmaLert/en.lproj/Main.strings; sourceTree = "<group>"; };
 		8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertViewController.swift; sourceTree = "<group>"; };
 		8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -288,6 +290,7 @@
 				8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */,
 				8DB718361CCB133600F2CBE4 /* Main.storyboard */,
 				8DD6D2681CF504C6003A1820 /* LoginViewController.swift */,
+				8D0B7BB61D024A5A0011D6FE /* Common.swift */,
 				8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */,
 				8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */,
 				8DBA58191CF3EC0000B3185F /* FriendItem.swift */,
@@ -593,6 +596,7 @@
 				8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */,
 				8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */,
 				8DBA581A1CF3EC0000B3185F /* FriendItem.swift in Sources */,
+				8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */,
 				8DD6D26D1CF543DA003A1820 /* UIView+Designable.swift in Sources */,
 				8D7BEC041CF280FB007AF833 /* SettingsViewController.swift in Sources */,
 				8DBA58181CF3E04600B3185F /* DetailAlertViewController.swift in Sources */,
