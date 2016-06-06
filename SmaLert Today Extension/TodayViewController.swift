@@ -2,8 +2,8 @@
 //  TodayViewController.swift
 //  SmaLert Today Extension
 //
-//  Created by Kian on 5/23/16.
-//  Copyright © 2016 Kian Sutarwala. All rights reserved.
+//  Created by Kalissaac on 5/23/16.
+//  Copyright © 2016 Kalissaac Corp. All rights reserved.
 //
 
 import UIKit

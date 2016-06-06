@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  SmaLert
 //
-//  Created by Kian on 4/10/16.
-//  Copyright © 2016 Kian Sutarwala. All rights reserved.
+//  Created by Kalissaac on 4/10/16.
+//  Copyright © 2016 Kalissaac Corp. All rights reserved.
 //
 
 import UIKit

@@ -2,8 +2,8 @@
 //  ListAlertViewController.swift
 //  SmaLert
 //
-//  Created by Kian on 4/10/16.
-//  Copyright © 2016 Kian Sutarwala. All rights reserved.
+//  Created by Kalissaac on 4/10/16.
+//  Copyright © 2016 Kalissaac Corp. All rights reserved.
 //
 
 import UIKit
@@ -18,14 +18,10 @@ class ListAlertViewController: UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet var alertTableView: UITableView!
     
-    var friendsArray = [FriendItem]()
-    var filteredFriends = [FriendItem]()
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.friendsArray += [FriendItem(name: "")]
+
     }
     
     override func didReceiveMemoryWarning() {

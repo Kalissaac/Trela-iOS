@@ -2,8 +2,8 @@
 //  SmaLertUITests.swift
 //  SmaLertUITests
 //
-//  Created by Kian on 4/22/16.
-//  Copyright © 2016 Kian Sutarwala. All rights reserved.
+//  Created by Kalissaac on 4/22/16.
+//  Copyright © 2016 Kalissaac Corp. All rights reserved.
 //
 
 import XCTest

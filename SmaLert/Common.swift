@@ -2,8 +2,8 @@
 //  Common.swift
 //  SmaLert
 //
-//  Created by Kian on 6/3/16.
-//  Copyright © 2016 Kian Sutarwala. All rights reserved.
+//  Created by Kalissaac on 6/3/16.
+//  Copyright © 2016 Kalissaac Corp. All rights reserved.
 //
 
 import Foundation

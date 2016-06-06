@@ -1,14 +1,14 @@
 //
-//  SettingsViewController.swift
+//  RadiusTableViewController.swift
 //  SmaLert
 //
-//  Created by Kalissaac on 5/20/16.
+//  Created by Kalissaac on 6/4/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.
 //
 
 import UIKit
 
-class SettingsViewController: UITableViewController {
+class RadiusTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class SettingsViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    /*
+
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
@@ -36,7 +36,7 @@ class SettingsViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
-    */
+
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
@@ -91,61 +91,5 @@ class SettingsViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-    
-    var lastSelection: NSIndexPath!
-    @IBOutlet var settingsTableView: UITableView!
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                if self.lastSelection != nil {
-                    self.settingsTableView.cellForRowAtIndexPath(self.lastSelection)?.accessoryType = .None
-                }
-                self.settingsTableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
-                self.lastSelection = indexPath
-                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
-                
-            } else if indexPath.row == 1 {
-                if self.lastSelection != nil {
-                    self.settingsTableView.cellForRowAtIndexPath(self.lastSelection)?.accessoryType = .None
-                }
-                self.settingsTableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
-                self.lastSelection = indexPath
-                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
-            } else {
-                if self.lastSelection != nil {
-                    self.settingsTableView.cellForRowAtIndexPath(self.lastSelection)?.accessoryType = .None
-                }
-                self.settingsTableView.cellForRowAtIndexPath(indexPath)?.accessoryType = .Checkmark
-                self.lastSelection = indexPath
-                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
-            }
-        } else if indexPath.section == 3 {
-            if indexPath.row == 0 {
-                let alertController = UIAlertController(title: "", message: "Are you sure you want to log out?", preferredStyle: .ActionSheet)
-                let logoutAction = UIAlertAction(title: "Log Out", style: .Destructive) { (action) in
-                    self.performSegueWithIdentifier("logoutSegue", sender: nil)
-                }
-                alertController.addAction(logoutAction)
-                let cancelAction = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
-                }
-                alertController.addAction(cancelAction)
-                self.presentViewController(alertController, animated: true) {
-                }
-                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
-            } else {
-                return
-            }
-        } else if indexPath.section == 4 {
-            if indexPath.row == 0 {
-                self.settingsTableView.deselectRowAtIndexPath(indexPath, animated: true)
-            } else {
-                return
-            }
-        } else {
-            return
-        }
-        
-    }
-    
+
 }

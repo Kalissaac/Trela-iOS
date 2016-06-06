@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B7BB61D024A5A0011D6FE /* Common.swift */; settings = {ASSET_TAGS = (); }; };
+		8D0E2C351D03F0BE0090F1C3 /* RadiusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8D0E2C371D03F1B50090F1C3 /* LanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E2C361D03F1B50090F1C3 /* LanguageTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8D7BEC041CF280FB007AF833 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8D8B49ED1CE1688400E9AF8F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D8B49EB1CE1688400E9AF8F /* Interface.storyboard */; };
@@ -31,7 +33,6 @@
 		8DB718381CCB133600F2CBE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DB718361CCB133600F2CBE4 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
 		8DB7183C1CCB238800F2CBE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */; };
 		8DBA58181CF3E04600B3185F /* DetailAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		8DBA581A1CF3EC0000B3185F /* FriendItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58191CF3EC0000B3185F /* FriendItem.swift */; settings = {ASSET_TAGS = (); }; };
 		8DBA58211CF3F52100B3185F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBA58201CF3F52100B3185F /* NotificationCenter.framework */; settings = {ASSET_TAGS = (); }; };
 		8DBA58241CF3F52100B3185F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DBA58231CF3F52100B3185F /* TodayViewController.swift */; };
 		8DBA58271CF3F52100B3185F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DBA58251CF3F52100B3185F /* MainInterface.storyboard */; };
@@ -116,6 +117,8 @@
 
 /* Begin PBXFileReference section */
 		8D0B7BB61D024A5A0011D6FE /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusTableViewController.swift; sourceTree = "<group>"; };
+		8D0E2C361D03F1B50090F1C3 /* LanguageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTableViewController.swift; sourceTree = "<group>"; };
 		8D6CFFD81CCD4BF900774356 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = SmaLert/en.lproj/Main.strings; sourceTree = "<group>"; };
 		8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertViewController.swift; sourceTree = "<group>"; };
 		8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -149,7 +152,6 @@
 		8DB718371CCB133600F2CBE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = SmaLert/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAlertViewController.swift; sourceTree = "<group>"; };
-		8DBA58191CF3EC0000B3185F /* FriendItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendItem.swift; sourceTree = "<group>"; };
 		8DBA581F1CF3F52100B3185F /* SmaLert Today Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SmaLert Today Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DBA58201CF3F52100B3185F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8DBA58231CF3F52100B3185F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
@@ -208,6 +210,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0E2C3C1D03F5B80090F1C3 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */,
+				8D0E2C361D03F1B50090F1C3 /* LanguageTableViewController.swift */,
+				8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */,
+			);
+			name = SettingsViewController;
+			sourceTree = "<group>";
+		};
 		8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -287,13 +299,12 @@
 				8DD6D2641CF4F93B003A1820 /* SmaLert.entitlements */,
 				8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */,
 				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
-				8D7BEC031CF280FB007AF833 /* SettingsViewController.swift */,
+				8D0E2C3C1D03F5B80090F1C3 /* SettingsViewController */,
 				8DB718361CCB133600F2CBE4 /* Main.storyboard */,
 				8DD6D2681CF504C6003A1820 /* LoginViewController.swift */,
 				8D0B7BB61D024A5A0011D6FE /* Common.swift */,
 				8DBA58171CF3E04600B3185F /* DetailAlertViewController.swift */,
 				8D6CFFD91CCD541100774356 /* ListAlertViewController.swift */,
-				8DBA58191CF3EC0000B3185F /* FriendItem.swift */,
 				8DD6D26B1CF543DA003A1820 /* UIView+Designable.swift */,
 				8DB718041CCB11B000F2CBE4 /* LaunchScreen.storyboard */,
 				8DB718341CCB132E00F2CBE4 /* Assets.xcassets */,
@@ -594,13 +605,14 @@
 			files = (
 				8DD6D2691CF504C6003A1820 /* LoginViewController.swift in Sources */,
 				8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */,
+				8D0E2C351D03F0BE0090F1C3 /* RadiusTableViewController.swift in Sources */,
 				8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */,
-				8DBA581A1CF3EC0000B3185F /* FriendItem.swift in Sources */,
 				8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */,
 				8DD6D26D1CF543DA003A1820 /* UIView+Designable.swift in Sources */,
 				8D7BEC041CF280FB007AF833 /* SettingsViewController.swift in Sources */,
 				8DBA58181CF3E04600B3185F /* DetailAlertViewController.swift in Sources */,
 				8D6CFFDA1CCD541100774356 /* ListAlertViewController.swift in Sources */,
+				8D0E2C371D03F1B50090F1C3 /* LanguageTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,11 +714,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App/SmaLert WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SmaLert_WatchKit_App_Extension;
 				INFOPLIST_FILE = "SmaLert WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert.WatchKitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -720,11 +734,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App/SmaLert WatchKit App.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SmaLert_WatchKit_App_Extension;
 				INFOPLIST_FILE = "SmaLert WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert.WatchKitApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -736,10 +752,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App Extension/SmaLert WatchKit App Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SmaLert WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert.WatchKitApp.WatchKitExtension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -751,10 +770,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "SmaLert WatchKit App Extension/SmaLert WatchKit App Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SmaLert WatchKit App Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert.watchkitapp.watchkitextension;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert.WatchKitApp.WatchKitExtension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -849,12 +871,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SmaLert/SmaLert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmaLert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -864,12 +888,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SmaLert/SmaLert.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SmaLert/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = co.sutarwala.kian.SmaLert;
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -926,11 +952,13 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "SmaLert Today Extension/SmaLert Today Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SmaLert Today Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert.SmaLert-Today-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -940,11 +968,13 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "SmaLert Today Extension/SmaLert Today Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "SmaLert Today Extension/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "co.sutarwala.kian.SmaLert.SmaLert-Today-Extension";
+				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.SmaLert.TodayExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
