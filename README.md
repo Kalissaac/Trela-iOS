@@ -1,8 +1,8 @@
-# SmaLert-iOS
+# Trela-iOS
 A smart alert system. Currently in development. Alpha testing coming soon™️. This is the iOS version. For Android go to: https://git.io/vwRsX
 
 
-Copyright © 2016 Kian Sutarwala. All rights reserved.
+Copyright © 2016 Kalissaac Corp. All rights reserved.
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
