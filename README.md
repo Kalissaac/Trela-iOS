@@ -1,6 +1,7 @@
 # Trela-iOS
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
 [![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
+[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/Kalissaac/Trela-iOS)
 [![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
 [![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
 
