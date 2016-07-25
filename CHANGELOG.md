@@ -7,6 +7,9 @@ Additions:
 -Using Firebase for alert data
 -Option to change map type
 -Delay when error notification shows
+Updates:
+-App now works in simulator
+-Sped up build time
 
 - 3.0: 
 Additions / Updates:
