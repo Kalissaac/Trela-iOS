@@ -1,4 +1,9 @@
 # Trela-iOS
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS/blob/master/LICENSE.md)
+[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS/releases)
+[![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS/issues)
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS/releases)
+
 A smart alert system. Currently in development. Alpha testing coming soon™️. This is the iOS version. For Android go to: https://git.io/vwRsX
 
 
