@@ -1,9 +1,9 @@
 # Trela-iOS
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
-[![GitHub release](https://img.shields.io/github/release/qubyte/rubidium.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
-[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)](https://github.com/Kalissaac/Trela-iOS)
-[![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
+[![license](https://img.shields.io/github/license/Kalissaac/Trela-iOS.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
+[![GitHub release](https://img.shields.io/github/release/Kalissaac/Trela-iOS.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
+[![GitHub contributors](https://img.shields.io/github/contributors/Kalissaac/Trela-iOS.svg)](https://github.com/Kalissaac/Trela-iOS)
+[![GitHub issues](https://img.shields.io/github/issues/Kalissaac/Trela-iOS.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
+[![Github All Releases](https://img.shields.io/github/downloads/Kalissaac/Trela-iOS/total.svg?maxAge=2592000)](https://github.com/Kalissaac/Trela-iOS)
 
 A smart alert system. Currently in development. Alpha testing coming soon™️. This is the iOS version. For Android go to: https://git.io/vwRsX
 
