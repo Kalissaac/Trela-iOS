@@ -8,6 +8,7 @@ This is where I keep track of stuff todo for the next update
 ### Additions:
 - [ ] Using Firebase for alert data
 - [ ] Option to change map type
+- [x] Hover bar to hold buttons
 - [x] Delay when error notification shows
 - [x] Shows walkthrough first time app is launched
 
