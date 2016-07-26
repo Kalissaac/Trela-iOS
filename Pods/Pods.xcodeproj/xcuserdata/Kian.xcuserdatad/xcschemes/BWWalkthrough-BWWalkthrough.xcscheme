@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9E0E4CC77754C3A4E2567B984F10EEA1'
-               BlueprintName = 'SWMessages'
+               BlueprintIdentifier = 'A371D9F716AF507FF01A593DD0D9DFDF'
+               BlueprintName = 'BWWalkthrough-BWWalkthrough'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SWMessages.framework'>
+               BuildableName = 'BWWalkthrough.bundle'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

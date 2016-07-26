@@ -13,10 +13,12 @@ pod 'Firebase/Database'
 pod 'FirebaseUI/Database', '~> 0.4'
 pod 'Firebase/Crash'
 pod 'Firebase/Auth'
-# pod 'ISHHoverBar'
+pod 'ISHHoverBar'
 pod 'Presentr'
 pod 'SWMessages'
 # pod 'Localide', '~> 1.0'
 # pod 'SCLAlertView'
+#pod "TTCountryFlagLabel"
+pod "BWWalkthrough"
 
 end

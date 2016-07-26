@@ -4,6 +4,21 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>BWWalkthrough-BWWalkthrough.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>BWWalkthrough.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ISHHoverBar.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Trela.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>056AF0E75C0A0788E9404DCE54B0A5A7</key>
+		<key>06008BDA8C88338D6B6E5BDC162E6148</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F92F75ABC7ACBB10BEA5B67210B74E1</key>
+		<key>07BFB2C0F35D333AE54AFE4067B91D89</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54AAAFEAC78E2AF3684EF7752CE87CD4</key>
+		<key>17664F8F0232329D875EC690EB653867</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>52A150813DE987B3F83FD41FD48805B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E0E4CC77754C3A4E2567B984F10EEA1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A371D9F716AF507FF01A593DD0D9DFDF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
