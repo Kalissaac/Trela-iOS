@@ -1,9 +1,6 @@
 //
 //  ContactImageView
-//  SmaLert
-//
-//  Created by Kalissaac on 6/3/16.
-//  Copyright © 2016 Kalissaac Corp. All rights reserved.
+//  
 //
 //  Copyright © 2016 George Kye. All rights reserved.
 //

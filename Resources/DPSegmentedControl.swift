@@ -1,6 +1,6 @@
 //
 //  SegmentedControl.swift
-//  Segmented
+//  
 //
 //  Created by Dwi Permana Putra on 5/30/16.
 //  Copyright © 2016 Dwi Permana Putra. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 4/10/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.
@@ -29,6 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.redColor()
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Raleway-Medium", size: 20)!]
         UILabel.appearance().substituteFontName = "Raleway-Regular"
+        UILabel.appearance().substituteFontNameMedium = "Raleway-Medium"
         UILabel.appearance().substituteFontNameBold = "Raleway-Medium"
         UITextView.appearance().substituteFontName = "Raleway-Regular"
         UITextField.appearance().substituteFontName = "Raleway-Regular"
@@ -86,10 +87,19 @@ extension UILabel {
         set { self.font = UIFont(name: "Raleway-Regular", size: self.font.pointSize) }
     }
     
-    var substituteFontNameBold : String {
+    var substituteFontNameMedium : String {
         get { return self.font.fontName }
         set {
             if self.font.fontName.rangeOfString("Medium") != nil {
+                self.font = UIFont(name: "Raleway-Medium", size: self.font.pointSize)
+            }
+        }
+    }
+    
+    var substituteFontNameBold : String {
+        get { return self.font.fontName }
+        set {
+            if self.font.fontName.rangeOfString("Bold") != nil {
                 self.font = UIFont(name: "Raleway-Medium", size: self.font.pointSize)
             }
         }

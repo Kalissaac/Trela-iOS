@@ -1,6 +1,6 @@
 //
 //  UIView+Designable.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 5/24/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.

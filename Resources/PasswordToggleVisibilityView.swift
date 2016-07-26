@@ -1,6 +1,6 @@
 //
 //  PasswordToggleVisibilityView.swift
-//  Guidebook
+//  
 //
 //  Created by Mike Sprague on 4/14/16.
 //
