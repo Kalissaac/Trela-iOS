@@ -11,6 +11,7 @@ This is where I keep track of stuff todo for the next update
 - [x] Hover bar to hold buttons
 - [x] Delay when error notification shows
 - [x] Shows walkthrough first time app is launched
+- [ ] Improved the way the app asks for location access and push notifications
 
 ### Updates:
 - [x] App now works in simulator
