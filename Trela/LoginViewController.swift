@@ -1,6 +1,6 @@
 //
 //  LoginViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 5/24/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.
@@ -74,7 +74,7 @@ class LoginViewController: UIViewController {
     @IBAction func noAccount(sender: UIButton) {
         // TODO: Decide whether to allow users to create an account or not.
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://kalissaac.github.io/SmaLert")!)
+        UIApplication.sharedApplication().openURL(NSURL(string: "http://kalissaac.github.io/Trela")!)
     }
 
     /*
