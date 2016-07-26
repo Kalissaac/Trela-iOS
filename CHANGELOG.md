@@ -1,6 +1,6 @@
 # Changelog
 
-##Beta:
+## Beta:
 
 - [In Progress] 4.0:
 Additions:
@@ -11,6 +11,7 @@ Additions:
 Updates:
 -App now works in simulator
 -Sped up build time
+-Updated project name at the top of Swift source files.
 
 - 3.0: 
 Additions / Updates:
