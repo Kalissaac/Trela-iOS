@@ -12,6 +12,7 @@ Updates:
 -App now works in simulator
 -Sped up build time
 -Updated project name at the top of Swift source files.
+-Renamed "Common.swift" to "Delay.swift"
 
 - 3.0: 
 Additions / Updates:
