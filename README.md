@@ -23,3 +23,17 @@ Copyright © 2016 Kalissaac Corp. All rights reserved.
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+# Changelog
+
+## Beta:
+
+- 3.0: 
+Additions / Updates:
+-Using CocoaPods
+-Using Firebase for authentication
+-Using Google AdMob
+-Added menu screen instead of tab bar.
+-Many more things
+Issues:
+-App does not work in the simulator.
