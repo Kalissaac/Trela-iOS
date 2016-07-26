@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import BWWalkthrough
 
-class LoadingViewController: UIViewController {
+class LoadingViewController: UIViewController, BWWalkthroughViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,25 +19,58 @@ class LoadingViewController: UIViewController {
     }
     
     override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(false)
+        super.viewDidAppear(animated)
+        
         ARSLineProgress.show()
-        if ((FIRAuth.auth()?.currentUser) != nil) {
-            delay(5, closure: {
-                ARSLineProgress.hide()
-                let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginLogout")
-                self.presentViewController(viewController!, animated: true, completion: { return })
-            })
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if !userDefaults.boolForKey("walkthroughPresented") {
+            ARSLineProgress.hide()
+            
+            showWalkthrough()
+            
+            userDefaults.setBool(true, forKey: "walkthroughPresented")
+            userDefaults.synchronize()
         } else {
-            delay(5, closure: {
-                ARSLineProgress.hide()
-                self.performSegueWithIdentifier("mapSegue", sender: nil)
-            })
+            if ((FIRAuth.auth()?.currentUser) != nil) {
+                delay(5) {
+                    ARSLineProgress.hide()
+                    let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginLogout")
+                    self.presentViewController(viewController!, animated: true, completion: { return })
+                }
+            } else {
+                delay(5) {
+                    ARSLineProgress.hide()
+                    self.performSegueWithIdentifier("mapSegue", sender: nil)
+                }
+            }
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func showWalkthrough(){
+        
+        // Get view controllers and build the walkthrough
+        let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
+        let walkthrough = stb.instantiateViewControllerWithIdentifier("walk") as! BWWalkthroughViewController
+        let page_one = stb.instantiateViewControllerWithIdentifier("walk1")
+        let page_two = stb.instantiateViewControllerWithIdentifier("walk2")
+        let page_three = stb.instantiateViewControllerWithIdentifier("walk3")
+        let page_four = stb.instantiateViewControllerWithIdentifier("walk4")
+        
+        // Attach the pages to the master
+        walkthrough.delegate = self
+        walkthrough.addViewController(page_one)
+        walkthrough.addViewController(page_two)
+        walkthrough.addViewController(page_three)
+        walkthrough.addViewController(page_four)
+        
+        self.presentViewController(walkthrough, animated: true, completion: nil)
+    }
+    
+    // MARK: - Walkthrough delegate
+    
+    func walkthroughCloseButtonPressed() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
 
