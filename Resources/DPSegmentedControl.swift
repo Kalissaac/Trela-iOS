@@ -306,7 +306,7 @@ class DPSegmentedControl:UIControl {
             
             var labelFrame = self.selectedLabel.bounds
             
-            print("selectedLabel: \(self.selectedLabel.frame.origin.x)")
+            //print("selectedLabel: \(self.selectedLabel.frame.origin.x)")
             
             if self.componentOrientation == ComponentOrientation.TopDown {
                 labelFrame.origin.x = self.selectedLabel.frame.origin.x - iconX + 4 + 13
