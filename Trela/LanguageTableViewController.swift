@@ -1,6 +1,6 @@
 //
 //  LanguageTableViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 6/4/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.

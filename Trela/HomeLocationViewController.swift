@@ -1,6 +1,6 @@
 //
 //  HomeLocationViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 6/21/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.

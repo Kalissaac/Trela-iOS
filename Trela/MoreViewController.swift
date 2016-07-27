@@ -1,6 +1,6 @@
 //
 //  MoreViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 5/20/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.
@@ -72,7 +72,7 @@ class MoreViewController: UITableViewController {
             if indexPath.row == 0 {
                 self.MoreTableView.deselectRowAtIndexPath(indexPath, animated: true)
             } else if indexPath.row == 1 {
-                UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/Kalissaac/SmaLert-iOS/issues")!)
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/Kalissaac/Trela-iOS/issues")!)
                 self.MoreTableView.deselectRowAtIndexPath(indexPath, animated: true)
             } else {
                 return

@@ -1,6 +1,6 @@
 //
 //  ProfilesViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kian on 7/14/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.
@@ -12,7 +12,7 @@ import Firebase
 class ProfilesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var barFrame:CGRect?
-    var dataProfiles = ["SmaLert Profile 1", "SmaLert Profile 2", "SmaLert Profile 3", "SmaLert Profile 4", "SmaLert Profile 5"]
+    var dataProfiles = ["Trela Profile 1", "Trela Profile 2", "Trela Profile 3", "Trela Profile 4", "Trela Profile 5"]
     var dataProfilesAdd = ["Add New Profile..."]
     @IBOutlet weak var profilesTableView: UITableView!
     @IBOutlet weak var profileImageView: ContactImageView!
