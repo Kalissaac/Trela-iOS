@@ -21,10 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize Firebase.
         // Use Firebase library to configure APIs
         FIRApp.configure()
-        let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
-        let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
-        application.registerForRemoteNotifications()
-        application.registerUserNotificationSettings(notificationSettings)
         
         UINavigationBar.appearance().tintColor = UIColor.redColor()
         UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName: UIFont(name: "Raleway-Medium", size: 20)!]
