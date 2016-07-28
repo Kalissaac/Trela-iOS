@@ -7,7 +7,6 @@ This is where I keep track of stuff todo for the next update
 
 ### Additions:
 - [ ] Option to change map type
-- [ ] Hover bar and segmented control move up when ad loads.
 - [x] Hover bar to hold buttons
 - [x] Delay when error notification shows
 - [x] Shows walkthrough first time app is launched
