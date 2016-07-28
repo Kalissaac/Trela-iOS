@@ -32,16 +32,21 @@ class LoadingViewController: UIViewController, BWWalkthroughViewControllerDelega
             userDefaults.setBool(true, forKey: "walkthroughPresented")
             userDefaults.synchronize()
         } else {
-            if ((FIRAuth.auth()?.currentUser) != nil) {
-                delay(5) {
-                    ARSLineProgress.hide()
-                    let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginLogout")
-                    self.presentViewController(viewController!, animated: true, completion: { return })
-                }
-            } else {
-                delay(5) {
-                    ARSLineProgress.hide()
-                    self.performSegueWithIdentifier("mapSegue", sender: nil)
+            FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+                if let user = user {
+                    // User is signed in.
+                    print("User's email: \(user.email!)")
+                    delay(5) {
+                        ARSLineProgress.hide()
+                        self.performSegueWithIdentifier("mapSegue", sender: nil)
+                    }
+                } else {
+                    // No user is signed in.
+                    delay(5) {
+                        ARSLineProgress.hide()
+                        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginLogout")
+                        self.presentViewController(viewController!, animated: true, completion: { return })
+                    }
                 }
             }
         }

@@ -1,6 +1,6 @@
 //
 //  MapViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 4/10/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.
@@ -12,13 +12,19 @@ import CoreLocation
 import Firebase
 import Presentr
 import SWMessages
+import ISHHoverBar
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MenuViewDelegate {
+
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, MenuViewDelegate, GADBannerViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     
-    @IBOutlet weak var infoButton: UIButton!
+    @IBOutlet weak var refreshButton: UIBarButtonItem!
+    
+    @IBOutlet weak var hoverBar: ISHHoverBar!
+    
+    var segmentedControl: DPSegmentedControl!
 
     @IBOutlet weak var googleAdBannerView: GADBannerView!
     
@@ -28,31 +34,40 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         self.locationManager.delegate = self
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         
         googleAdBannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         googleAdBannerView.rootViewController = self
         googleAdBannerView.loadRequest(GADRequest())
         
-        let screen = UIScreen.mainScreen().bounds
-        let segmentedControl = DPSegmentedControl.init(
-            FrameWithoutIcon: CGRectMake(0, 0, screen.width - 44, 15),
-            items: ["Standard", "Satellite", "Hybrid"],
+        let mapBarButton: UIBarButtonItem = MKUserTrackingBarButtonItem(mapView: self.mapView)
+        let infoButton: UIButton = UIButton(type: UIButtonType.DetailDisclosure)
+        infoButton.addTarget(self, action: #selector(self.tapInfo(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        let infoBarButton: UIBarButtonItem = UIBarButtonItem(customView: infoButton)
+        self.hoverBar.items = [mapBarButton, infoBarButton]
+        self.hoverBar.orientation = .Vertical
+        self.hoverBar.tintColor = UIColor.init(hex: "#B60002")
+        
+        segmentedControl = DPSegmentedControl.init(
+            FrameWithoutIcon: CGRectMake(307.5, 566, 235, 37.5),
+            items: ["Standard", "Hybrid", "Satellite"],
             backgroundColor: UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1),
-            thumbColor: UIColor.redColor(),
+            thumbColor: UIColor.init(hex: "#B60002"),
             textColor: UIColor(hex: "#808080"),
             selectedTextColor: UIColor(hex: "#FFFFFF"))
+        segmentedControl.alpha = 0
         
-        segmentedControl.selectedIndex = 1
+        segmentedControl.selectedIndex = 0
         
-        segmentedControl.addTarget(self, action: #selector(self.action(_:)), forControlEvents: .ValueChanged)
-        self.view.addSubview(segmentedControl)
+        segmentedControl.addTarget(self, action: #selector(self.tapSegment(_:)), forControlEvents: .ValueChanged)
+        self.view.insertSubview(self.segmentedControl, belowSubview: self.hoverBar)
         
-        /*let location = LocalideGeoLocation(latitude: 37.776692, longitude: 0.0)
+        /*
+         let location = LocalideGeoLocation(latitude: 37.776692, longitude: 0.0)
         Localide.sharedManager.promptForDirections(toLocation: location, { (usedApp, fromMemory, openedLinkSuccessfully) in
             print("The user picked \(usedApp.name)")
-        })*/
+        })
+        */
         
         /*
         func getDirections(){
@@ -66,27 +81,77 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.segmentedControl?.superview!.bringSubviewToFront(self.segmentedControl)
+        self.hoverBar.superview!.bringSubviewToFront(self.hoverBar)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if !userDefaults.boolForKey("locationAsked") {
+            
+            let presenter: Presentr = {
+            let presenter = Presentr(presentationType: .Alert)
+            presenter.transitionType = .CoverVerticalFromTop // Optional
+            return presenter
+            } ()
+            let titleText = "Can we access your location?"
+            let bodyText = "This way we can show it on the map. We do not save or use your location for any other purpose."
+            let controller = Presentr.alertViewController(title: titleText, body: bodyText)
+            let noAction = AlertAction(title: "Nope", style: .Destructive) {
+                userDefaults.setBool(false, forKey: "locationAsked")
+                userDefaults.synchronize()
+            }
+            let okAction = AlertAction(title: "Sure!", style: .Cancel) {
+                self.locationManager.requestWhenInUseAuthorization()
+                userDefaults.setBool(true, forKey: "locationAsked")
+                userDefaults.synchronize()
+            }
+            controller.addAction(noAction)
+            controller.addAction(okAction)
+            presenter.presentationType = .Alert
+            customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
+            
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func didTapInfoButton(sender: AnyObject) {
+    func tapInfo(sender: AnyObject) {
+        if segmentedControl.alpha == 1 {
+            UIView.animateWithDuration(1, animations: {
+                self.segmentedControl.alpha = 0
+                self.segmentedControl.frame = CGRectMake( 307.5, 562, self.segmentedControl.frame.size.width, self.segmentedControl.frame.size.height );
+            })
+        } else {
+            UIView.animateWithDuration(1, animations: {
+                self.segmentedControl.alpha = 1
+                self.segmentedControl.frame = CGRectMake( 60, 562, self.segmentedControl.frame.size.width, self.segmentedControl.frame.size.height );
+            })
+        }
     }
     
-    func action(sender: DPSegmentedControl){
-        if sender.selectedIndex == 1 {
+    func tapSegment(sender: DPSegmentedControl){
+        if segmentedControl.selectedIndex == 0 {
             mapView.mapType = .Standard
-        } else if sender.selectedIndex == 2 {
-            mapView.mapType = .Satellite
-        } else if sender.selectedIndex == 3 {
+        } else if segmentedControl.selectedIndex == 1 {
             mapView.mapType = .Hybrid
+        } else if segmentedControl.selectedIndex == 2 {
+            mapView.mapType = .Satellite
         } else { return }
     }
     
     @IBAction func didTapRefresh(sender: AnyObject) {
         self.loadView()
+        self.mapView.reloadInputViews()
+    }
+    
+    // MARK: - Ad Banner Delegate Methods
+    func adView(bannerView: GADBannerView!, didFailToReceiveAdWithError error: GADRequestError!) {
+        delay(2) {
+            SWMessage.sharedInstance.showNotificationWithTitle( "Ad Error:", subtitle: "\(error.localizedDescription)", type: .Error )
+        }
     }
     
     // MARK: - Location Delegate Methods
@@ -98,16 +163,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         self.locationManager.stopUpdatingLocation()
     }
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-        SWMessage.sharedInstance.showNotificationWithTitle( "Location Error:", subtitle: "\(error.localizedDescription)", type: .Error )
+        delay(2) { 
+            SWMessage.sharedInstance.showNotificationWithTitle( "Location Error:", subtitle: "\(error.localizedDescription)", type: .Error )
+        }
     }
     func mapView(mapView: MKMapView, didFailToLocateUserWithError error: NSError) {
-        SWMessage.sharedInstance.showNotificationWithTitle( "Location Error:", subtitle: "\(error.localizedDescription)", type: .Error )
+        delay(2) {
+            SWMessage.sharedInstance.showNotificationWithTitle( "Location Error:", subtitle: "\(error.localizedDescription)", type: .Error )
+        }
     }
     func mapViewDidFailLoadingMap(mapView: MKMapView, withError error: NSError) {
-        SWMessage.sharedInstance.showNotificationWithTitle( "Map Error:", subtitle: "\(error.localizedDescription)", type: .Error )
+        delay(2) {
+            SWMessage.sharedInstance.showNotificationWithTitle( "Map Error:", subtitle: "\(error.localizedDescription)", type: .Error )
+        }
     }
     
-    // MARK: - Menu
+    
+    // MARK: - Menu Delegate
     
     lazy var menuViewController: MenuViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("menu") as! MenuViewController
     var overlay: OverlayView?
@@ -170,6 +242,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             controller.addAction(okAction)
             let presenter = Presentr(presentationType: .Alert)
             customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
+            self.navigationItem.title = "Trela"
 
             break
         default: break

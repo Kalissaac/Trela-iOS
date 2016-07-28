@@ -9,8 +9,9 @@
 import UIKit
 import Firebase
 import FirebaseDatabaseUI
+import Presentr
 
-class AlertListViewController: UIViewController, UITableViewDelegate {
+class AlertListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var alertTableView: UITableView!
     lazy var refreshControl: UIRefreshControl = {
@@ -20,8 +21,15 @@ class AlertListViewController: UIViewController, UITableViewDelegate {
         return refreshControl
     }()
     
-    let firebaseRef = FIRDatabase.database().reference()
+    var firebaseRef: FIRDatabaseReference!
+    var database: FIRDatabase!
     var dataSource: FirebaseTableViewDataSource!
+    
+    let dataListAlerts:[String] = ["Trela Alert 1", "Trela Alert 2", "Trela Alert 3", "Trela Alert 4", "Trela Alert 5"]
+    let dataListAlertsDescription:[String] = ["Trela Alert Description 1", "Trela Alert Description 2", "Trela Alert Description 3", "Trela Alert Description 4", "Trela Alert Description 5"]
+    // Make sure that dataListAlerts and dataListAlertsDescription have the same number of strings or the app will crash.
+    var filteredAlerts = [String]()
+    var filteredAlertsDescriptions = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,26 +39,54 @@ class AlertListViewController: UIViewController, UITableViewDelegate {
         
         self.alertTableView.addSubview(self.refreshControl)
         
-        self.dataSource = FirebaseTableViewDataSource(ref: self.firebaseRef, cellReuseIdentifier: "cellAlertList", view: self.alertTableView)
-        self.dataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
-            let snap = obj as! FIRDataSnapshot
-            
-            // Populate cell as you see fit, like as below
-            cell.textLabel?.text = snap.key as String
-        }
-        self.alertTableView.dataSource = self.dataSource
-        
+        self.firebaseRef = FIRDatabase.database().referenceFromURL("https://trela-9a57f.firebaseio.com/alert-text")
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.dataSource = FirebaseTableViewDataSource(ref: self.firebaseRef, cellReuseIdentifier: "cellAlertList", view: self.alertTableView)
-        self.dataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
-            let snap = obj as! FIRDataSnapshot
-            
-            // Populate cell as you see fit, like as below
-            cell.textLabel?.text = snap.key as String
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        //ARSLineProgress.show()
+        /*self.dataSource = FirebaseTableViewDataSource(ref: self.firebaseRef, cellReuseIdentifier: "cellAlertList", view: self.alertTableView)
+         self.dataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
+         let snap = obj as! FIRDataSnapshot
+         
+         // Populate cell as you see fit, like as below
+         cell.textLabel?.text = snap.key as String
+         }
+        self.alertTableView.dataSource = self.dataSource*/
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        if !userDefaults.boolForKey("notificationAsked") {
+            delay(5) {
+                let presenter: Presentr = {
+                    let presenter = Presentr(presentationType: .Alert)
+                    presenter.transitionType = .CoverVerticalFromTop // Optional
+                    return presenter
+                } ()
+                let titleText = "We have to ask you..."
+                let bodyText = "Would you like us to notify you when there is a new alert? We will only ask you this one time."
+                let controller = Presentr.alertViewController(title: titleText, body: bodyText)
+                let noAction = AlertAction(title: "Nope", style: .Destructive) {
+                    
+                    userDefaults.setBool(true, forKey: "notificationAsked")
+                    userDefaults.synchronize()
+                    
+                }
+                let okAction = AlertAction(title: "Sure!", style: .Cancel) {
+                    
+                    let notificationTypes: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
+                    let notificationSettings = UIUserNotificationSettings(forTypes: notificationTypes, categories: nil)
+                    UIApplication.sharedApplication().registerForRemoteNotifications()
+                    UIApplication.sharedApplication().registerUserNotificationSettings(notificationSettings)
+                    
+                    userDefaults.setBool(true, forKey: "notificationAsked")
+                    userDefaults.synchronize()
+                }
+                controller.addAction(noAction)
+                controller.addAction(okAction)
+                presenter.presentationType = .Alert
+                self.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil)
+            }
         }
-        self.alertTableView.dataSource = self.dataSource
     }
     
     override func didReceiveMemoryWarning() {
@@ -73,35 +109,46 @@ class AlertListViewController: UIViewController, UITableViewDelegate {
     
     // MARK: - Table view data source
     
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        if tableView == self.alertTableView {
+            return dataListAlerts.count
+        } else {
+            return filteredAlerts.count
+        }
     }
     
-     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        if tableView == self.alertTableView {
+            let cell = tableView.dequeueReusableCellWithIdentifier("cellAlertList", forIndexPath: indexPath)
+            cell.textLabel?.text = dataListAlerts[indexPath.row]
+            cell.textLabel?.font = UIFont(name: "Raleway-Regular", size: 15)
+            cell.detailTextLabel?.text = dataListAlertsDescription[indexPath.row]
+            cell.detailTextLabel?.font = UIFont(name: "Raleway-Light", size: 11)
+            return cell
+        } else {
+            let cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "cellFilteredAlertList")
+            cell.textLabel?.text = filteredAlerts[indexPath.row]
+            cell.textLabel?.font = UIFont(name: "Raleway-Regular", size: 16)
+            cell.detailTextLabel?.text = filteredAlertsDescriptions[indexPath.row]
+            cell.detailTextLabel?.font = UIFont(name: "Raleway-Light", size: 11)
+            cell.accessoryType = .DetailButton
+            return cell
+        }
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.alertTableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
     func tableView(tableView: UITableView, accessoryButtonTappedForRowWithIndexPath indexPath: NSIndexPath) {
         self.performSegueWithIdentifier("alertDetailsSegue", sender: nil)
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = alertTableView.dequeueReusableCellWithIdentifier("cellAlertList", forIndexPath: indexPath)
-        self.dataSource = FirebaseTableViewDataSource(ref: self.firebaseRef, cellReuseIdentifier: "cellAlertList", view: self.alertTableView)
-        self.dataSource.populateCellWithBlock { (cell: UITableViewCell, obj: NSObject) -> Void in
-            let snap = obj as! FIRDataSnapshot
-            
-            // Populate cell as you see fit, like as below 
-            cell.textLabel?.text = snap.key as String
-        }
-        self.alertTableView.dataSource = self.dataSource
-        return cell
     }
 
     /*

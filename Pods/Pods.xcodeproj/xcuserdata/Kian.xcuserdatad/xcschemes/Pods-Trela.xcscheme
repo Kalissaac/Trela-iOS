@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "056AF0E75C0A0788E9404DCE54B0A5A7"
+               BlueprintIdentifier = "07BFB2C0F35D333AE54AFE4067B91D89"
                BuildableName = "Pods_Trela.framework"
                BlueprintName = "Pods-Trela"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "056AF0E75C0A0788E9404DCE54B0A5A7"
+            BlueprintIdentifier = "07BFB2C0F35D333AE54AFE4067B91D89"
             BuildableName = "Pods_Trela.framework"
             BlueprintName = "Pods-Trela"
             ReferencedContainer = "container:Pods.xcodeproj">

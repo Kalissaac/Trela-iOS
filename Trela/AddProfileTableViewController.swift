@@ -1,6 +1,6 @@
 //
 //  AddProfileTableViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 6/24/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.

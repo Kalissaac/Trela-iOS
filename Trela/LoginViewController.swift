@@ -16,59 +16,51 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: HideShowPasswordTextField!
     @IBOutlet weak var loginButton: UIButton!
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        /*if ((FIRAuth.auth()?.currentUser) != nil) {
-        } else {
-            self.performSegueWithIdentifier("loginSegue", sender: nil)
-        }*/
+        navigationController?.navigationBarHidden = true
     }
 
     @IBAction func didPressLogin(sender: AnyObject) {
-        func show() {}
+        ARSLineProgress.show()
         loginButton.selected = true
         if emailField.text == "" {
-            delay(2, closure: { () -> () in
-                func showFail() {}
+            delay(2) {
+                ARSLineProgress.showFail()
                 self.loginButton.selected = false
-                let title = "Oops!"
-                let body = "You didn't enter an email!"
-                let controller = Presentr.alertViewController(title: title, body: body)
-                let tryAgainAction = AlertAction(title: "Try again", style: .Cancel){}
-                controller.addAction(tryAgainAction)
-                let presenter = Presentr(presentationType: .Alert)
-                self.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil) })
-        } else if passwordField.text == "" {
-            delay(2, closure: { () -> () in
-                func showFail() {}
-                self.loginButton.selected = false
-                let title = "Oops!"
-                let body = "You didn't enter a password!"
-                let controller = Presentr.alertViewController(title: title, body: body)
-                let tryAgainAction = AlertAction(title: "Try again", style: .Cancel){}
-                controller.addAction(tryAgainAction)
-                let presenter = Presentr(presentationType: .Alert)
-                self.customPresentViewController(presenter, viewController: controller, animated: true, completion: nil) })
-        } else {
-            FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!, completion: { (user, error) -> Void in
-                if error == nil {
-                    func showSuccess() {}
-                    self.loginButton.selected = false
-                    self.performSegueWithIdentifier("loginSegue", sender: nil)
-                } else {
-                    func showFail() {}
-                    self.loginButton.selected = false
-                    SWMessage.sharedInstance.showNotificationInViewController ( self, title: "Oops!", subtitle: error?.localizedDescription, image: nil, type: .Error, duration: .Automatic, callback: nil, buttonTitle: "Try again", buttonCallback: {}, atPosition: .Top, canBeDismissedByUser: true )
+                SWMessage.sharedInstance.showNotificationWithTitle(
+                    "Oops!",
+                    subtitle: "You didn't enter an email!",
+                    type: .Error )
                 }
-            })
+        } else if passwordField.text == "" {
+            delay(2) {
+                ARSLineProgress.showFail()
+                self.loginButton.selected = false
+                SWMessage.sharedInstance.showNotificationWithTitle(
+                    "Oops!",
+                    subtitle: "You didn't enter a password!",
+                    type: .Error )
+            }
+        } else {
+            delay(2) {
+                FIRAuth.auth()?.signInWithEmail(self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) -> Void in
+                    if error == nil {
+                        ARSLineProgress.showSuccess()
+                        self.loginButton.selected = false
+                        self.performSegueWithIdentifier("loginSegue", sender: nil)
+                    } else {
+                        ARSLineProgress.showFail()
+                        self.loginButton.selected = false
+                        SWMessage.sharedInstance.showNotificationWithTitle(
+                            "Oops!",
+                            subtitle: error?.localizedDescription,
+                            type: .Error )
+                    }
+                })
+            }
         }
     }
     @IBAction func noAccount(sender: UIButton) {

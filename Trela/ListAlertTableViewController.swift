@@ -1,6 +1,6 @@
 //
 //  ListAlertTableViewController.swift
-//  SmaLert
+//  Trela
 //
 //  Created by Kalissaac on 5/24/16.
 //  Copyright © 2016 Kalissaac Corp. All rights reserved.
@@ -18,13 +18,13 @@ class ListAlertTableViewController: UITableViewController, UISearchResultsUpdati
     var searchController: UISearchController!
     var resultsController = UITableViewController()
     
-    let dataListAlerts:[String] = ["SmaLert Alert 1", "SmaLert Alert 2", "SmaLert Alert 3", "SmaLert Alert 4", "SmaLert Alert 5"]
-    let dataListAlertsDescription:[String] = ["SmaLert Alert Description 1", "SmaLert Alert Description 2", "SmaLert Alert Description 3", "SmaLert Alert Description 4", "SmaLert Alert Description 5"]
+    let dataListAlerts:[String] = ["Trela Alert 1", "Trela Alert 2", "Trela Alert 3", "Trela Alert 4", "Trela Alert 5"]
+    let dataListAlertsDescription:[String] = ["Trela Alert Description 1", "Trela Alert Description 2", "Trela Alert Description 3", "Trela Alert Description 4", "Trela Alert Description 5"]
     // Make sure that dataListAlerts and dataListAlertsDescription have the same number of strings or the app will crash.
     var filteredAlerts = [String]()
     var filteredAlertsDescriptions = [String]()
     
-    //let ref = Firebase(url: "https://smalert-16111.firebaseio.com/alerts")
+    //let ref = Firebase(url: "https://Trela-16111.firebaseio.com/alerts")
 
 
     override func viewDidLoad() {

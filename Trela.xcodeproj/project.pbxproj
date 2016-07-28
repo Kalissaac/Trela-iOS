@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		01966AC3EFFA01933959313A /* Pods_Trela.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03776F91FB044FD7F1FA86C4 /* Pods_Trela.framework */; };
-		8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B7BB61D024A5A0011D6FE /* Common.swift */; };
+		8D0B7BB71D024A5A0011D6FE /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B7BB61D024A5A0011D6FE /* Delay.swift */; };
 		8D0E2C351D03F0BE0090F1C3 /* RadiusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */; };
 		8D0E2C371D03F1B50090F1C3 /* LanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E2C361D03F1B50090F1C3 /* LanguageTableViewController.swift */; };
 		8D0FC93D1D41C47B005CAE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0FC93B1D41C47B005CAE57 /* Main.storyboard */; };
 		8D2951911D1F90E80062C32E /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2951901D1F90E80062C32E /* ProfileDetailViewController.swift */; };
 		8D4035BB1D428F7D00DC34F3 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4035BA1D428F7D00DC34F3 /* AlertListViewController.swift */; };
+		8D5ECEA31D46D1F9009580AC /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5ECEA21D46D1F9009580AC /* Walkthrough.storyboard */; };
 		8D662ED51D195EB50078A359 /* HomeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D662ED41D195EB50078A359 /* HomeLocationViewController.swift */; };
 		8D662ED71D199D810078A359 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D662ED61D199D810078A359 /* LocationSearchTable.swift */; };
 		8D66DC7F1D411B2E007B6A83 /* DPSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D66DC7E1D411B2E007B6A83 /* DPSegmentedControl.swift */; };
@@ -56,7 +57,6 @@
 		8DDF5AEA1D425F88004B718B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF5AE81D425F88004B718B /* MainInterface.storyboard */; };
 		8DDF5AEE1D425F88004B718B /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8DDF5AE21D425F88004B718B /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8DE89C381D0730F7003B3ED9 /* ListAlertTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE89C371D0730F7003B3ED9 /* ListAlertTableViewController.swift */; };
-		8DED9EE61D35BC9500AD0B5B /* TextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DED9EE51D35BC9500AD0B5B /* TextViewController.swift */; };
 		8DED9F081D3688B700AD0B5B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBA58201CF3F52100B3185F /* NotificationCenter.framework */; };
 /* End PBXBuildFile section */
 
@@ -123,24 +123,17 @@
 /* Begin PBXFileReference section */
 		02C99BD55059005B6882ECAF /* Pods-Trela WatchKit App Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela WatchKit App Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trela WatchKit App Extension/Pods-Trela WatchKit App Extension.release.xcconfig"; sourceTree = "<group>"; };
 		03776F91FB044FD7F1FA86C4 /* Pods_Trela.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Trela.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		100DA8933F598E8B41E0846B /* Pods-SmaLertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLertTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLertTests/Pods-SmaLertTests.debug.xcconfig"; sourceTree = "<group>"; };
-		29BA1B628B9CB11F371E4E8B /* Pods-SmaLert WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert WatchKit App/Pods-SmaLert WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
-		29BD98DA382B02CA5E8C06D8 /* Pods-SmaLertUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLertUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLertUITests/Pods-SmaLertUITests.release.xcconfig"; sourceTree = "<group>"; };
-		2E070A4119A54AED86D92D24 /* Pods-SmaLert WatchKit App Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert WatchKit App Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert WatchKit App Extension/Pods-SmaLert WatchKit App Extension.release.xcconfig"; sourceTree = "<group>"; };
-		2E5A68D87DA27E5B44C303D6 /* Pods-SmaLert WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert WatchKit App/Pods-SmaLert WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		2F947F61A559FE63FFB90CEE /* Pods-SmaLert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert/Pods-SmaLert.debug.xcconfig"; sourceTree = "<group>"; };
 		38DFA858A67D731B78175D67 /* Pods-Trela Spotlight Index Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela Spotlight Index Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trela Spotlight Index Extension/Pods-Trela Spotlight Index Extension.release.xcconfig"; sourceTree = "<group>"; };
 		480F272D4D6FFE8E17B674BE /* Pods-Trela.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela/Pods-Trela.debug.xcconfig"; sourceTree = "<group>"; };
-		6B297269505060DE96E5DBB7 /* Pods-SmaLert Today Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert Today Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert Today Extension/Pods-SmaLert Today Extension.release.xcconfig"; sourceTree = "<group>"; };
-		7888F8525D44996CBD9B7BA4 /* Pods-SmaLertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLertUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLertUITests/Pods-SmaLertUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F08B932451AA7F8827B406C /* Pods-Trela Spotlight Index Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela Spotlight Index Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela Spotlight Index Extension/Pods-Trela Spotlight Index Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		88A7E7D71B7AC254B2F87F1A /* libPods-Trela WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trela WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D0B7BB61D024A5A0011D6FE /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Resources/Common.swift; sourceTree = "<group>"; };
+		8D0B7BB61D024A5A0011D6FE /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Delay.swift; path = Resources/Delay.swift; sourceTree = "<group>"; };
 		8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusTableViewController.swift; sourceTree = "<group>"; };
 		8D0E2C361D03F1B50090F1C3 /* LanguageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTableViewController.swift; sourceTree = "<group>"; };
 		8D0FC93C1D41C47B005CAE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8D2951901D1F90E80062C32E /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		8D4035BA1D428F7D00DC34F3 /* AlertListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		8D5ECEA21D46D1F9009580AC /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		8D662ED41D195EB50078A359 /* HomeLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLocationViewController.swift; sourceTree = "<group>"; };
 		8D662ED61D199D810078A359 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		8D66DC7E1D411B2E007B6A83 /* DPSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DPSegmentedControl.swift; path = Resources/DPSegmentedControl.swift; sourceTree = "<group>"; };
@@ -190,22 +183,15 @@
 		8DDF5AE91D425F88004B718B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8DDF5AEB1D425F88004B718B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DE89C371D0730F7003B3ED9 /* ListAlertTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertTableViewController.swift; sourceTree = "<group>"; };
-		8DED9EE51D35BC9500AD0B5B /* TextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewController.swift; sourceTree = "<group>"; };
-		8E43D7F9DAFA3F78423EF021 /* Pods-SmaLert WatchKit App Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert WatchKit App Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert WatchKit App Extension/Pods-SmaLert WatchKit App Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		973CA583A6835581BC2F0C17 /* libPods-Trela Spotlight Index Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trela Spotlight Index Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9914FD779F9C0FFEE82751FD /* Pods-SmaLert Spotlight Index Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert Spotlight Index Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert Spotlight Index Extension/Pods-SmaLert Spotlight Index Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		9A4AF480AB4C1335FC44244B /* Pods-Trela Today Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela Today Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela Today Extension/Pods-Trela Today Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		9DD935EFF5082E47AE98F366 /* libPods-Trela Today Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trela Today Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F578B3E5B4D7C3F99980431 /* Pods-Trela Today Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela Today Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trela Today Extension/Pods-Trela Today Extension.release.xcconfig"; sourceTree = "<group>"; };
-		A98A72F22DF7C33911DD4A5A /* Pods-SmaLert Today Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert Today Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert Today Extension/Pods-SmaLert Today Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		B1A6196482B88449BF083FAE /* Pods-Trela.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trela/Pods-Trela.release.xcconfig"; sourceTree = "<group>"; };
 		C3008B87AEBF2F79B3305074 /* Pods-Trela WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela WatchKit App/Pods-Trela WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
 		D40D28B0B77453480F60FB06 /* Pods-Trela WatchKit App Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela WatchKit App Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela WatchKit App Extension/Pods-Trela WatchKit App Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		E4CFBEAD30FD483213DD4260 /* libPods-Trela WatchKit App Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trela WatchKit App Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC182456BCAEE4545540204 /* Pods-Trela WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Trela WatchKit App/Pods-Trela WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
-		EFA0E006867A96736141CCFE /* Pods-SmaLert Spotlight Index Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert Spotlight Index Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert Spotlight Index Extension/Pods-SmaLert Spotlight Index Extension.release.xcconfig"; sourceTree = "<group>"; };
-		F2CB240FEF1C8EC5CFFB1746 /* Pods-SmaLert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLert.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLert/Pods-SmaLert.release.xcconfig"; sourceTree = "<group>"; };
-		F680663F45A4975BE9470FB7 /* Pods-SmaLertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmaLertTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmaLertTests/Pods-SmaLertTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,7 +243,6 @@
 				8D2951901D1F90E80062C32E /* ProfileDetailViewController.swift */,
 				8D662ED61D199D810078A359 /* LocationSearchTable.swift */,
 				8D662ED41D195EB50078A359 /* HomeLocationViewController.swift */,
-				8DED9EE51D35BC9500AD0B5B /* TextViewController.swift */,
 			);
 			name = MoreViewController;
 			sourceTree = "<group>";
@@ -297,7 +282,7 @@
 				8DAFA6901D2D275100A9FCBD /* Fonts */,
 				8D91125A1D3996560058B569 /* Menu */,
 				8D6BA3291D41C78A0017F976 /* GoogleService-Info.plist */,
-				8D0B7BB61D024A5A0011D6FE /* Common.swift */,
+				8D0B7BB61D024A5A0011D6FE /* Delay.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -345,6 +330,7 @@
 				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
 				8D0E2C3C1D03F5B80090F1C3 /* MoreViewController */,
 				8D0FC93B1D41C47B005CAE57 /* Main.storyboard */,
+				8D5ECEA21D46D1F9009580AC /* Walkthrough.storyboard */,
 				8D73BB2B1D3C486D0078A0BC /* LoadingViewController.swift */,
 				8DD6D2681CF504C6003A1820 /* LoginViewController.swift */,
 				8DDB499B1D157A7300AA1F64 /* DetailAlertViewController.swift */,
@@ -415,20 +401,6 @@
 		DF02E922E0B2B1C6FE19B438 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2F947F61A559FE63FFB90CEE /* Pods-SmaLert.debug.xcconfig */,
-				F2CB240FEF1C8EC5CFFB1746 /* Pods-SmaLert.release.xcconfig */,
-				9914FD779F9C0FFEE82751FD /* Pods-SmaLert Spotlight Index Extension.debug.xcconfig */,
-				EFA0E006867A96736141CCFE /* Pods-SmaLert Spotlight Index Extension.release.xcconfig */,
-				A98A72F22DF7C33911DD4A5A /* Pods-SmaLert Today Extension.debug.xcconfig */,
-				6B297269505060DE96E5DBB7 /* Pods-SmaLert Today Extension.release.xcconfig */,
-				29BA1B628B9CB11F371E4E8B /* Pods-SmaLert WatchKit App.debug.xcconfig */,
-				2E5A68D87DA27E5B44C303D6 /* Pods-SmaLert WatchKit App.release.xcconfig */,
-				8E43D7F9DAFA3F78423EF021 /* Pods-SmaLert WatchKit App Extension.debug.xcconfig */,
-				2E070A4119A54AED86D92D24 /* Pods-SmaLert WatchKit App Extension.release.xcconfig */,
-				100DA8933F598E8B41E0846B /* Pods-SmaLertTests.debug.xcconfig */,
-				F680663F45A4975BE9470FB7 /* Pods-SmaLertTests.release.xcconfig */,
-				7888F8525D44996CBD9B7BA4 /* Pods-SmaLertUITests.debug.xcconfig */,
-				29BD98DA382B02CA5E8C06D8 /* Pods-SmaLertUITests.release.xcconfig */,
 				480F272D4D6FFE8E17B674BE /* Pods-Trela.debug.xcconfig */,
 				B1A6196482B88449BF083FAE /* Pods-Trela.release.xcconfig */,
 				7F08B932451AA7F8827B406C /* Pods-Trela Spotlight Index Extension.debug.xcconfig */,
@@ -589,6 +561,7 @@
 				8D0FC93D1D41C47B005CAE57 /* Main.storyboard in Resources */,
 				8D9112581D39936E0058B569 /* Raleway-Medium.ttf in Resources */,
 				8DB718061CCB11B000F2CBE4 /* LaunchScreen.storyboard in Resources */,
+				8D5ECEA31D46D1F9009580AC /* Walkthrough.storyboard in Resources */,
 				8D9112571D39936E0058B569 /* Raleway-Light.ttf in Resources */,
 				8D6BA32A1D41C78A0017F976 /* GoogleService-Info.plist in Resources */,
 			);
@@ -684,7 +657,6 @@
 				8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */,
 				8D91125E1D39967D0058B569 /* Menu.swift in Sources */,
 				8D0E2C351D03F0BE0090F1C3 /* RadiusTableViewController.swift in Sources */,
-				8DED9EE61D35BC9500AD0B5B /* TextViewController.swift in Sources */,
 				8D9112661D39A1100058B569 /* OverlayView.swift in Sources */,
 				8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */,
 				8D66DC7F1D411B2E007B6A83 /* DPSegmentedControl.swift in Sources */,
@@ -692,7 +664,7 @@
 				8DA753B31D3A7315009AFCD0 /* PasswordToggleVisibilityView.swift in Sources */,
 				8D9112601D39967D0058B569 /* MenuViewController.swift in Sources */,
 				8D4035BB1D428F7D00DC34F3 /* AlertListViewController.swift in Sources */,
-				8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */,
+				8D0B7BB71D024A5A0011D6FE /* Delay.swift in Sources */,
 				8D91125F1D39967D0058B569 /* MenuTableViewCell.swift in Sources */,
 				8D2951911D1F90E80062C32E /* ProfileDetailViewController.swift in Sources */,
 				8DD6D26D1CF543DA003A1820 /* UIView+Designable.swift in Sources */,
@@ -875,6 +847,7 @@
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Resources",
 				);
+				GCC_OPTIMIZATION_LEVEL = 2;
 				INFOPLIST_FILE = "$(SRCROOT)/Trela/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

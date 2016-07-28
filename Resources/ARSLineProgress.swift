@@ -151,19 +151,19 @@ final public class ARSLineProgressConfiguration: NSObject {
     
     public static var checkmarkAnimationDrawDuration: CFTimeInterval = 0.4
     public static var checkmarkLineWidth: CGFloat = 2.0
-    public static var checkmarkColor: CGColor = UIColor.ars_colorWithRGB(130.0, green: 149.0, blue: 173.0, alpha: 1.0).CGColor
+    public static var checkmarkColor: CGColor = UIColor.ars_colorWithRGB(218.0, green: 86.0, blue: 80.0, alpha: 1.0).CGColor
     
     public static var successCircleAnimationDrawDuration: CFTimeInterval = 0.7
     public static var successCircleLineWidth: CGFloat = 2.0
-    public static var successCircleColor: CGColor = UIColor.ars_colorWithRGB(130.0, green: 149.0, blue: 173.0, alpha: 1.0).CGColor
+    public static var successCircleColor: CGColor = UIColor.ars_colorWithRGB(218.0, green: 86.0, blue: 80.0, alpha: 1.0).CGColor
     
     public static var failCrossAnimationDrawDuration: CFTimeInterval = 0.4
     public static var failCrossLineWidth: CGFloat = 2.0
-    public static var failCrossColor: CGColor = UIColor.ars_colorWithRGB(130.0, green: 149.0, blue: 173.0, alpha: 1.0).CGColor
+    public static var failCrossColor: CGColor = UIColor.ars_colorWithRGB(218.0, green: 86.0, blue: 80.0, alpha: 1.0).CGColor
     
     public static var failCircleAnimationDrawDuration: CFTimeInterval = 0.7
     public static var failCircleLineWidth: CGFloat = 2.0
-    public static var failCircleColor: CGColor = UIColor.ars_colorWithRGB(130.0, green: 149.0, blue: 173.0, alpha: 1.0).CGColor
+    public static var failCircleColor: CGColor = UIColor.ars_colorWithRGB(218.0, green: 86.0, blue: 80.0, alpha: 1.0).CGColor
     
     /**
         Use this function to restore all properties to their default values.

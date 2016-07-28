@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>FirebaseAppDelegateProxyEnabled</key>
+	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDocumentTypes</key>
@@ -65,7 +67,7 @@
 		<string>MKDirectionsModeTrain</string>
 	</array>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>In order to display your location, you must allow Trela access.</string>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Raleway-Regular.ttf</string>
