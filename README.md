@@ -28,12 +28,31 @@ Copyright © 2016 Kalissaac Corp. All rights reserved.
 
 ## Beta:
 
-- 3.0: 
-Additions / Updates:
--Using CocoaPods
--Using Firebase for authentication
--Using Google AdMob
--Added menu screen instead of tab bar.
--Many more things
-Issues:
--App does not work in the simulator.
+### Release 4.0:
+
+### Additions:
+- [x] Option to change map type
+- [x] Hover bar to hold buttons
+- [x] Delay when error notification shows
+- [x] Shows walkthrough first time app is launched
+- [x] Improved the way the app asks for location access and notifications
+
+### Updates:
+- [x] App now works in simulator
+- [x] Sped up build time
+- [x] Updated project name at the top of Swift source files.
+- [x] Renamed "Common.swift" to "Delay.swift"
+- [x] Cleaned up the login page
+
+--
+
+### Release 3.0:
+
+### Additions / Updates:
+- [x] Using CocoaPods
+- [x] Using Firebase for authentication
+- [x] Using Google AdMob
+- [x] Added menu screen instead of tab bar.
+- [x] Many more things
+### Issues:
+- [x] App does not work in the simulator.
