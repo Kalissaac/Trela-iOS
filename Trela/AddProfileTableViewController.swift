@@ -14,19 +14,19 @@ class AddProfileTableViewController: UITableViewController, UITextFieldDelegate 
     @IBOutlet weak var idField: UITextField!
     @IBOutlet weak var codeField: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBAction func cancelButton(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func cancelButton(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
-    @IBAction func didTapSave(sender: AnyObject) {
+    @IBAction func didTapSave(_ sender: AnyObject) {
         // TODO: - Add new profile here
         if idField.text == "" && codeField.text == "" {
-            self.dismissViewControllerAnimated(true, completion: nil)
+            self.dismiss(animated: true, completion: nil)
         } else {
-            let alertController = UIAlertController(title: "Oops!", message: "The profile identifier and/or verification code you entered were not reconized!", preferredStyle: .Alert)
-            let cancelAction = UIAlertAction(title: "Try again", style: .Cancel) { (action) in
+            let alertController = UIAlertController(title: "Oops!", message: "The profile identifier and/or verification code you entered were not reconized!", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Try again", style: .cancel) { (action) in
             }
             alertController.addAction(cancelAction)
-            self.presentViewController(alertController, animated: true) {
+            self.present(alertController, animated: true) {
             }
         }
     }
@@ -46,7 +46,7 @@ class AddProfileTableViewController: UITableViewController, UITextFieldDelegate 
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if textField == idField { // Switch focus to other text field
             codeField.becomeFirstResponder()
@@ -56,9 +56,9 @@ class AddProfileTableViewController: UITableViewController, UITextFieldDelegate 
 
     // MARK: - Table view data source
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 1 {
-            self.addProfileTableView.deselectRowAtIndexPath(indexPath, animated: true)
+            self.addProfileTableView.deselectRow(at: indexPath, animated: true)
         }
     }
 

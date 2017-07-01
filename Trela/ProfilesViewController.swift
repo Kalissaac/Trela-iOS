@@ -8,25 +8,49 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
+
+struct profile {
+    
+    let title : String!
+}
 
 class ProfilesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var barFrame:CGRect?
-    var dataProfiles = ["Trela Profile 1", "Trela Profile 2", "Trela Profile 3", "Trela Profile 4", "Trela Profile 5"]
     var dataProfilesAdd = ["Add New Profile..."]
     @IBOutlet weak var profilesTableView: UITableView!
-    @IBOutlet weak var profileImageView: ContactImageView!
     
+    @IBOutlet var profileImageView: ContactImageView!
+    
+    var profiles = [profile]()
     
      override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
         
-        /*profileImageView.setImageText(text: (FIRAuth.auth()?.currentUser?.email)!, backgroundImage: UIImage(named: "Person"), username: true, textColor: UIColor.whiteColor(), fillColor: UIColor.blackColor(), circle: true)
-        */
+        newProfile()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let databaseRef = Database.database().reference()
+        databaseRef.child("Profile").queryOrderedByKey().observe(.childAdded, with: {
+            snapshot in
+            
+            let value = snapshot.value as? NSDictionary
+
+            let title = value?["title"] as! String
+            
+            self.profiles.insert(profile(title: title), at: 0)
+            self.profilesTableView.reloadData()
+        })
+        
+        profileImageView.setImageText((Auth.auth().currentUser?.email)!, backgroundImage: UIImage(named: "Person"), username: true, textColor: UIColor.white, fillColor: UIColor.black, circle: true)
     }
 
      override func didReceiveMemoryWarning() {
@@ -34,36 +58,47 @@ class ProfilesViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
+    func newProfile() {
+        
+        let title = "Example Profile"
+        let identifier = "Trela.example.com"
+        let verificationCode = "123456"
+        
+        let profile: [String: AnyObject] = ["title" : title as AnyObject, "identifier" : identifier as AnyObject, "verificationCode" : verificationCode as AnyObject]
+        let databaseRef = Database.database().reference()
+        databaseRef.child("Profiles").childByAutoId().setValue(profile)
+    }
+    
     // MARK: - Table view data source
     
-     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 3
     }
     
-     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else if section == 1 {
-            return dataProfiles.count
+            return profiles.count
         } else {
             return dataProfilesAdd.count
         }
     }
     
-     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cellProfileAbout", forIndexPath: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfileAbout", for: indexPath)
             //cell.imageView.setImageText(text: (FIRAuth.auth()?.currentUser?.email)!, backgroundImage: UIImage(named: "Person"), username: true, textColor: UIColor.whiteColor(), fillColor: UIColor.blackColor(), circle: true)
-            cell.textLabel?.text = FIRAuth.auth()?.currentUser?.email
+            cell.textLabel?.text = Auth.auth().currentUser?.email
             return cell
         } else if indexPath.section == 1 {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cellProfile", forIndexPath: indexPath)
-            cell.textLabel?.text = dataProfiles[indexPath.row]
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfile", for: indexPath)
+            cell.textLabel?.text = profiles[indexPath.row].title
             cell.textLabel?.font = UIFont(name: "Raleway-Regular", size: 16)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCellWithIdentifier("cellProfileAdd", forIndexPath: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfileAdd", for: indexPath)
             cell.textLabel?.text = dataProfilesAdd[indexPath.row]
             cell.textLabel?.font = UIFont(name: "Raleway-Regular", size: 16)
             return cell
@@ -72,7 +107,7 @@ class ProfilesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     
     //  to support conditional editing of the table view.
-     func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         if indexPath.section == 0 {
             return true
@@ -82,17 +117,17 @@ class ProfilesViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     //  to support editing the table view.
-     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
+     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
             // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
     }
     
-     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.profilesTableView.deselectRowAtIndexPath(indexPath, animated: true)
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.profilesTableView.deselectRow(at: indexPath, animated: true)
     }
     
     /*

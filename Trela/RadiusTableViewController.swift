@@ -10,15 +10,14 @@ import UIKit
 
 class RadiusTableViewController: UITableViewController {
     
-    var barFrame:CGRect?
-    @IBOutlet var radiusTableView: UITableView!
-    var radiusId:Int!
+    var lastSelection: IndexPath!
+    let userDefaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
@@ -29,81 +28,51 @@ class RadiusTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        // self.tabBarController?.tabBar.hidden=true
-        if let tabBar=self.tabBarController?.tabBar {
-            self.barFrame=tabBar.frame
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                let newBarFrame=CGRectMake(self.barFrame!.origin.x, self.view.frame.size.height, self.barFrame!.size.width, self.barFrame!.size.height)
-                tabBar.frame=newBarFrame
-                }, completion: { (Bool) -> Void in
-                    tabBar.hidden=true
-            })
-        }
-    }
-    
-    override func viewWillDisappear(animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.hidden=false;
-        if self.barFrame != nil {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                let newBarFrame=CGRectMake(self.barFrame!.origin.x, self.view.frame.size.height-self.barFrame!.size.height, self.view.frame.size.width, self.barFrame!.size.height)
-                self.tabBarController?.tabBar.frame=newBarFrame
-            })
-        }
-    }
-
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.row == 0 {
-            radiusId = 0
-            print("1 mile is the chosen radius. (radiusId: \(radiusId))")
-            self.radiusTableView.deselectRowAtIndexPath(indexPath, animated: true)
-        } else if indexPath.row == 1 {
-            radiusId = 1
-            print("2 miles is the chosen radius. (radiusId: \(radiusId))")
-            self.radiusTableView.deselectRowAtIndexPath(indexPath, animated: true)
-        } else if indexPath.row == 2 {
-            radiusId = 2
-            print("5 miles is the chosen radius. (radiusId: \(radiusId))")
-            self.radiusTableView.deselectRowAtIndexPath(indexPath, animated: true)
-        } else if indexPath.row == 3 {
-            radiusId = 3
-            print("10 miles is the chosen radius. (radiusId: \(radiusId))")
-            self.radiusTableView.deselectRowAtIndexPath(indexPath, animated: true)
-        } else {
-            radiusId = 4
-            print("15 miles is the chosen radius. (radiusId: \(radiusId))")
-            self.radiusTableView.deselectRowAtIndexPath(indexPath, animated: true)
-        }
-    }
-    
     // MARK: - Table view data source
-
-    /* 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedCell = self.tableView!.cellForRow(at: indexPath)
+        let selectedRadiusName = selectedCell!.textLabel!.text!
+        
+        userDefaults.set(indexPath.row, forKey: "radius")
+        userDefaults.synchronize()
+        
+        print("\(selectedRadiusName) is the chosen radius.")
+        
+        if self.lastSelection != nil {
+            self.tableView.cellForRow(at: self.lastSelection)?.accessoryType = .none
+        }
+        self.tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        self.lastSelection = indexPath
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
-    } 
-    */
+        return 1
+    }
 
-    /* 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
-    } 
-    */
+        return radiusIDs.count
+    }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: "cellRadius", for: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = radiusIDs[indexPath.row]
+        
+        if userDefaults.string(forKey: "radius") == "\(indexPath.row)" {
+            cell.accessoryType = .checkmark
+            self.lastSelection = indexPath
+        }
         cell.textLabel?.font = UIFont(name: "Raleway-Regular", size: 16)
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

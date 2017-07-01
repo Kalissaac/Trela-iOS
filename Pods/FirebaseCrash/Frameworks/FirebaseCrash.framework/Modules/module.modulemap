@@ -1,13 +1,11 @@
 framework module FirebaseCrash {
-
-  export *
-
   umbrella header "FirebaseCrash.h"
-
-  header "FIRCrashLog.h"
-
+  export *
+  module * { export *}
+  link "c++"
+  link "sqlite3"
+  link "z"
   link framework "CoreTelephony"
   link framework "SystemConfiguration"
-
-  link "c++"
+  link framework "UIKit"
 }

@@ -8,61 +8,41 @@
 
 import Foundation
 
-/**
- Describes the transition animation for presenting the view controller. Includes the default system transitions and custom ones.
- 
- - CoverVertical:            System provided transition style. UIModalTransitionStyle.CoverVertical
- - CrossDissolve:            System provided transition style. UIModalTransitionStyle.CrossDissolve
- - FlipHorizontal:           System provided transition style. UIModalTransitionStyle.FlipHorizontal
- - CoverVerticalFromTop:     Custom transition animation. Slides in vertically from top.
- - CoverHorizontalFromLeft:  Custom transition animation. Slides in horizontally from left.
- - CoverHorizontalFromRight: Custom transition animation. Slides in horizontally from  right.
- */
-public enum TransitionType{
-    
-    // System provided
-    case CoverVertical
-    case CrossDissolve
-    case FlipHorizontal
-    // Custom
-    case CoverVerticalFromTop
-    case CoverHorizontalFromRight
-    case CoverHorizontalFromLeft
-    
-    /**
-     Maps the 'TransitionType' to the system provided transition. If this returns nil it should be taken to mean that it's a custom transition, and should call the animation() method.
-     
-     - returns: UIKit transition style
-     */
-    func systemTransition() -> UIModalTransitionStyle?{
+/// Describes the transition animation for presenting the view controller.
+///
+/// - crossDissolve: Crossfade animation transition.
+/// - coverVertical: Slides in vertically from bottom.
+/// - coverVerticalFromTop: Slides in vertically from top.
+/// - coverHorizontalFromRight: Slides in horizontally from right.
+/// - coverHorizontalFromLeft: Slides in horizontally from left.
+/// - custom: Custom transition animation provided by user.
+public enum TransitionType {
+
+    case crossDissolve
+    case coverVertical
+    case coverVerticalFromTop
+    case coverHorizontalFromRight
+    case coverHorizontalFromLeft
+    case custom(PresentrAnimation)
+
+    /// Associates a custom transition type to the class responsible for its animation.
+    ///
+    /// - Returns: PresentrAnimation subclass which conforms to 'UIViewControllerAnimatedTransitioning' to be used for the animation transition.
+    func animation() -> PresentrAnimation {
         switch self {
-        case .CoverVertical:
-            return UIModalTransitionStyle.CoverVertical
-        case .CrossDissolve:
-            return UIModalTransitionStyle.CrossDissolve
-        case .FlipHorizontal:
-            return UIModalTransitionStyle.FlipHorizontal
-        default:
-            return nil
-        }
-    }
-    
-    /**
-     Associates a custom transition type to the class responsible for its animation.
-     
-     - returns: Object conforming to the 'PresentrAnimation' protocol, which in turn conforms to 'UIViewControllerAnimatedTransitioning'. Use this object for the custom animation.
-     */
-    func animation() -> PresentrAnimation?{
-        switch self {
-        case .CoverVerticalFromTop:
+        case .crossDissolve:
+            return CrossDissolveAnimation()
+        case .coverVertical:
+            return CoverVerticalAnimation()
+        case .coverVerticalFromTop:
             return CoverVerticalFromTopAnimation()
-        case .CoverHorizontalFromRight:
+        case .coverHorizontalFromRight:
             return CoverHorizontalAnimation(fromRight: true)
-        case .CoverHorizontalFromLeft:
+        case .coverHorizontalFromLeft:
             return CoverHorizontalAnimation(fromRight: false)
-        default:
-            return nil
+        case .custom(let animation):
+            return animation
         }
     }
-    
+
 }

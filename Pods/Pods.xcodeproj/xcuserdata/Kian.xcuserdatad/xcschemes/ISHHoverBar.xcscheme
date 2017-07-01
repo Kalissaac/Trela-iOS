@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '06008BDA8C88338D6B6E5BDC162E6148'
+               BlueprintIdentifier = '0EB9E3E33D1BD3DBA85D570B0C330457'
                BlueprintName = 'ISHHoverBar'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'ISHHoverBar.framework'>

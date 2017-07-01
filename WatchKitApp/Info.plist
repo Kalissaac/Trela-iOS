@@ -17,7 +17,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>Beta 4.0</string>
+	<string>Beta 5.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -28,7 +28,7 @@
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
 	</array>
 	<key>WKCompanionAppBundleIdentifier</key>
-	<string>corp.Kalissaac.Trela</string>
+	<string>corp.Kalissaac.Trela-iOS</string>
 	<key>WKWatchKitApp</key>
 	<true/>
 </dict>

@@ -18,11 +18,54 @@ There are 4 different types already set up for you: Success, Error, Warning, Mes
 
 # Installation
 
-## From Carthage
-SWMessages is available through [Carthage](https://github.com/Carthage/Carthage). To install
-it, simply add the following line to your Cartfile:
+## Swift Compatibility
 
-github "saiprasanna/SWMessages"
+    v0.2.0 -> Swift 2.2
+    v0.3.0 -> Swift 3.0
+
+## Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.
+
+You can install Carthage with [Homebrew](http://brew.sh/) using the following command:
+
+```bash
+$ brew update
+$ brew install carthage
+```
+
+To integrate SWMessage into your Xcode project using Carthage, specify it in your `Cartfile`:
+
+```ogdl
+github "sai-prasanna/SWMessages" ~> 0.3.0
+```
+
+Run `carthage update` to build the framework and drag the built `SWMessages.framework` into your Xcode project.
+
+## CocoaPods
+
+[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects. You can install it with the following command:
+
+```bash
+$ gem install cocoapods
+```
+
+To integrate SWMessages into your Xcode project using CocoaPods, specify it in your `Podfile`:
+
+```ruby
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '8.0'
+use_frameworks!
+
+target '<Your Target Name>' do
+    pod 'SWMessages', '~> 0.3.0'
+end
+```
+
+Then, run the following command:
+
+```bash
+$ pod install
+```
 
 ## Manually
 Copy the source files and asset files from SWMessages directory to your project. It is the only way to make this work in iOS 7.
@@ -39,7 +82,7 @@ To show notifications use the following code:
 SWMessage.sharedInstance.showNotificationWithTitle(
     "Title",
     subtitle: "Subtitle",
-    type: .Success
+    type: .success
 )
 
 
@@ -49,14 +92,14 @@ SWMessage.sharedInstance.showNotificationInViewController (
     title: "Update available",
     subtitle: "Please update our app. We added AI to replace you",
     image: nil,
-    type: .Success,
-    duration: .Automatic,
+    type: .success,
+    duration: .automatic,
     callback: nil,
     buttonTitle: "Update",
     buttonCallback: { 
-      SWMessage.showNotificationWithTitle("Thanks for updating", type: .Success)
+      SWMessage.showNotificationWithTitle("Thanks for updating", type: .success)
     },
-    atPosition: .Top,
+    atPosition: .top,
     canBeDismissedByUser: true 
 )
 
@@ -97,8 +140,8 @@ The following properties can be set when creating a new notification:
 * **title**: The title of the notification view
 * **subtitle**: The text that is displayed underneath the title (optional)
 * **image**: A custom icon image that is used instead of the default one (optional)
-* **type**: The notification type (Message, Warning, Error, Success)
-* **duration**: The duration the notification should be displayed (Automatic, Endless, Custom)
+* **type**: The notification type (message, warning, error, success)
+* **duration**: The duration the notification should be displayed (automatic, endless, custom)
 * **callback**: The block that should be executed, when the user dismissed the message by tapping on it or swiping it to the top.
 * **buttonTitle**: The title of button to be shown in right.
 * **buttonCallback**: The block that should be executed, when user taps the right button.

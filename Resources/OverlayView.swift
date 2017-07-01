@@ -9,20 +9,20 @@
 import UIKit
 
 enum Style: Int {
-    case Light, Dark
+    case light, dark
 }
 
 protocol OverlayViewDelegate {
-    func didDismissView(view: OverlayView)
+    func didDismissView(_ view: OverlayView)
 }
 
 class OverlayView: UIView {
     
     var delegate: OverlayViewDelegate?
-    var style: Style = .Light
-    let statusBarStyle: UIStatusBarStyle = UIApplication.sharedApplication().statusBarStyle
+    var style: Style = .light
+    let statusBarStyle: UIStatusBarStyle = UIApplication.shared.statusBarStyle
     var closeButton: UIButton!
-    let backgroundcolor = UIColor.clearColor()
+    let backgroundcolor = UIColor.clear
 
     var presentationAnimation: CAAnimationGroup {
         get{
@@ -48,10 +48,10 @@ class OverlayView: UIView {
     }
     
     required init() {
-        super.init(frame: CGRectZero)
-        let frame = UIScreen.mainScreen().bounds
+        super.init(frame: CGRect.zero)
+        let frame = UIScreen.main.bounds
         self.frame = frame
-        self.opaque = false
+        self.isOpaque = false
         self.backgroundColor = backgroundcolor
     }
     
@@ -61,18 +61,18 @@ class OverlayView: UIView {
     
     func open() {
         layer.removeAllAnimations()
-        var window = UIApplication.sharedApplication().keyWindow
+        var window = UIApplication.shared.keyWindow
         
         if window == nil {
-            window = UIApplication.sharedApplication().windows.first
+            window = UIApplication.shared.windows.first
         }
         
         if closeButton == nil {
-            closeButton = UIButton(type: .System)
-            closeButton.frame = CGRectMake(CGRectGetMaxX(self.frame) - 60, 30, 33, 33)
-            let image = UIImage(named: "close-Icon")?.imageWithRenderingMode(.AlwaysTemplate)
-            closeButton.setImage(image, forState: .Normal)
-            closeButton.addTarget(self, action: #selector(dismissView), forControlEvents: .TouchDown)
+            closeButton = UIButton(type: .system)
+            closeButton.frame = CGRect(x: self.frame.maxX - 60, y: 30, width: 33, height: 33)
+            let image = UIImage(named: "close-Icon")?.withRenderingMode(.alwaysTemplate)
+            closeButton.setImage(image, for: UIControlState())
+            closeButton.addTarget(self, action: #selector(dismissView), for: .touchDown)
         }
         
         self.addSubview(closeButton)
@@ -83,31 +83,31 @@ class OverlayView: UIView {
          set UIViewControllerBasedStatusBarAppearance = No in info.plist
          */
         switch style {
-        case .Dark:
-            closeButton.tintColor = UIColor.whiteColor()
-            UIApplication.sharedApplication().statusBarStyle = .LightContent
+        case .dark:
+            closeButton.tintColor = UIColor.white
+            UIApplication.shared.statusBarStyle = .lightContent
             break
         default:
-            closeButton.tintColor = UIColor.darkGrayColor()
-            UIApplication.sharedApplication().statusBarStyle = .Default
+            closeButton.tintColor = UIColor.darkGray
+            UIApplication.shared.statusBarStyle = .default
         }
         
-        layer.addAnimation(presentationAnimation, forKey: "present")
+        layer.add(presentationAnimation, forKey: "present")
         window?.subviews.first?.addSubview(self)
         
     }
     
     func dismissView() {
         
-        UIView.animateWithDuration(0.3, animations: {
-            self.transform = CGAffineTransformMakeScale(0.8, 0.8)
+        UIView.animate(withDuration: 0.3, animations: {
+            self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             self.alpha = 0.0
-        }) { [unowned self]  (comlete) in
+        }, completion: { [unowned self]  (comlete) in
             self.removeFromSuperview()
             self.alpha = 1
-            self.transform = CGAffineTransformIdentity
-            UIApplication.sharedApplication().statusBarStyle = self.statusBarStyle
-        }
+            self.transform = CGAffineTransform.identity
+            UIApplication.shared.statusBarStyle = self.statusBarStyle
+        }) 
         
         delegate?.didDismissView(self)
     }

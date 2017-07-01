@@ -9,22 +9,6 @@
 import UIKit
 
 @IBDesignable class DesignableImageView: UIImageView { }
-@IBDesignable class DesignableButton: UIButton { }
-@IBDesignable class DesignableTabBarItem: UITabBarItem { }
-@IBDesignable class DesignableTextField: UITextField {
-
-  @IBInspectable
-  var placeholderTextColor: UIColor = UIColor.lightGrayColor() {
-    didSet {
-      guard let placeholder = placeholder else {
-        return
-      }
-      
-      attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSForegroundColorAttributeName: placeholderTextColor])
-    }
-  }
-  
-}
 
 extension UIView {
   
@@ -42,11 +26,11 @@ extension UIView {
   @IBInspectable
   var borderColor: UIColor? {
     get {
-      return layer.borderColor != nil ? UIColor(CGColor: layer.borderColor!) : nil
+      return layer.borderColor != nil ? UIColor(cgColor: layer.borderColor!) : nil
     }
     
     set {
-      layer.borderColor = newValue?.CGColor
+      layer.borderColor = newValue?.cgColor
     }
   }
   
@@ -69,7 +53,7 @@ extension UIView {
     }
     
     set {
-      if let makeCircular = newValue where makeCircular {
+      if let makeCircular = newValue, makeCircular {
         cornerRadius = min(bounds.width, bounds.height) / 2.0
       }
     }

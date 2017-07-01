@@ -9,17 +9,19 @@
 import Foundation
 
 extension PresentationType: Equatable { }
-public func ==(lhs: PresentationType, rhs: PresentationType) -> Bool{
-    switch (lhs, rhs){
-    case (let .Custom(lhsWidth, lhsHeight, lhsCenter), let .Custom(rhsWidth, rhsHeight, rhsCenter)):
+public func == (lhs: PresentationType, rhs: PresentationType) -> Bool {
+    switch (lhs, rhs) {
+    case (let .custom(lhsWidth, lhsHeight, lhsCenter), let .custom(rhsWidth, rhsHeight, rhsCenter)):
         return lhsWidth == rhsWidth && lhsHeight == rhsHeight && lhsCenter == rhsCenter
-    case (.Alert, .Alert):
+    case (.alert, .alert):
         return true
-    case (.Popup, .Popup):
+    case (.popup, .popup):
         return true
-    case (.TopHalf, .TopHalf):
+    case (.topHalf, .topHalf):
         return true
-    case (.BottomHalf, .BottomHalf):
+    case (.bottomHalf, .bottomHalf):
+        return true
+    case (.dynamic, .dynamic):
         return true
     default:
         return false
@@ -27,15 +29,15 @@ public func ==(lhs: PresentationType, rhs: PresentationType) -> Bool{
 }
 
 extension ModalSize: Equatable { }
-public func ==(lhs: ModalSize, rhs: ModalSize) -> Bool{
-    switch (lhs, rhs){
-    case (let .Custom(lhsSize), let .Custom(rhsSize)):
+public func == (lhs: ModalSize, rhs: ModalSize) -> Bool {
+    switch (lhs, rhs) {
+    case (let .custom(lhsSize), let .custom(rhsSize)):
         return lhsSize == rhsSize
-    case (.Default, .Default):
+    case (.default, .default):
         return true
-    case (.Half, .Half):
+    case (.half, .half):
         return true
-    case (.Full, .Full):
+    case (.full, .full):
         return true
     default:
         return false
@@ -43,15 +45,15 @@ public func ==(lhs: ModalSize, rhs: ModalSize) -> Bool{
 }
 
 extension ModalCenterPosition: Equatable { }
-public func ==(lhs: ModalCenterPosition, rhs: ModalCenterPosition) -> Bool{
-    switch (lhs, rhs){
-    case (let .Custom(lhsCenterPoint), let .Custom(rhsCenterPoint)):
+public func == (lhs: ModalCenterPosition, rhs: ModalCenterPosition) -> Bool {
+    switch (lhs, rhs) {
+    case (let .custom(lhsCenterPoint), let .custom(rhsCenterPoint)):
         return lhsCenterPoint.x == rhsCenterPoint.x && lhsCenterPoint.y == rhsCenterPoint.y
-    case (.Center, .Center):
+    case (.center, .center):
         return true
-    case (.TopCenter, .TopCenter):
+    case (.topCenter, .topCenter):
         return true
-    case (.BottomCenter, .BottomCenter):
+    case (.bottomCenter, .bottomCenter):
         return true
     default:
         return false

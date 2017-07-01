@@ -7,9 +7,9 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>947405426814-lip6uhvd10llqln247vb1clc1p9h8699.apps.googleusercontent.com</string>
+	<string>947405426814-epetcdpcse60disp5unmgujq84980eph.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.947405426814-lip6uhvd10llqln247vb1clc1p9h8699</string>
+	<string>com.googleusercontent.apps.947405426814-epetcdpcse60disp5unmgujq84980eph</string>
 	<key>API_KEY</key>
 	<string>AIzaSyB62ZKUSVuPE-GQMs3DQ6HdTt0KHsh6CZs</string>
 	<key>GCM_SENDER_ID</key>
@@ -17,7 +17,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>corp.Kalissaac.Trela</string>
+	<string>corp.Kalissaac.Trela-iOS</string>
 	<key>PROJECT_ID</key>
 	<string>trela-9a57f</string>
 	<key>STORAGE_BUCKET</key>
@@ -33,7 +33,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:947405426814:ios:a913d4bd1a8a341d</string>
+	<string>1:947405426814:ios:73306c10ce2880f3</string>
 	<key>DATABASE_URL</key>
 	<string>https://trela-9a57f.firebaseio.com</string>
 </dict>

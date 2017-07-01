@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import BWWalkthrough
+import ARSLineProgress
 
 class LoadingViewController: UIViewController, BWWalkthroughViewControllerDelegate {
 
@@ -18,34 +19,36 @@ class LoadingViewController: UIViewController, BWWalkthroughViewControllerDelega
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
         ARSLineProgress.show()
         
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        if !userDefaults.boolForKey("walkthroughPresented") {
+        let userDefaults = UserDefaults.standard
+        if !userDefaults.bool(forKey: "walkthroughPresented") {
             ARSLineProgress.hide()
             
             showWalkthrough()
             
-            userDefaults.setBool(true, forKey: "walkthroughPresented")
+            userDefaults.set(true, forKey: "walkthroughPresented")
             userDefaults.synchronize()
         } else {
-            FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
+            Auth.auth().addStateDidChangeListener { auth, user in
                 if let user = user {
                     // User is signed in.
                     print("User's email: \(user.email!)")
                     delay(5) {
                         ARSLineProgress.hide()
-                        self.performSegueWithIdentifier("mapSegue", sender: nil)
+                        delay(0.25) {
+                            self.performSegue(withIdentifier: "mapSegue", sender: nil)
+                        }
                     }
                 } else {
                     // No user is signed in.
                     delay(5) {
                         ARSLineProgress.hide()
-                        let viewController = self.storyboard?.instantiateViewControllerWithIdentifier("LoginLogout")
-                        self.presentViewController(viewController!, animated: true, completion: { return })
+                        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "LoginLogout")
+                        self.present(viewController!, animated: true, completion: { return })
                     }
                 }
             }
@@ -56,26 +59,26 @@ class LoadingViewController: UIViewController, BWWalkthroughViewControllerDelega
         
         // Get view controllers and build the walkthrough
         let stb = UIStoryboard(name: "Walkthrough", bundle: nil)
-        let walkthrough = stb.instantiateViewControllerWithIdentifier("walk") as! BWWalkthroughViewController
-        let page_one = stb.instantiateViewControllerWithIdentifier("walk1")
-        let page_two = stb.instantiateViewControllerWithIdentifier("walk2")
-        let page_three = stb.instantiateViewControllerWithIdentifier("walk3")
-        let page_four = stb.instantiateViewControllerWithIdentifier("walk4")
+        let walkthrough = stb.instantiateViewController(withIdentifier: "walk") as! BWWalkthroughViewController
+        let page_one = stb.instantiateViewController(withIdentifier: "walk1")
+        let page_two = stb.instantiateViewController(withIdentifier: "walk2")
+        let page_three = stb.instantiateViewController(withIdentifier: "walk3")
+        let page_four = stb.instantiateViewController(withIdentifier: "walk4")
         
         // Attach the pages to the master
         walkthrough.delegate = self
-        walkthrough.addViewController(page_one)
-        walkthrough.addViewController(page_two)
-        walkthrough.addViewController(page_three)
-        walkthrough.addViewController(page_four)
+        walkthrough.add(viewController:page_one)
+        walkthrough.add(viewController:page_two)
+        walkthrough.add(viewController:page_three)
+        walkthrough.add(viewController:page_four)
         
-        self.presentViewController(walkthrough, animated: true, completion: nil)
+        self.present(walkthrough, animated: true, completion: nil)
     }
     
     // MARK: - Walkthrough delegate
     
     func walkthroughCloseButtonPressed() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
 

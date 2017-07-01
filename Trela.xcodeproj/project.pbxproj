@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		01966AC3EFFA01933959313A /* Pods_Trela.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03776F91FB044FD7F1FA86C4 /* Pods_Trela.framework */; };
-		8D0B7BB71D024A5A0011D6FE /* Delay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B7BB61D024A5A0011D6FE /* Delay.swift */; };
+		8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0B7BB61D024A5A0011D6FE /* Common.swift */; };
 		8D0E2C351D03F0BE0090F1C3 /* RadiusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */; };
 		8D0E2C371D03F1B50090F1C3 /* LanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E2C361D03F1B50090F1C3 /* LanguageTableViewController.swift */; };
 		8D0FC93D1D41C47B005CAE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D0FC93B1D41C47B005CAE57 /* Main.storyboard */; };
-		8D2951911D1F90E80062C32E /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2951901D1F90E80062C32E /* ProfileDetailViewController.swift */; };
+		8D2464291D655BCB007A0AB9 /* ProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2464281D655BCB007A0AB9 /* ProfileDetailViewController.swift */; };
 		8D4035BB1D428F7D00DC34F3 /* AlertListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4035BA1D428F7D00DC34F3 /* AlertListViewController.swift */; };
+		8D585FF71D67656B00D1B62A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D585FF61D67656B00D1B62A /* GoogleService-Info.plist */; };
 		8D5ECEA31D46D1F9009580AC /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D5ECEA21D46D1F9009580AC /* Walkthrough.storyboard */; };
 		8D662ED51D195EB50078A359 /* HomeLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D662ED41D195EB50078A359 /* HomeLocationViewController.swift */; };
 		8D662ED71D199D810078A359 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D662ED61D199D810078A359 /* LocationSearchTable.swift */; };
 		8D66DC7F1D411B2E007B6A83 /* DPSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D66DC7E1D411B2E007B6A83 /* DPSegmentedControl.swift */; };
-		8D6BA32A1D41C78A0017F976 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8D6BA3291D41C78A0017F976 /* GoogleService-Info.plist */; };
 		8D73BB2C1D3C486D0078A0BC /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D73BB2B1D3C486D0078A0BC /* LoadingViewController.swift */; };
-		8D73BB661D3D20B90078A0BC /* ARSLineProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D73BB651D3D20B90078A0BC /* ARSLineProgress.swift */; };
 		8D7BEC041CF280FB007AF833 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7BEC031CF280FB007AF833 /* MoreViewController.swift */; };
 		8D9112571D39936E0058B569 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9112541D39936E0058B569 /* Raleway-Light.ttf */; };
 		8D9112581D39936E0058B569 /* Raleway-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8D9112551D39936E0058B569 /* Raleway-Medium.ttf */; };
@@ -31,6 +30,7 @@
 		8D9112661D39A1100058B569 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9112651D39A1100058B569 /* OverlayView.swift */; };
 		8DA753B21D3A7315009AFCD0 /* HideShowPasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA753B01D3A7315009AFCD0 /* HideShowPasswordTextField.swift */; };
 		8DA753B31D3A7315009AFCD0 /* PasswordToggleVisibilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA753B11D3A7315009AFCD0 /* PasswordToggleVisibilityView.swift */; };
+		8DABC7721D6DEAA900FA663D /* RalewayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DABC7711D6DEAA900FA663D /* RalewayTableViewCell.swift */; };
 		8DB5CE111D1D5B6800BDD943 /* AddProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB5CE101D1D5B6800BDD943 /* AddProfileTableViewController.swift */; };
 		8DB637D11D385225007A3AB1 /* ContactImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB637D01D385225007A3AB1 /* ContactImageView.swift */; };
 		8DB637D31D38534F007A3AB1 /* ProfilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB637D21D38534F007A3AB1 /* ProfilesViewController.swift */; };
@@ -41,39 +41,31 @@
 		8DB7182E1CCB121600F2CBE4 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7182D1CCB121600F2CBE4 /* WebKit.framework */; };
 		8DB718351CCB132E00F2CBE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DB718341CCB132E00F2CBE4 /* Assets.xcassets */; };
 		8DB7183C1CCB238800F2CBE4 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */; };
+		8DCB465B1D56D3CD00B11552 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCB465A1D56D3CD00B11552 /* AboutViewController.swift */; };
+		8DCBF15E1D709EF200DAE47B /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCBF15D1D709EF200DAE47B /* CreateAccountViewController.swift */; };
 		8DD6D2691CF504C6003A1820 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6D2681CF504C6003A1820 /* LoginViewController.swift */; };
 		8DD6D26D1CF543DA003A1820 /* UIView+Designable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD6D26B1CF543DA003A1820 /* UIView+Designable.swift */; };
 		8DDB499C1D157A7300AA1F64 /* DetailAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDB499B1D157A7300AA1F64 /* DetailAlertViewController.swift */; };
 		8DDF5ABC1D425F56004B718B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF5ABA1D425F56004B718B /* Interface.storyboard */; };
 		8DDF5ABE1D425F56004B718B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF5ABD1D425F56004B718B /* Assets.xcassets */; };
-		8DDF5AC51D425F57004B718B /* WatchKitApp Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8DDF5AC41D425F57004B718B /* WatchKitApp Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		8DDF5ACC1D425F57004B718B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF5ACB1D425F57004B718B /* InterfaceController.swift */; };
 		8DDF5ACE1D425F57004B718B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF5ACD1D425F57004B718B /* ExtensionDelegate.swift */; };
 		8DDF5AD01D425F57004B718B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF5ACF1D425F57004B718B /* NotificationController.swift */; };
 		8DDF5AD21D425F57004B718B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF5AD11D425F57004B718B /* Assets.xcassets */; };
 		8DDF5AD61D425F57004B718B /* WatchKitApp.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8DDF5AB81D425F56004B718B /* WatchKitApp.app */; };
-		8DDF5AE41D425F88004B718B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DDF5AE31D425F88004B718B /* NotificationCenter.framework */; };
 		8DDF5AE71D425F88004B718B /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DDF5AE61D425F88004B718B /* TodayViewController.swift */; };
 		8DDF5AEA1D425F88004B718B /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DDF5AE81D425F88004B718B /* MainInterface.storyboard */; };
 		8DDF5AEE1D425F88004B718B /* TodayExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8DDF5AE21D425F88004B718B /* TodayExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		8DE89C381D0730F7003B3ED9 /* ListAlertTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE89C371D0730F7003B3ED9 /* ListAlertTableViewController.swift */; };
 		8DED9F081D3688B700AD0B5B /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DBA58201CF3F52100B3185F /* NotificationCenter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8DDF5AC61D425F57004B718B /* PBXContainerItemProxy */ = {
+		8D44ECAA1F04494500EFC855 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8DB717EE1CCB11B000F2CBE4 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DDF5AC31D425F57004B718B;
 			remoteInfo = "WatchKitApp Extension";
-		};
-		8DDF5AD41D425F57004B718B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8DB717EE1CCB11B000F2CBE4 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DDF5AB71D425F56004B718B;
-			remoteInfo = WatchKitApp;
 		};
 		8DDF5AEC1D425F88004B718B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -87,14 +79,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		8D8B4A0F1CE1688500E9AF8F /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
 				8DDF5AD61D425F57004B718B /* WatchKitApp.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 		};
 		8DBA582F1CF3F52200B3185F /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -113,7 +105,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				8DDF5AC51D425F57004B718B /* WatchKitApp Extension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,19 +118,18 @@
 		480F272D4D6FFE8E17B674BE /* Pods-Trela.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela/Pods-Trela.debug.xcconfig"; sourceTree = "<group>"; };
 		7F08B932451AA7F8827B406C /* Pods-Trela Spotlight Index Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela Spotlight Index Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela Spotlight Index Extension/Pods-Trela Spotlight Index Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		88A7E7D71B7AC254B2F87F1A /* libPods-Trela WatchKit App.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trela WatchKit App.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D0B7BB61D024A5A0011D6FE /* Delay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Delay.swift; path = Resources/Delay.swift; sourceTree = "<group>"; };
+		8D0B7BB61D024A5A0011D6FE /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Common.swift; path = Resources/Common.swift; sourceTree = "<group>"; };
 		8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadiusTableViewController.swift; sourceTree = "<group>"; };
 		8D0E2C361D03F1B50090F1C3 /* LanguageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguageTableViewController.swift; sourceTree = "<group>"; };
 		8D0FC93C1D41C47B005CAE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8D2951901D1F90E80062C32E /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
+		8D2464281D655BCB007A0AB9 /* ProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileDetailViewController.swift; sourceTree = "<group>"; };
 		8D4035BA1D428F7D00DC34F3 /* AlertListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertListViewController.swift; sourceTree = "<group>"; };
+		8D585FF61D67656B00D1B62A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D5ECEA21D46D1F9009580AC /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
 		8D662ED41D195EB50078A359 /* HomeLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeLocationViewController.swift; sourceTree = "<group>"; };
 		8D662ED61D199D810078A359 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
 		8D66DC7E1D411B2E007B6A83 /* DPSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DPSegmentedControl.swift; path = Resources/DPSegmentedControl.swift; sourceTree = "<group>"; };
-		8D6BA3291D41C78A0017F976 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8D73BB2B1D3C486D0078A0BC /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
-		8D73BB651D3D20B90078A0BC /* ARSLineProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ARSLineProgress.swift; path = Resources/ARSLineProgress.swift; sourceTree = "<group>"; };
 		8D7BEC031CF280FB007AF833 /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		8D9112541D39936E0058B569 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Light.ttf"; path = "Raleway/Raleway-Light.ttf"; sourceTree = "<group>"; };
 		8D9112551D39936E0058B569 /* Raleway-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Raleway-Medium.ttf"; path = "Raleway/Raleway-Medium.ttf"; sourceTree = "<group>"; };
@@ -150,6 +140,7 @@
 		8D9112651D39A1100058B569 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		8DA753B01D3A7315009AFCD0 /* HideShowPasswordTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HideShowPasswordTextField.swift; path = Resources/HideShowPasswordTextField.swift; sourceTree = "<group>"; };
 		8DA753B11D3A7315009AFCD0 /* PasswordToggleVisibilityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PasswordToggleVisibilityView.swift; path = Resources/PasswordToggleVisibilityView.swift; sourceTree = "<group>"; };
+		8DABC7711D6DEAA900FA663D /* RalewayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RalewayTableViewCell.swift; path = ../Trela/RalewayTableViewCell.swift; sourceTree = "<group>"; };
 		8DB5CE101D1D5B6800BDD943 /* AddProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddProfileTableViewController.swift; sourceTree = "<group>"; };
 		8DB637D01D385225007A3AB1 /* ContactImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ContactImageView.swift; path = Resources/ContactImageView.swift; sourceTree = "<group>"; };
 		8DB637D21D38534F007A3AB1 /* ProfilesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
@@ -163,6 +154,12 @@
 		8DB718341CCB132E00F2CBE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DB7183B1CCB238800F2CBE4 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		8DBA58201CF3F52100B3185F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		8DCB465A1D56D3CD00B11552 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		8DCBF15D1D709EF200DAE47B /* CreateAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		8DD531901D71147B002E15FE /* Trela.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Trela.entitlements; sourceTree = "<group>"; };
+		8DD531911D71149C002E15FE /* TodayExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TodayExtension.entitlements; sourceTree = "<group>"; };
+		8DD531921D7114A7002E15FE /* WatchKitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchKitApp.entitlements; sourceTree = "<group>"; };
+		8DD531931D7114AF002E15FE /* WatchKitApp Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchKitApp Extension.entitlements"; sourceTree = "<group>"; };
 		8DD6D2681CF504C6003A1820 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8DD6D26B1CF543DA003A1820 /* UIView+Designable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Designable.swift"; sourceTree = "<group>"; };
 		8DDB499B1D157A7300AA1F64 /* DetailAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailAlertViewController.swift; sourceTree = "<group>"; };
@@ -178,11 +175,9 @@
 		8DDF5AD11D425F57004B718B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8DDF5AD31D425F57004B718B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DDF5AE21D425F88004B718B /* TodayExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TodayExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DDF5AE31D425F88004B718B /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		8DDF5AE61D425F88004B718B /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		8DDF5AE91D425F88004B718B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		8DDF5AEB1D425F88004B718B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8DE89C371D0730F7003B3ED9 /* ListAlertTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListAlertTableViewController.swift; sourceTree = "<group>"; };
 		973CA583A6835581BC2F0C17 /* libPods-Trela Spotlight Index Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trela Spotlight Index Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A4AF480AB4C1335FC44244B /* Pods-Trela Today Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Trela Today Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Trela Today Extension/Pods-Trela Today Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		9DD935EFF5082E47AE98F366 /* libPods-Trela Today Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Trela Today Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -225,7 +220,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DDF5AE41D425F88004B718B /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +234,10 @@
 				8D0E2C341D03F0BE0090F1C3 /* RadiusTableViewController.swift */,
 				8DB5CE101D1D5B6800BDD943 /* AddProfileTableViewController.swift */,
 				8DB637D21D38534F007A3AB1 /* ProfilesViewController.swift */,
-				8D2951901D1F90E80062C32E /* ProfileDetailViewController.swift */,
+				8D2464281D655BCB007A0AB9 /* ProfileDetailViewController.swift */,
 				8D662ED61D199D810078A359 /* LocationSearchTable.swift */,
 				8D662ED41D195EB50078A359 /* HomeLocationViewController.swift */,
+				8DCB465A1D56D3CD00B11552 /* AboutViewController.swift */,
 			);
 			name = MoreViewController;
 			sourceTree = "<group>";
@@ -250,7 +245,6 @@
 		8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8D73BB651D3D20B90078A0BC /* ARSLineProgress.swift */,
 				8D66DC7E1D411B2E007B6A83 /* DPSegmentedControl.swift */,
 				8DA753B01D3A7315009AFCD0 /* HideShowPasswordTextField.swift */,
 				8DA753B11D3A7315009AFCD0 /* PasswordToggleVisibilityView.swift */,
@@ -275,14 +269,28 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		8D92E1AF1F07F2740037C06E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
+				8D0E2C3C1D03F5B80090F1C3 /* MoreViewController */,
+				8D73BB2B1D3C486D0078A0BC /* LoadingViewController.swift */,
+				8DD6D2681CF504C6003A1820 /* LoginViewController.swift */,
+				8DCBF15D1D709EF200DAE47B /* CreateAccountViewController.swift */,
+				8DDB499B1D157A7300AA1F64 /* DetailAlertViewController.swift */,
+				8D4035BA1D428F7D00DC34F3 /* AlertListViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		8DAFA68F1D2D272D00A9FCBD /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				8D63A25D1CCFBF5B00D0C5A0 /* Frameworks */,
 				8DAFA6901D2D275100A9FCBD /* Fonts */,
 				8D91125A1D3996560058B569 /* Menu */,
-				8D6BA3291D41C78A0017F976 /* GoogleService-Info.plist */,
-				8D0B7BB61D024A5A0011D6FE /* Delay.swift */,
+				8D585FF61D67656B00D1B62A /* GoogleService-Info.plist */,
+				8D0B7BB61D024A5A0011D6FE /* Common.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -290,6 +298,7 @@
 		8DAFA6901D2D275100A9FCBD /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				8DABC7711D6DEAA900FA663D /* RalewayTableViewCell.swift */,
 				8D9112541D39936E0058B569 /* Raleway-Light.ttf */,
 				8D9112551D39936E0058B569 /* Raleway-Medium.ttf */,
 				8D9112561D39936E0058B569 /* Raleway-Regular.ttf */,
@@ -326,16 +335,11 @@
 		8DB717F81CCB11B000F2CBE4 /* Trela */ = {
 			isa = PBXGroup;
 			children = (
+				8DD531901D71147B002E15FE /* Trela.entitlements */,
 				8DB717F91CCB11B000F2CBE4 /* AppDelegate.swift */,
-				8DB717FB1CCB11B000F2CBE4 /* MapViewController.swift */,
-				8D0E2C3C1D03F5B80090F1C3 /* MoreViewController */,
+				8D92E1AF1F07F2740037C06E /* ViewControllers */,
 				8D0FC93B1D41C47B005CAE57 /* Main.storyboard */,
 				8D5ECEA21D46D1F9009580AC /* Walkthrough.storyboard */,
-				8D73BB2B1D3C486D0078A0BC /* LoadingViewController.swift */,
-				8DD6D2681CF504C6003A1820 /* LoginViewController.swift */,
-				8DDB499B1D157A7300AA1F64 /* DetailAlertViewController.swift */,
-				8D4035BA1D428F7D00DC34F3 /* AlertListViewController.swift */,
-				8DE89C371D0730F7003B3ED9 /* ListAlertTableViewController.swift */,
 				8DD6D26B1CF543DA003A1820 /* UIView+Designable.swift */,
 				8DB718041CCB11B000F2CBE4 /* LaunchScreen.storyboard */,
 				8DB718341CCB132E00F2CBE4 /* Assets.xcassets */,
@@ -347,6 +351,7 @@
 		8DDF5AB91D425F56004B718B /* WatchKitApp */ = {
 			isa = PBXGroup;
 			children = (
+				8DD531921D7114A7002E15FE /* WatchKitApp.entitlements */,
 				8DDF5ABA1D425F56004B718B /* Interface.storyboard */,
 				8DDF5ABD1D425F56004B718B /* Assets.xcassets */,
 				8DDF5ABF1D425F56004B718B /* Info.plist */,
@@ -357,6 +362,7 @@
 		8DDF5AC81D425F57004B718B /* WatchKitApp Extension */ = {
 			isa = PBXGroup;
 			children = (
+				8DD531931D7114AF002E15FE /* WatchKitApp Extension.entitlements */,
 				8DDF5ACB1D425F57004B718B /* InterfaceController.swift */,
 				8DDF5ACD1D425F57004B718B /* ExtensionDelegate.swift */,
 				8DDF5ACF1D425F57004B718B /* NotificationController.swift */,
@@ -378,6 +384,7 @@
 		8DDF5AE51D425F88004B718B /* TodayExtension */ = {
 			isa = PBXGroup;
 			children = (
+				8DD531911D71149C002E15FE /* TodayExtension.entitlements */,
 				8DDF5AE61D425F88004B718B /* TodayViewController.swift */,
 				8DDF5AE81D425F88004B718B /* MainInterface.storyboard */,
 				8DDF5AEB1D425F88004B718B /* Info.plist */,
@@ -393,7 +400,6 @@
 				9DD935EFF5082E47AE98F366 /* libPods-Trela Today Extension.a */,
 				88A7E7D71B7AC254B2F87F1A /* libPods-Trela WatchKit App.a */,
 				E4CFBEAD30FD483213DD4260 /* libPods-Trela WatchKit App Extension.a */,
-				8DDF5AE31D425F88004B718B /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -434,7 +440,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				8DDF5AD51D425F57004B718B /* PBXTargetDependency */,
 				8DDF5AED1D425F88004B718B /* PBXTargetDependency */,
 			);
 			name = Trela;
@@ -453,7 +458,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8DDF5AC71D425F57004B718B /* PBXTargetDependency */,
+				8D44ECAB1F04494500EFC855 /* PBXTargetDependency */,
 			);
 			name = WatchKitApp;
 			productName = WatchKitApp;
@@ -501,15 +506,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Kalissaac Corp.";
 				TargetAttributes = {
 					8DB717F51CCB11B000F2CBE4 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = 7QA845L52Q;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -519,14 +526,34 @@
 					8DDF5AB71D425F56004B718B = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7QA845L52Q;
+						LastSwiftMigration = 0830;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8DDF5AC31D425F57004B718B = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7QA845L52Q;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8DDF5AE11D425F88004B718B = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7QA845L52Q;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -557,13 +584,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D9112591D39936E0058B569 /* Raleway-Regular.ttf in Resources */,
+				8D585FF71D67656B00D1B62A /* GoogleService-Info.plist in Resources */,
 				8DB718351CCB132E00F2CBE4 /* Assets.xcassets in Resources */,
 				8D0FC93D1D41C47B005CAE57 /* Main.storyboard in Resources */,
 				8D9112581D39936E0058B569 /* Raleway-Medium.ttf in Resources */,
 				8DB718061CCB11B000F2CBE4 /* LaunchScreen.storyboard in Resources */,
 				8D5ECEA31D46D1F9009580AC /* Walkthrough.storyboard in Resources */,
 				8D9112571D39936E0058B569 /* Raleway-Light.ttf in Resources */,
-				8D6BA32A1D41C78A0017F976 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,7 +664,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -650,27 +677,28 @@
 				8D662ED51D195EB50078A359 /* HomeLocationViewController.swift in Sources */,
 				8DA753B21D3A7315009AFCD0 /* HideShowPasswordTextField.swift in Sources */,
 				8DD6D2691CF504C6003A1820 /* LoginViewController.swift in Sources */,
-				8DE89C381D0730F7003B3ED9 /* ListAlertTableViewController.swift in Sources */,
 				8DB5CE111D1D5B6800BDD943 /* AddProfileTableViewController.swift in Sources */,
 				8D662ED71D199D810078A359 /* LocationSearchTable.swift in Sources */,
 				8D73BB2C1D3C486D0078A0BC /* LoadingViewController.swift in Sources */,
 				8DB717FA1CCB11B000F2CBE4 /* AppDelegate.swift in Sources */,
 				8D91125E1D39967D0058B569 /* Menu.swift in Sources */,
 				8D0E2C351D03F0BE0090F1C3 /* RadiusTableViewController.swift in Sources */,
+				8DCBF15E1D709EF200DAE47B /* CreateAccountViewController.swift in Sources */,
 				8D9112661D39A1100058B569 /* OverlayView.swift in Sources */,
 				8DB717FC1CCB11B000F2CBE4 /* MapViewController.swift in Sources */,
+				8DCB465B1D56D3CD00B11552 /* AboutViewController.swift in Sources */,
 				8D66DC7F1D411B2E007B6A83 /* DPSegmentedControl.swift in Sources */,
 				8DB637D11D385225007A3AB1 /* ContactImageView.swift in Sources */,
 				8DA753B31D3A7315009AFCD0 /* PasswordToggleVisibilityView.swift in Sources */,
 				8D9112601D39967D0058B569 /* MenuViewController.swift in Sources */,
 				8D4035BB1D428F7D00DC34F3 /* AlertListViewController.swift in Sources */,
-				8D0B7BB71D024A5A0011D6FE /* Delay.swift in Sources */,
+				8D2464291D655BCB007A0AB9 /* ProfileDetailViewController.swift in Sources */,
+				8D0B7BB71D024A5A0011D6FE /* Common.swift in Sources */,
 				8D91125F1D39967D0058B569 /* MenuTableViewCell.swift in Sources */,
-				8D2951911D1F90E80062C32E /* ProfileDetailViewController.swift in Sources */,
 				8DD6D26D1CF543DA003A1820 /* UIView+Designable.swift in Sources */,
+				8DABC7721D6DEAA900FA663D /* RalewayTableViewCell.swift in Sources */,
 				8D7BEC041CF280FB007AF833 /* MoreViewController.swift in Sources */,
 				8DDB499C1D157A7300AA1F64 /* DetailAlertViewController.swift in Sources */,
-				8D73BB661D3D20B90078A0BC /* ARSLineProgress.swift in Sources */,
 				8DB637D31D38534F007A3AB1 /* ProfilesViewController.swift in Sources */,
 				8D0E2C371D03F1B50090F1C3 /* LanguageTableViewController.swift in Sources */,
 			);
@@ -697,15 +725,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8DDF5AC71D425F57004B718B /* PBXTargetDependency */ = {
+		8D44ECAB1F04494500EFC855 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DDF5AC31D425F57004B718B /* WatchKitApp Extension */;
-			targetProxy = 8DDF5AC61D425F57004B718B /* PBXContainerItemProxy */;
-		};
-		8DDF5AD51D425F57004B718B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8DDF5AB71D425F56004B718B /* WatchKitApp */;
-			targetProxy = 8DDF5AD41D425F57004B718B /* PBXContainerItemProxy */;
+			targetProxy = 8D44ECAA1F04494500EFC855 /* PBXContainerItemProxy */;
 		};
 		8DDF5AED1D425F88004B718B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -763,11 +786,12 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -808,11 +832,12 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -829,6 +854,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -837,11 +863,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 480F272D4D6FFE8E17B674BE /* Pods-Trela.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Trela/Trela.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -851,9 +879,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Trela/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS";
 				PRODUCT_NAME = Trela;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -861,11 +891,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B1A6196482B88449BF083FAE /* Pods-Trela.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Trela/Trela.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -874,9 +906,11 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Trela/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS";
 				PRODUCT_NAME = Trela;
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -884,14 +918,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = "WatchKitApp Extension/WatchKitApp Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7QA845L52Q;
 				INFOPLIST_FILE = "WatchKitApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela.WatchKitApp.WatchKitExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS.WatchKitApp.WatchKitExtension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -899,52 +937,60 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = "WatchKitApp Extension/WatchKitApp Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = 7QA845L52Q;
 				INFOPLIST_FILE = "WatchKitApp Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela.WatchKitApp.WatchKitExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS.WatchKitApp.WatchKitExtension";
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
 		8DDF5ADC1D425F57004B718B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = WatchKitApp/WatchKitApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 7QA845L52Q;
 				IBSC_MODULE = WatchKitApp_Extension;
 				INFOPLIST_FILE = WatchKitApp/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela.WatchKitApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS.WatchKitApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
 		8DDF5ADD1D425F57004B718B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = WatchKitApp/WatchKitApp.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				DEVELOPMENT_TEAM = 7QA845L52Q;
 				IBSC_MODULE = WatchKitApp_Extension;
 				INFOPLIST_FILE = WatchKitApp/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela.WatchKitApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS.WatchKitApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.2;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -952,14 +998,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TodayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela.TodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS.TodayExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -967,14 +1017,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_ENTITLEMENTS = TodayExtension/TodayExtension.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TodayExtension/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = corp.Kalissaac.Trela.TodayExtension;
+				PRODUCT_BUNDLE_IDENTIFIER = "corp.Kalissaac.Trela-iOS.TodayExtension";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

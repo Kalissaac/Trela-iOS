@@ -8,17 +8,16 @@ use_frameworks!
 
 pod 'Firebase/Core'
 pod 'Firebase/AdMob'
-pod 'Firebase/Messaging'
-pod 'Firebase/Database'
-pod 'FirebaseUI/Database', '~> 0.4'
-pod 'Firebase/Crash'
 pod 'Firebase/Auth'
+pod 'Firebase/Crash'
+pod 'Firebase/Database'
+pod 'Firebase/Messaging'
 pod 'ISHHoverBar'
 pod 'Presentr'
 pod 'SWMessages'
-# pod 'Localide', '~> 1.0'
-# pod 'SCLAlertView'
-#pod "TTCountryFlagLabel"
-pod "BWWalkthrough"
+#pod 'Localide', '~> 1.0'
+pod 'BWWalkthrough'
+pod 'IQKeyboardManagerSwift'
+pod 'ARSLineProgress', '~> 2.0'
 
 end

@@ -7,21 +7,21 @@
 
 import UIKit
 
-@IBDesignable public class ContactImageView : UIImageView {
+@IBDesignable open class ContactImageView : UIImageView {
   
   var twoCharacters: Bool = true
   
   /// Sets font for text (Default is UIFont(20) **UIFONT not currently supported in @IBInspectable
-  public var textFont: UIFont = UIFont.systemFontOfSize(22)
+  open var textFont: UIFont = UIFont.systemFont(ofSize: 22)
   
-  @IBInspectable public var fontSize: CGFloat = 22{
+  @IBInspectable open var fontSize: CGFloat = 22{
     didSet{
-      textFont = textFont.fontWithSize(fontSize)
+      textFont = textFont.withSize(fontSize)
       setStoryboardImage()
     }
   }
   
-  @IBInspectable public var labelFont: String?{
+  @IBInspectable open var labelFont: String?{
     didSet{
       if let _ = labelFont{
         if let setFont = UIFont(name: "Quicksand-Regular", size: fontSize){
@@ -33,33 +33,33 @@ import UIKit
   }
   
   /// Sets color of text being displayed, default is white color
-  @IBInspectable public var textColor: UIColor = UIColor.whiteColor(){
+  @IBInspectable open var textColor: UIColor = UIColor.white{
     didSet{
       setStoryboardImage()
     }
   }
   
   /// Set text to be displayed in UIImageView, default is "GK".
-  @IBInspectable public var text: String = "GK"{
+  @IBInspectable open var text: String = "GK"{
     didSet{
       setStoryboardImage()
     }
   }
   
-  @IBInspectable public var username: Bool = false{
+  @IBInspectable open var username: Bool = false{
     didSet{
       setStoryboardImage()
     }
   }
   
-  @IBInspectable public var backgroundImage: UIImage? = nil{
+  @IBInspectable open var backgroundImage: UIImage? = nil{
     didSet{
       setStoryboardImage()
     }
   }
   
 /// Returns a circular if set true, default is false
-  @IBInspectable public var circle: Bool = true{
+  @IBInspectable open var circle: Bool = true{
     didSet{
       if circle{
         self.layer.cornerRadius = self.bounds.width / 2
@@ -70,25 +70,25 @@ import UIKit
   }
   
   /// Set background color your imageview
-  @IBInspectable public var fillColor: UIColor = UIColor.lightGrayColor(){
+  @IBInspectable open var fillColor: UIColor = UIColor.lightGray{
     didSet{
       setStoryboardImage()
     }
   }
   
-  override public var bounds: CGRect {
+  override open var bounds: CGRect {
     didSet {
       setStoryboardImage()
     }
   }
   
-  private func setStoryboardImage(){
-    setImageText(text: text, backgroundImage: backgroundImage, username: username, font: textFont, textColor: textColor, fillColor: fillColor, circle: circle)
+  fileprivate func setStoryboardImage(){
+    setImageText(text, backgroundImage: backgroundImage, username: username, font: textFont, textColor: textColor, fillColor: fillColor, circle: circle)
   }
   
   
   
-  public func setImageText(text text: String, backgroundImage: UIImage? = nil, username: Bool = false, font: UIFont = UIFont.systemFontOfSize(22), textColor: UIColor = UIColor.whiteColor(), fillColor: UIColor, circle: Bool = true){
+  open func setImageText(_ text: String, backgroundImage: UIImage? = nil, username: Bool = false, font: UIFont = UIFont.systemFont(ofSize: 22), textColor: UIColor = UIColor.white, fillColor: UIColor, circle: Bool = true){
     
     var imgText = text
     
@@ -113,10 +113,10 @@ import UIKit
    - returns: [String: AnyObject] to be used as an NSAttribute
    */
   
-  func getAttributedText(text: String, color: UIColor, textFont: UIFont) -> [String: AnyObject] {
+  func getAttributedText(_ text: String, color: UIColor, textFont: UIFont) -> [String: AnyObject] {
     let area:CGFloat = self.bounds.width * textFont.pointSize
     let size = sqrt(area / CGFloat(text.characters.count))
-    let attribute:[String:AnyObject] = [NSForegroundColorAttributeName: color, NSFontAttributeName: textFont.fontWithSize(size)]
+    let attribute:[String:AnyObject] = [NSForegroundColorAttributeName: color, NSFontAttributeName: textFont.withSize(size)]
     return attribute
   }
   
@@ -128,36 +128,36 @@ import UIKit
    
    - returns: an ImageView with text rendered
    */
-  private func createImage(attributedString: NSAttributedString, backgroundImage: UIImage? = nil, backgroundColor: UIColor) -> UIImage {
-    let scale = UIScreen.mainScreen().scale
+  fileprivate func createImage(_ attributedString: NSAttributedString, backgroundImage: UIImage? = nil, backgroundColor: UIColor) -> UIImage {
+    let scale = UIScreen.main.scale
     let bounds = self.bounds
     UIGraphicsBeginImageContextWithOptions(bounds.size, false, scale)
     let context = UIGraphicsGetCurrentContext()
     
     
     if (circle) {
-      let path = CGPathCreateWithEllipseInRect(self.bounds, nil);
-      CGContextAddPath(context, path)
-      CGContextClip(context)
+      let path = CGPath(ellipseIn: self.bounds, transform: nil);
+      context!.addPath(path)
+      context!.clip()
     }
     
     if backgroundImage != nil{
-      backgroundImage!.drawInRect(CGRectMake(0, 0, self.bounds.size.width, self.bounds.size.height))
+      backgroundImage!.draw(in: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height))
       
     }else{
-      CGContextSetFillColorWithColor(context, backgroundColor.CGColor)
-      CGContextFillRect(context, CGRectMake(0, 0, bounds.size.width, bounds.size.height))
+      context!.setFillColor(backgroundColor.cgColor)
+      context!.fill(CGRect(x: 0, y: 0, width: bounds.size.width, height: bounds.size.height))
     }
     
     let textSize = attributedString.size()
     let rect = CGRect(x: bounds.size.width/2 - textSize.width/2, y: bounds.size.height/2 - textSize.height/2, width: textSize.width, height: textSize.height)
     
-    attributedString.drawInRect(rect)
+    attributedString.draw(in: rect)
     
     let image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     
-    return image;
+    return image!;
   }
   
   
@@ -168,8 +168,8 @@ import UIKit
    
    - returns: returns a two character string (first inital and last inital
    */
-  func getCharactersFromName(text: String) -> String {
-    let username = text.componentsSeparatedByString(" ")
+  func getCharactersFromName(_ text: String) -> String {
+    let username = text.components(separatedBy: " ")
     var initial = String()
     if let initalFirst = username[0].characters.first {
       initial.append(initalFirst)

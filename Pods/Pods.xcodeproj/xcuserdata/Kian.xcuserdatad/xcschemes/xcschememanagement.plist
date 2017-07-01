@@ -4,12 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BWWalkthrough-BWWalkthrough.xcscheme</key>
+		<key>ARSLineProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>BWWalkthrough.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GTMSessionFetcher.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>GoogleToolboxForMac.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,6 +44,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Protobuf.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SWMessages.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,32 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>06008BDA8C88338D6B6E5BDC162E6148</key>
+		<key>0EB9E3E33D1BD3DBA85D570B0C330457</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>07BFB2C0F35D333AE54AFE4067B91D89</key>
+		<key>14876E8917EFFF790E519A59FF893DE6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>17664F8F0232329D875EC690EB653867</key>
+		<key>531CDEA6A86597243C79C694F3916AA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>52A150813DE987B3F83FD41FD48805B3</key>
+		<key>6D5CEDECD3D8DC52EA507E0431BDA8A0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9E0E4CC77754C3A4E2567B984F10EEA1</key>
+		<key>748A5C95E42C459D2EE5C3EDC8F95046</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A371D9F716AF507FF01A593DD0D9DFDF</key>
+		<key>9889562781163BF5CB84E06A985BCE44</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2F03F568A4A17DEBD8FFBDC1F3B0128</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFEC88879B9861E3A6D26524558E3EA7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C235F77E101E742652CCF98FFDFA5182</key>
 		<dict>
 			<key>primary</key>
 			<true/>

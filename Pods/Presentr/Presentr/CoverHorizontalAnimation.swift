@@ -8,37 +8,22 @@
 
 import Foundation
 
-/// Custom 'CoverHorizontalAnimation' animation. Conforms to 'PresentrAnimation' protocol
-class CoverHorizontalAnimation: NSObject, PresentrAnimation{
-    
-    var animationDuration: NSTimeInterval
-    var fromRight: Bool
-    
-    init(animationDuration: NSTimeInterval = 0.5, fromRight: Bool = true){
-        self.animationDuration = animationDuration
+public class CoverHorizontalAnimation: PresentrAnimation {
+
+    private var fromRight: Bool
+
+    public init(fromRight: Bool = true) {
         self.fromRight = fromRight
     }
-    
-}
 
-// MARK: UIViewControllerAnimatedTransitioning
-
-extension CoverHorizontalAnimation: UIViewControllerAnimatedTransitioning{
-    
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return animationDuration
-    }
-    
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        animate(transitionContext) { finalFrame, containerFrame in
-            var initialFrame = finalFrame
-            if self.fromRight{
-                initialFrame.origin.x = containerFrame.size.width + initialFrame.size.width
-            }else{
-                initialFrame.origin.x = 0 - initialFrame.size.width
-            }
-            return initialFrame
+    override public func transform(containerFrame: CGRect, finalFrame: CGRect) -> CGRect {
+        var initialFrame = finalFrame
+        if fromRight {
+            initialFrame.origin.x = containerFrame.size.width + initialFrame.size.width
+        } else {
+            initialFrame.origin.x = 0 - initialFrame.size.width
         }
+        return initialFrame
     }
-    
+
 }

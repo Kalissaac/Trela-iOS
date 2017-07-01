@@ -7,9 +7,33 @@
 //
 
 import UIKit
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+// FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
+// Consider refactoring the code to use the non-optional operators.
+fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l > r
+  default:
+    return rhs < lhs
+  }
+}
+
 
 protocol MenuViewDelegate {
-    func didSelect(menu: Menu, row: NSIndexPath, inTableView: UITableView)
+    func didSelect(_ menu: Menu, row: IndexPath, inTableView: UITableView)
 }
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -35,38 +59,38 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func setupTableView () {
         tableView.reloadData()
         if tableView.indexPathsForVisibleRows?.count > 0 {
-            tableView.selectRowAtIndexPath(tableView!.indexPathsForVisibleRows![selected], animated: true, scrollPosition: .None)
+            tableView.selectRow(at: tableView!.indexPathsForVisibleRows![selected], animated: true, scrollPosition: .none)
         }
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menu.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: MenuTableViewCell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as! MenuTableViewCell
+        let cell: MenuTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! MenuTableViewCell
         cell.menu = menu[indexPath.row]        
         if indexPath.row == 0 {
             // we could create a whole new 'spacer' cell. but I am lazy, so I wont.
-            cell.userInteractionEnabled = false
+            cell.isUserInteractionEnabled = false
         }
         return cell
     }
     
-    func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 45
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selected = indexPath.row
         
         if let delegate = delegate {
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.4 * Double(NSEC_PER_SEC)))
-            dispatch_after(delayTime, dispatch_get_main_queue()) { [unowned self] in
+            let delayTime = DispatchTime.now() + Double(Int64(0.4 * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+            DispatchQueue.main.asyncAfter(deadline: delayTime) { [unowned self] in
                 delegate.didSelect(self.menu[indexPath.row], row:indexPath, inTableView: tableView)
             }
 

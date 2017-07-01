@@ -20,9 +20,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         allAlertsButton.titleLabel?.font = UIFont(name: "Raleway-Regular", size: 15)
     }
     
-    @IBAction func didTapButton(sender: AnyObject) {
-        let openURL = NSURL(string: "Trela://AllAlerts")
-        self.extensionContext?.openURL(openURL!, completionHandler: nil)
+    @IBAction func didTapButton(_ sender: AnyObject) {
+        let openURL = URL(string: "Trela://AllAlerts")
+        self.extensionContext?.open(openURL! as URL, completionHandler: nil)
     }
     
     
@@ -31,14 +31,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // Dispose of any resources that can be recreated.
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
+    func widgetPerformUpdate(completionHandler: (@escaping (NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
 
         // If an error is encountered, use NCUpdateResult.Failed
         // If there's no update required, use NCUpdateResult.NoData
         // If there's an update, use NCUpdateResult.NewData
 
-        completionHandler(NCUpdateResult.NewData)
+        completionHandler(NCUpdateResult.newData)
     }
     
 }

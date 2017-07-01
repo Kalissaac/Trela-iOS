@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 protocol HandleMapSearch {
-    func dropPinZoomIn(placemark:MKPlacemark)
+    func dropPinZoomIn(_ placemark:MKPlacemark)
 }
 
 class HomeLocationViewController: UIViewController {
@@ -22,8 +22,8 @@ class HomeLocationViewController: UIViewController {
     var selectedPin:MKPlacemark? = nil
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var saveButton: UIBarButtonItem!
-    @IBAction func didTapSave(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+    @IBAction func didTapSave(_ sender: AnyObject) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -39,7 +39,7 @@ class HomeLocationViewController: UIViewController {
             // Fallback on earlier versions
         }
         
-        let locationSearchTable = storyboard!.instantiateViewControllerWithIdentifier("LocationSearchTable") as! LocationSearchTable
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController?.searchResultsUpdater = locationSearchTable
         
@@ -61,26 +61,26 @@ class HomeLocationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // self.tabBarController?.tabBar.hidden=true
         if let tabBar=self.tabBarController?.tabBar {
             self.barFrame=tabBar.frame
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                let newBarFrame=CGRectMake(self.barFrame!.origin.x, self.view.frame.size.height, self.barFrame!.size.width, self.barFrame!.size.height)
+            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                let newBarFrame=CGRect(x: self.barFrame!.origin.x, y: self.view.frame.size.height, width: self.barFrame!.size.width, height: self.barFrame!.size.height)
                 tabBar.frame=newBarFrame
                 }, completion: { (Bool) -> Void in
-                    tabBar.hidden=true
+                    tabBar.isHidden=true
             })
         }
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.tabBarController?.tabBar.hidden=false;
+        self.tabBarController?.tabBar.isHidden=false;
         if self.barFrame != nil {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                let newBarFrame=CGRectMake(self.barFrame!.origin.x, self.view.frame.size.height-self.barFrame!.size.height, self.view.frame.size.width, self.barFrame!.size.height)
+            UIView.animate(withDuration: 0.3, animations: { () -> Void in
+                let newBarFrame=CGRect(x: self.barFrame!.origin.x, y: self.view.frame.size.height-self.barFrame!.size.height, width: self.view.frame.size.width, height: self.barFrame!.size.height)
                 self.tabBarController?.tabBar.frame=newBarFrame
             })
         }
@@ -100,8 +100,8 @@ class HomeLocationViewController: UIViewController {
 }
 
 extension HomeLocationViewController : CLLocationManagerDelegate {
-    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == .AuthorizedWhenInUse {
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
             if #available(iOS 9.0, *) {
                 locationManager.requestLocation()
             } else {
@@ -110,7 +110,7 @@ extension HomeLocationViewController : CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let location = locations.first {
             let span = MKCoordinateSpanMake(0.05, 0.05)
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
@@ -118,13 +118,13 @@ extension HomeLocationViewController : CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("error:: \(error)")
     }
 }
 
 extension HomeLocationViewController: HandleMapSearch {
-    func dropPinZoomIn(placemark:MKPlacemark){
+    func dropPinZoomIn(_ placemark:MKPlacemark){
         // cache the pin
         selectedPin = placemark
         // clear existing pins

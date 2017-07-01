@@ -8,8 +8,8 @@
 
 import UIKit
 import Firebase
-import Presentr
 import SWMessages
+import ARSLineProgress
 
 class LoginViewController: UIViewController {
 
@@ -20,53 +20,61 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationController?.navigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
     }
 
-    @IBAction func didPressLogin(sender: AnyObject) {
+    @IBAction func didPressLogin(_ sender: AnyObject) {
         ARSLineProgress.show()
-        loginButton.selected = true
+        loginButton.isSelected = true
         if emailField.text == "" {
             delay(2) {
                 ARSLineProgress.showFail()
-                self.loginButton.selected = false
+                self.loginButton.isSelected = false
                 SWMessage.sharedInstance.showNotificationWithTitle(
                     "Oops!",
                     subtitle: "You didn't enter an email!",
-                    type: .Error )
+                    type: .error )
                 }
         } else if passwordField.text == "" {
             delay(2) {
                 ARSLineProgress.showFail()
-                self.loginButton.selected = false
+                self.loginButton.isSelected = false
                 SWMessage.sharedInstance.showNotificationWithTitle(
                     "Oops!",
                     subtitle: "You didn't enter a password!",
-                    type: .Error )
+                    type: .error )
             }
         } else {
             delay(2) {
-                FIRAuth.auth()?.signInWithEmail(self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) -> Void in
+                Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) -> Void in
                     if error == nil {
                         ARSLineProgress.showSuccess()
-                        self.loginButton.selected = false
-                        self.performSegueWithIdentifier("loginSegue", sender: nil)
+                        self.loginButton.isSelected = false
+                        self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                        self.addUser()
                     } else {
                         ARSLineProgress.showFail()
-                        self.loginButton.selected = false
-                        SWMessage.sharedInstance.showNotificationWithTitle(
-                            "Oops!",
-                            subtitle: error?.localizedDescription,
-                            type: .Error )
+                        self.loginButton.isSelected = false
+                        SWMessage.sharedInstance.showNotificationWithTitle("Oops!", subtitle: error?.localizedDescription, type: .error)
+                        SWMessage.sharedInstance.showNotificationInViewController(self, title: "Oops!2", subtitle: (error?.localizedDescription)!, type: .error)
                     }
                 })
             }
         }
     }
-    @IBAction func noAccount(sender: UIButton) {
+    @IBAction func noAccount(_ sender: UIButton) {
         // TODO: Decide whether to allow users to create an account or not.
         
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://kalissaac.github.io/Trela")!)
+        UIApplication.shared.openURL(URL(string: "http://kalissaac.github.io/Trela")!)
+    }
+    
+    func addUser() {
+        
+        let hasLoggedIn = true
+        
+        let user: [String: AnyObject] = ["hasLoggedIn" : hasLoggedIn as AnyObject]
+        let databaseRef = Database.database().reference()
+        databaseRef.child("Users").child((Auth.auth().currentUser?.uid)!).updateChildValues(user)
     }
 
     /*
@@ -83,15 +91,15 @@ class LoginViewController: UIViewController {
 
 // MARK: UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, textField string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersInRange range: NSRange, textField string: String) -> Bool {
         return passwordField.textField(textField, shouldChangeCharactersInRange: range, replacementString: string)
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         passwordField.textFieldDidEndEditing(textField)
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         if textField == emailField { // Switch focus to other text field
             passwordField.becomeFirstResponder()
@@ -104,7 +112,7 @@ extension LoginViewController: UITextFieldDelegate {
 // Implementing this delegate is entirely optional.
 // It's useful when you want to show the user that their password is valid.
 extension LoginViewController: HideShowPasswordTextFieldDelegate {
-    func isValidPassword(password: String) -> Bool {
-        return password.characters.count > 6
+    func isValidPassword(_ password: String) -> Bool {
+        return password.characters.count >= 6
     }
 }

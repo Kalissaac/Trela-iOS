@@ -14,10 +14,8 @@ class MoreViewController: UITableViewController {
     @IBOutlet var MoreTableView: UITableView!
     @IBOutlet weak var chosenRadius: UILabel!
     @IBOutlet weak var chosenLanguage: UILabel!
-    var lastSelection: NSIndexPath!
-    var radiusIdMore:Int?
-    var languageIdMore:Int?
-    var mapIdMore:Int?
+    var lastSelection: IndexPath!
+    let userDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,39 +26,17 @@ class MoreViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.navigationItem.rightBarButtonItem?.enabled = false
-
-
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        
     }
     
-    /*
-    override func viewWillAppear(animated: Bool) {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        if radiusIdMore == 0 {
-            chosenRadius.text = "1 mile"
-        } else if radiusIdMore == 1 {
-            chosenRadius.text = "2 miles"
-        } else if radiusIdMore == 2 {
-            chosenRadius.text = "5 miles"
-        } else if radiusIdMore == 3 {
-            chosenRadius.text = "10 miles"
-        } else if radiusIdMore == 4 {
-            chosenRadius.text = "15 miles"
-        } else {
-            chosenRadius.text = ""
-        }
-        
-        if languageIdMore == 0 {
-            chosenLanguage.text = "English"
-        } else if languageIdMore == 1 {
-            chosenLanguage.text = "Español"
-        } else if languageIdMore == 2 {
-            chosenLanguage.text = "Français"
-        } else {
-            chosenLanguage.text = ""
-        }
+        chosenRadius.text = radiusIDs[Int(userDefaults.string(forKey: "radius")!)!]
+        chosenLanguage.text = languageIDs[Int(userDefaults.string(forKey: "language")!)!]
     }
-    */
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -69,18 +45,16 @@ class MoreViewController: UITableViewController {
     
     // MARK: - Table view data source
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 3 {
             if indexPath.row == 0 {
-                self.MoreTableView.deselectRowAtIndexPath(indexPath, animated: true)
+                tableView.deselectRow(at: indexPath, animated: true)
+                //self.MoreTableView.deselectRow(at: indexPath, animated: true)
             } else if indexPath.row == 1 {
-                UIApplication.sharedApplication().openURL(NSURL(string: "https://github.com/Kalissaac/Trela-iOS/issues")!)
-                self.MoreTableView.deselectRowAtIndexPath(indexPath, animated: true)
-            } else {
-                return
+                UIApplication.shared.openURL(URL(string: "https://github.com/Kalissaac/Trela-iOS/issues")!)
+                tableView.deselectRow(at: indexPath, animated: true)
+                //self.MoreTableView.deselectRow(at: indexPath, animated: true)
             }
-        } else {
-            return
         }
         
     }
@@ -143,7 +117,7 @@ class MoreViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
