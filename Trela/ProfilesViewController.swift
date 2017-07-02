@@ -50,7 +50,7 @@ class ProfilesViewController: UIViewController, UITableViewDataSource, UITableVi
             self.profilesTableView.reloadData()
         })
         
-        profileImageView.setImageText((Auth.auth().currentUser?.email)!, backgroundImage: UIImage(named: "Person"), username: true, textColor: UIColor.white, fillColor: UIColor.black, circle: true)
+        //profileImageView.setImageText((Auth.auth().currentUser?.email)!, backgroundImage: UIImage(named: "Person"), username: true, textColor: UIColor.white, fillColor: UIColor.black, circle: true)
     }
 
      override func didReceiveMemoryWarning() {
@@ -100,7 +100,7 @@ class ProfilesViewController: UIViewController, UITableViewDataSource, UITableVi
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cellProfileAdd", for: indexPath)
             cell.textLabel?.text = dataProfilesAdd[indexPath.row]
-            cell.textLabel?.font = UIFont(name: "Raleway-Regular", size: 16)
+            cell.textLabel?.font = UIFont(name: "Raleway-Regular", size: UIFont.systemFontSize)
             return cell
         }
     }
