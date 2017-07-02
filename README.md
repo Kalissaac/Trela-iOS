@@ -54,5 +54,6 @@ Copyright © 2016 Kalissaac Corp. All rights reserved.
 - [x] Using Google AdMob
 - [x] Added menu screen instead of tab bar.
 - [x] Many more things
+
 ### Issues:
 - [x] App does not work in the simulator.
